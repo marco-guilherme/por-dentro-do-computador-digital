@@ -22,7 +22,8 @@ npm start
 ## Tecnologias Utilizadas
 
 - React 18
+- React Router DOM 6
 - TypeScript 4
-- Ant Design
+- Ant Design 4
 
 ## Como Contribuir
