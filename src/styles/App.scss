@@ -8,13 +8,14 @@
   display: flex;
   align-items: center;
   background-color: #20232a;
+  font-size: 1.125rem;
 
   .header-logo-wrapper {
     width: 20%;
 
     img {
       margin-left: 5vw;
-      width: 30%;
+      width: 40%;
       height: 20%;
     }
   }
@@ -22,10 +23,12 @@
   nav {
     width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 1rem;
 
     a {
+      padding-left: 2rem;
+      padding-right: 2rem;
       height: 5rem;
       text-decoration: none;
       cursor: pointer;
@@ -46,11 +49,6 @@
 
       &.active {
         color: #3f704d;
-      }
-
-      &:last-child {
-        margin-left: auto;
-        margin-right: 1rem;
       }
     }
   }

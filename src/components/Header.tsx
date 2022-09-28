@@ -12,6 +12,12 @@ export const Header = (): JSX.Element => {
         <NavLink to="/content">
           <span>Aulas</span>
         </NavLink>
+        <NavLink to="/content">
+          <span>ASCII</span>
+        </NavLink>
+        <NavLink to="/content">
+          <span>Sobre</span>
+        </NavLink>
       </nav>
     </header>
   );
