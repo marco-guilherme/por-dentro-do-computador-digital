@@ -1,14 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { About } from './components/About';
-import { Home } from './components/Home';
+import { DefaultLayout } from './layouts/DefaultLayout';
 import './styles/App.css';
 
 const App = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<DefaultLayout />}></Route>
       </Routes>
     </BrowserRouter>
   );
