@@ -9,13 +9,13 @@ export const Header = (): JSX.Element => {
       </div>
 
       <nav>
-        <NavLink to="/content">
+        <NavLink to="/aulas">
           <span>Aulas</span>
         </NavLink>
-        <NavLink to="/content">
+        <NavLink to="/ascii">
           <span>ASCII</span>
         </NavLink>
-        <NavLink to="/content">
+        <NavLink to="/sobre">
           <span>Sobre</span>
         </NavLink>
       </nav>
