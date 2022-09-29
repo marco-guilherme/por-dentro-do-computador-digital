@@ -79,3 +79,29 @@ div.body-content {
   align-items: center;
   flex-direction: column;
 }
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.main-content {
+  background-color: whitesmoke;
+}
+
+.aside-content {
+  background-color: #282c34;
+  text-align: center;
+
+  h2 {
+    color: rgb(97, 218, 251);
+  }
+}
+
+.tree-content {
+  background-color: #282c34 !important;
+  font-size: 1rem !important;
+  color: white !important;
+}
