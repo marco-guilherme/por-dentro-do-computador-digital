@@ -6,16 +6,22 @@
 
 ## Como Executar
 
-Obtenha uma cópia deste repositório:
+1. Obtenha uma cópia deste repositório:
 
 ```
 git clone https://github.com/marco-guilherme/por-dentro-do-computador-digital
 ```
 
-Inicie a aplicação:
+2. Instale as dependências:
 
 ```
 cd ./por-dentro-do-computador-digital
+npm install
+```
+
+3. Inicie a aplicação:
+
+```
 npm start
 ```
 

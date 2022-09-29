@@ -1,0 +1,38 @@
+export const Content = (): JSX.Element => {
+  return (
+    <div>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+      <h1>Content</h1>
+    </div>
+  );
+};
