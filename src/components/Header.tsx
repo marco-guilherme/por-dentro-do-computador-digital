@@ -9,6 +9,9 @@ export const Header = (): JSX.Element => {
       </div>
 
       <nav>
+        <NavLink to="/inicio">
+          <span>Início</span>
+        </NavLink>
         <NavLink to="/aulas">
           <span>Aulas</span>
         </NavLink>
