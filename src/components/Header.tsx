@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import unipLogo from '../images/unip-logo.png';
+import { GiNotebook } from 'react-icons/gi';
 
 export const Header = (): JSX.Element => {
   return (
@@ -22,6 +23,9 @@ export const Header = (): JSX.Element => {
           <span>Sobre</span>
         </NavLink>
       </nav>
+      <span id="open-drawer-icon" className="flex-center-column">
+        <GiNotebook />
+      </span>
     </header>
   );
 };

@@ -106,3 +106,17 @@ div.body-content {
   font-size: 1rem !important;
   color: white !important;
 }
+
+#open-drawer-icon {
+  padding-right: 1rem;
+
+  svg {
+    height: 2.188rem;
+    width: 2.188rem;
+    color: white;
+
+    &:hover {
+      color: rgb(97, 218, 251);
+    }
+  }
+}
