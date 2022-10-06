@@ -4,13 +4,17 @@ import { ApplicationActionType } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import { Dispatch } from 'redux';
 import { setDrawerVisibility } from '../store/application/actions';
+import { useNavigate } from 'react-router-dom';
+import { Key } from 'rc-tree/lib/interface';
 
-export const ContentDrawer = (): JSX.Element => {
+export const TreeDrawer = (): JSX.Element => {
   const {
     application: { drawerVisibility },
   } = useSelector((state: RootApplicationState) => state);
 
   const dispatch: Dispatch<ApplicationActionType> = useDispatch();
+
+  const navigate = useNavigate();
 
   const treeData = [
     {
@@ -21,15 +25,30 @@ export const ContentDrawer = (): JSX.Element => {
           title: 'Sobre a Eletrônica',
           key: '0-0',
           children: [
-            { title: 'O Que é Eletrônica?', key: '0-0-0', children: [] },
+            {
+              title: 'O Que é Eletrônica?',
+              key: '/aulas/eletronica-digital/sobre-eletronica/o-que-e-eletronica',
+              children: [],
+            },
             {
               title: 'Por Que Aprender Eletrônica?',
-              key: '0-0-1',
+              key: '/aulas/eletronica-digital/sobre-eletronica/por-que-aprender-eletronica',
               children: [],
             },
             { title: 'Eletrônica Analógica', key: '0-0-2', children: [] },
             { title: 'Eletrônica Digital', key: '0-0-3', children: [] },
             { title: 'Componentes Eletrônicos', key: '0-0-4', children: [] },
+          ],
+        },
+        {
+          title: 'Portas Lógicas',
+          key: '0-1',
+          children: [
+            {
+              title: 'Porta AND',
+              key: '/aulas/eletronica-digital/portas-logicas/porta-and',
+              children: [],
+            },
           ],
         },
       ],
@@ -43,9 +62,16 @@ export const ContentDrawer = (): JSX.Element => {
     },
   ];
 
-  const onSelect = (e: any, f: any): void => {
-    console.log(e);
-    console.log(f);
+  const onSelect = (selectedKeys: Key[]): void => {
+    if (!selectedKeys.length) {
+      return;
+    }
+
+    const selectedKey: Key = selectedKeys[0].toString();
+
+    if (selectedKey.includes('/')) {
+      navigate(selectedKey);
+    }
   };
 
   return (
@@ -60,6 +86,7 @@ export const ContentDrawer = (): JSX.Element => {
           treeData={treeData}
           showLine
           showIcon={false}
+          defaultExpandAll
           onSelect={onSelect}
         />
       </Drawer>
