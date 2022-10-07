@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { TreeDrawer } from '../components/TreeDrawer';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 
@@ -10,6 +11,8 @@ export const DefaultLayout = (): JSX.Element => {
       <div className="container body-content">
         <Outlet />
       </div>
+
+      <TreeDrawer />
 
       <Footer />
     </div>
