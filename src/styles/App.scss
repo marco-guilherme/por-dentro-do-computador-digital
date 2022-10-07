@@ -120,3 +120,26 @@ div.body-content {
     }
   }
 }
+
+.site-content-wrapper {
+  margin-top: 2rem;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+}
+
+.site-content {
+  margin-left: 3rem;
+  max-width: 90vw;
+  text-align: justify;
+
+  p {
+    font-family: Arial;
+    font-size: 1.313rem; /* 21 pixels */
+  }
+}

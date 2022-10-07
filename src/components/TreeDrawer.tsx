@@ -42,7 +42,7 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Portas Lógicas',
-          key: '0-1',
+          key: '/aulas/eletronica-digital/portas-logicas',
           children: [
             {
               title: 'Porta AND',

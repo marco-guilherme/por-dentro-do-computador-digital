@@ -11,6 +11,7 @@ import { WhatIsElectronics } from './pages/WhatIsElectronics';
 import { WhyLearnElectronics } from './pages/WhyLearnElectronics';
 import { AndGate } from './pages/AndGate';
 import { PageNotFound } from './pages/PageNotFound';
+import { LogicGates } from './pages/LogicGates';
 
 const App = (): JSX.Element => {
   return (
@@ -33,6 +34,11 @@ const App = (): JSX.Element => {
               <Route
                 path="eletronica-digital/sobre-eletronica/por-que-aprender-eletronica"
                 element={<WhyLearnElectronics />}
+              />
+
+              <Route
+                path="eletronica-digital/portas-logicas"
+                element={<LogicGates />}
               />
 
               <Route
