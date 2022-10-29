@@ -1,0 +1,81 @@
+import Table, { ColumnsType } from 'antd/lib/table';
+import { TwoInputGate } from '../../../store/application/types';
+import norGateAnsi from '../../../images/nor-gate-ansi.png';
+import norGateIec from '../../../images/nor-gate-iec.png';
+
+export const NorGate = (): JSX.Element => {
+  const columns: ColumnsType<Object> = [
+    {
+      title: 'Entradas',
+      children: [
+        { title: 'A', dataIndex: 'inputA', align: 'center' },
+        { title: 'B', dataIndex: 'inputB', align: 'center' },
+      ],
+      align: 'center',
+    },
+    {
+      title: 'Saída',
+      children: [{ title: 'Q', dataIndex: 'outputQ', align: 'center' }],
+      align: 'center',
+    },
+  ];
+
+  const dataSource: TwoInputGate[] = [
+    { inputA: 0, inputB: 0, outputQ: 1 },
+    { inputA: 0, inputB: 1, outputQ: 0 },
+    { inputA: 1, inputB: 0, outputQ: 0 },
+    { inputA: 1, inputB: 1, outputQ: 0 },
+  ];
+
+  return (
+    <div className="site-content-wrapper">
+      <h1>Porta Lógica NOR</h1>
+      <div className="site-content">
+        <p>
+          Uma porta NOR é na verdade, uma porta OR com sua saída sempre
+          invertida. Com isso, temos que, em uma porta NOR, a saída um se todas
+          as suas entradas forem iguais a zero.
+        </p>
+        <p>Simbologia no padrão ANSI:</p>
+        <div className="site-image">
+          <img
+            src={norGateAnsi}
+            className="logic-gate-symbol-image"
+            alt="Simbologia da porta lógica NOR no padrão ANSI"
+          />
+        </div>
+        <p>Simbologia no padrão IEC:</p>
+        <div className="site-image">
+          <img
+            src={norGateIec}
+            className="logic-gate-symbol-image"
+            alt="Simbologia da porta lógica NOR no padrão IEC"
+          />
+        </div>
+        <p>Tabela verdade para uma porta NOR de duas entradas:</p>
+        <div className="flex-center-column">
+          <Table
+            columns={columns}
+            bordered
+            size="middle"
+            dataSource={dataSource}
+            pagination={false}
+          />
+        </div>
+        <p>Expressão lógica:</p>
+        <div className="flex-center-column">
+          <span className="logic-expression">????????</span>
+        </div>
+        <p>Lê-se: a saída Q é igual a A não-ou B.</p>
+        <p>Porta lógica OR interativa:</p>
+        <div className="flex-center-column">
+          <iframe
+            title="two-input-nor-gate"
+            src="https://circuitverse.org/simulator/embed/nor-gate-7e5d2b61-74dc-4496-a8f1-02a1fe8a9129"
+            className="circuit-frame"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};

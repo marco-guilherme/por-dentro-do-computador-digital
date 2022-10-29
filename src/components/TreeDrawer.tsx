@@ -1,4 +1,4 @@
-import { Tree, Drawer, Button } from 'antd';
+import { Tree, Drawer } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { ApplicationActionType } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
@@ -39,6 +39,7 @@ export const TreeDrawer = (): JSX.Element => {
             { title: 'Eletrônica Digital', key: '0-0-3', children: [] },
             { title: 'Componentes Eletrônicos', key: '0-0-4', children: [] },
           ],
+          selectable: false,
         },
         {
           title: 'Portas Lógicas',
@@ -49,9 +50,40 @@ export const TreeDrawer = (): JSX.Element => {
               key: '/aulas/eletronica-digital/portas-logicas/porta-and',
               children: [],
             },
+            {
+              title: 'Porta OR',
+              key: '/aulas/eletronica-digital/portas-logicas/porta-or',
+              children: [],
+            },
+            {
+              title: 'Porta NOT',
+              key: '/aulas/eletronica-digital/portas-logicas/porta-not',
+              children: [],
+            },
+            {
+              title: 'Porta XOR',
+              key: '/aulas/eletronica-digital/portas-logicas/porta-xor',
+              children: [],
+            },
+            {
+              title: 'Porta XNOR',
+              key: '/aulas/eletronica-digital/portas-logicas/porta-xnor',
+              children: [],
+            },
+            {
+              title: 'Porta NAND',
+              key: '/aulas/eletronica-digital/portas-logicas/porta-nand',
+              children: [],
+            },
+            {
+              title: 'Porta NOR',
+              key: '/aulas/eletronica-digital/portas-logicas/porta-nor',
+              children: [],
+            },
           ],
         },
       ],
+      selectable: false,
     },
     {
       title: 'Linguagem Assembly x16',
@@ -59,6 +91,7 @@ export const TreeDrawer = (): JSX.Element => {
       children: [
         { title: 'Sobre a Linguagem Assembly', key: '1-0', children: [] },
       ],
+      selectable: false,
     },
   ];
 
