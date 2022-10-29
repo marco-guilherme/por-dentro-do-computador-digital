@@ -6,6 +6,7 @@
 
 div.body-content {
   padding-bottom: 6.25rem;
+  min-height: 85vh;
 }
 
 .header {
@@ -135,7 +136,7 @@ div.body-content {
 
 .site-content {
   margin-left: 3rem;
-  max-width: 90vw;
+  margin-right: 3rem;
   text-align: justify;
 
   p {
@@ -150,6 +151,27 @@ div.body-content {
   align-items: center;
 }
 
-.and-gate-symbol-image {
+.logic-gate-symbol-image {
   width: 40%;
+}
+
+.flex-center-column {
+  .ant-table-wrapper {
+    width: 50%;
+  }
+}
+
+.logic-expression {
+  font-family: Cambria Math;
+  font-size: 1.313rem;
+  font-style: italic;
+}
+
+.overbar {
+  border-top: 1px solid black;
+}
+
+.circuit-frame {
+  height: 40rem;
+  width: 70rem;
 }

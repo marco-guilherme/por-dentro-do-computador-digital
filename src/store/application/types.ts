@@ -13,4 +13,15 @@ interface SetDrawerVisibility {
   };
 }
 
+export type SingleInputGate = {
+  inputA: number;
+  outputQ: number;
+};
+
+export type TwoInputGate = {
+  inputA: number;
+  inputB: number;
+  outputQ: number;
+};
+
 export type ApplicationActionType = SetDrawerVisibility;
