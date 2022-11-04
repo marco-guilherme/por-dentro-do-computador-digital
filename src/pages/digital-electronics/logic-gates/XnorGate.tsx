@@ -2,6 +2,7 @@ import Table, { ColumnsType } from 'antd/lib/table';
 import { TwoInputGate } from '../../../store/application/types';
 import xnorGateAnsi from '../../../images/xnor-gate-ansi.png';
 import xnorGateIec from '../../../images/xnor-gate-iec.png';
+import Latex from 'react-latex';
 
 export const XnorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -64,8 +65,10 @@ export const XnorGate = (): JSX.Element => {
           />
         </div>
         <p>Expressão lógica:</p>
-        <div className="flex-center-column">
-          <span className="logic-expression">???????????????</span>
+        <div className="flex-center-column logic-expression">
+          <Latex>
+            {'$Q \\space = \\space \\overline{A \\space \\oplus \\space B}$'}
+          </Latex>
         </div>
         <p>Lê-se: a saída Q é igual a A não-ou-exclusivo B.</p>
         <p>Porta lógica XNOR interativa:</p>

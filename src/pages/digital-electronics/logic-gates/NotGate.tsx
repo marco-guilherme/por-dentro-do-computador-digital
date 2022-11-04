@@ -3,6 +3,7 @@ import { ColumnsType } from 'antd/lib/table';
 import { SingleInputGate } from '../../../store/application/types';
 import notGateAnsi from '../../../images/not-gate-ansi.png';
 import notGateIec from '../../../images/not-gate-iec.png';
+import Latex from 'react-latex';
 
 export const NotGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -60,10 +61,8 @@ export const NotGate = (): JSX.Element => {
           />
         </div>
         <p>Expressão lógica:</p>
-        <div className="flex-center-column">
-          <span className="logic-expression">
-            Q = <span className="overbar">A</span>
-          </span>
+        <div className="flex-center-column logic-expression">
+          <Latex>{'$Q \\space = \\space \\overline{A}$'}</Latex>
         </div>
         <p>
           Lê-se: a saída Q é igual a não A. Também podemos ler como: a saída Q é

@@ -1,4 +1,5 @@
 import Table, { ColumnsType } from 'antd/lib/table';
+import Latex from 'react-latex';
 import xorGateAnsi from '../../../images/xor-gate-ansi.png';
 import xorGateIec from '../../../images/xor-gate-iec.png';
 import { TwoInputGate } from '../../../store/application/types';
@@ -62,8 +63,8 @@ export const XorGate = (): JSX.Element => {
           />
         </div>
         <p>Expressão lógica:</p>
-        <div className="flex-center-column">
-          <span className="logic-expression">Q = A ⊕ B</span>
+        <div className="flex-center-column logic-expression">
+          <Latex>{'$Q \\space = \\space A \\space \\oplus \\space B$'}</Latex>
         </div>
         <p>Lê-se: a saída Q é igual a A ou-exclusivo B.</p>
         <p>Porta lógica XOR interativa:</p>
