@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { HashRouter, Outlet, Route, Routes } from 'react-router-dom';
 import { About } from './components/About';
 import { ASCIITable } from './components/ASCIITable';
 import { Content } from './pages/Content';
@@ -22,7 +22,7 @@ import { NorGate } from './pages/digital-electronics/logic-gates/NorGate';
 const App = (): JSX.Element => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route path="/" element={<Home />} />
@@ -76,7 +76,7 @@ const App = (): JSX.Element => {
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 };
