@@ -2,6 +2,7 @@ import Table, { ColumnsType } from 'antd/lib/table';
 import { TwoInputGate } from '../../../store/application/types';
 import norGateAnsi from '../../../images/nor-gate-ansi.png';
 import norGateIec from '../../../images/nor-gate-iec.png';
+import Latex from 'react-latex';
 
 export const NorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -63,8 +64,10 @@ export const NorGate = (): JSX.Element => {
           />
         </div>
         <p>Expressão lógica:</p>
-        <div className="flex-center-column">
-          <span className="logic-expression">????????</span>
+        <div className="flex-center-column logic-expression">
+          <Latex>
+            {'$Q \\space = \\space \\overline{A \\space + \\space B}$'}
+          </Latex>
         </div>
         <p>Lê-se: a saída Q é igual a A não-ou B.</p>
         <p>Porta lógica OR interativa:</p>

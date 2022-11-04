@@ -3,6 +3,7 @@ import { ColumnsType } from 'antd/lib/table';
 import { TwoInputGate } from '../../../store/application/types';
 import orGateAnsi from '../../../images/or-gate-ansi.png';
 import orGateIec from '../../../images/or-gate-iec.png';
+import Latex from 'react-latex';
 
 export const OrGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -63,8 +64,8 @@ export const OrGate = (): JSX.Element => {
           />
         </div>
         <p>Expressão lógica:</p>
-        <div className="flex-center-column">
-          <span className="logic-expression">Q = A + B</span>
+        <div className="flex-center-column logic-expression">
+          <Latex>{'$Q \\space = \\space A \\space + \\space B$'}</Latex>
         </div>
         <p>Lê-se: a saída Q é igual a A ou B.</p>
         <p>

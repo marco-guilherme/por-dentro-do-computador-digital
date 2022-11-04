@@ -1,5 +1,6 @@
 import { Table } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
+import Latex from 'react-latex';
 import andGateAnsi from '../../../images/and-gate-ansi.png';
 import andGateIec from '../../../images/and-gate-iec.png';
 import { TwoInputGate } from '../../../store/application/types';
@@ -63,8 +64,8 @@ export const AndGate = (): JSX.Element => {
           />
         </div>
         <p>Expressão lógica:</p>
-        <div className="flex-center-column">
-          <span className="logic-expression">Q = A . B</span>
+        <div className="flex-center-column logic-expression">
+          <Latex>{'$Q \\space = \\space A \\space . \\space B$'}</Latex>
         </div>
         <p>Lê-se: a saída Q é igual a A e B.</p>
         <p>
