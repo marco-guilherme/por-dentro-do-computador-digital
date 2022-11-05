@@ -30,15 +30,72 @@ export const ASCIITable = (): JSX.Element => {
     },
   ];
 
-  const dataSource: ASCIICharacter[] = [
-    {
-      decimal: '65',
-      hexadecimal: '41',
-      binary: '01000001',
-      octal: '101',
-      character: 'A',
-    },
-  ];
+  const generateAsciiTable = (): ASCIICharacter[] => {
+    const numberOfTableRows = 128;
+    let tableRows: ASCIICharacter[] = [];
+    const controlCharactersRepresentation: string[] = [
+      '[NULL]',
+      '[START OF HEADING]',
+      '[START OF TEXT]',
+      '[END OF TEXT]',
+      '[END OF TRANSMISSION]',
+      '[ENQUIRY]',
+      '[ACKNOWLEDGE]',
+      '[BELL]',
+      '[BACKSPACE]',
+      '[HORIZONTAL TAB]',
+      '[LINE FEED]',
+      '[VERTICAL TAB]',
+      '[FORM FEED]',
+      '[CARRIAGE RETURN]',
+      '[SHIFT OUT]',
+      '[SHIFT IN]',
+      '[DATA LINK ESCAPE]',
+      '[DEVIE CONTROL 1]',
+      '[DEVIE CONTROL 2]',
+      '[DEVIE CONTROL 3]',
+      '[DEVIE CONTROL 4]',
+      '[NEGATIVE ACKNOWLEDGE]',
+      '[SYNCHRONOUS IDLE]',
+      '[END OF TRANSMISSION BLOCK]',
+      '[CANCEL]',
+      '[END OF MEDIUM]',
+      '[SUBSTITUTE]',
+      '[ESCAPE]',
+      '[FILE SEPARATOR]',
+      '[GROUP SEPARATOR]',
+      '[RECORD SEPARATOR]',
+      '[UNIT SEPARATOR]',
+      '[SPACE]',
+      '[DEL]',
+    ];
+
+    for (let i: number = 0; i < numberOfTableRows; i++) {
+      let characterRepresentation: string = '';
+
+      if (i >= 0 && i <= 32) {
+        characterRepresentation = controlCharactersRepresentation[i];
+      } else if (i === 127) {
+        characterRepresentation =
+          controlCharactersRepresentation[
+            controlCharactersRepresentation.length - 1
+          ];
+      } else {
+        characterRepresentation = String.fromCharCode(i);
+      }
+
+      tableRows.push({
+        key: i,
+        decimal: i,
+        hexadecimal: Number(i).toString(16).toUpperCase().padStart(2, '0'),
+        binary: Number(i).toString(2).padStart(7, '0'),
+        octal: Number(i).toString(8),
+        character: characterRepresentation,
+      });
+    }
+
+    return tableRows;
+  };
 
   return (
     <div className="site-content-wrapper">
@@ -82,8 +139,15 @@ export const ASCIITable = (): JSX.Element => {
             columns={columns}
             bordered
             size="middle"
-            dataSource={dataSource}
+            dataSource={generateAsciiTable()}
             pagination={false}
+            onRow={(record, rowIndex) => {
+              return {
+                onClick: event => {
+                  console.log(event);
+                },
+              };
+            }}
           />
         </div>
         <br />
@@ -98,13 +162,24 @@ export const ASCIITable = (): JSX.Element => {
           diversos caracteres em dispositivos eletrônicos utilizando a
           codificação apropriada.
         </p>
+        <br />
+        <h2>Caracteres Imprimíveis</h2>
         <p>
           A maior parte da tabela ASCII é composta por{' '}
           <span className="bold-text">caracteres imprimíveis</span> (ou{' '}
           <span className="italic-text">printable characters</span> em inglês).
-          Os caracteres imprimíveis são visuais (letras, números e símbolos),
-          diferente dos{' '}
-          <span className="bold-text">caracteres de controle</span>.
+          Os caracteres imprimíveis são visuais (letras, números e símbolos).
+        </p>
+        <br />
+        <h2>Caracteres de Controle</h2>
+        <p>
+          Os 32 primeiros códigos ASCII (números de 0 a 31 em decimal) são
+          reservados para os caracteres de controle, assim como o último (número
+          127 em decimal). Os caracteres de controle são códigos que ao
+          contrário dos caracteres imprimíveis, não possuem uma representação
+          visual, pois o intuito é controlar dispositivos (como impressoras) que
+          fazem uso do ASCII ou fornecer meta-informações sobre fluxos de dados
+          como aqueles armazenados em fita magnéticas.
         </p>
       </div>
     </div>

@@ -27,7 +27,8 @@ export type TwoInputGate = {
 };
 
 export type ASCIICharacter = {
-  decimal: string;
+  key: number;
+  decimal: string | number;
   hexadecimal: string;
   binary: string;
   octal: string;
