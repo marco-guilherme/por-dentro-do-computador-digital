@@ -22,10 +22,10 @@ export const NorGate = (): JSX.Element => {
   ];
 
   const dataSource: TwoInputGate[] = [
-    { inputA: 0, inputB: 0, outputQ: 1 },
-    { inputA: 0, inputB: 1, outputQ: 0 },
-    { inputA: 1, inputB: 0, outputQ: 0 },
-    { inputA: 1, inputB: 1, outputQ: 0 },
+    { key: 1, inputA: 0, inputB: 0, outputQ: 1 },
+    { key: 2, inputA: 0, inputB: 1, outputQ: 0 },
+    { key: 3, inputA: 1, inputB: 0, outputQ: 0 },
+    { key: 4, inputA: 1, inputB: 1, outputQ: 0 },
   ];
 
   return (
@@ -56,6 +56,7 @@ export const NorGate = (): JSX.Element => {
         <p>Tabela verdade para uma porta NOR de duas entradas:</p>
         <div className="flex-center-column">
           <Table
+            rowClassName={'truth-table-row'}
             columns={columns}
             bordered
             size="middle"

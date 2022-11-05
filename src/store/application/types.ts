@@ -14,14 +14,24 @@ interface SetDrawerVisibility {
 }
 
 export type SingleInputGate = {
+  key: number;
   inputA: number;
   outputQ: number;
 };
 
 export type TwoInputGate = {
+  key: number;
   inputA: number;
   inputB: number;
   outputQ: number;
+};
+
+export type ASCIICharacter = {
+  decimal: string;
+  hexadecimal: string;
+  binary: string;
+  octal: string;
+  character: string;
 };
 
 export type ApplicationActionType = SetDrawerVisibility;
