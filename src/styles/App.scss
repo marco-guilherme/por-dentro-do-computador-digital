@@ -287,6 +287,7 @@ table {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  row-gap: 10rem;
 }
 
 .grid-container-homepage-item {
@@ -298,5 +299,20 @@ table {
 }
 
 .grid-container-homepage-item-icon {
-  width: 30%;
+  width: 100%;
+}
+
+.grid-container-homepage-item-icon-wrapper {
+  width: 20rem;
+  height: 20rem;
+  padding: 2rem;
+}
+
+.grid-container-homepage-item-text-wrapper {
+  width: 70%;
+
+  p {
+    text-align: justify;
+    font-size: 1.188rem;
+  }
 }
