@@ -137,7 +137,7 @@ export const ASCIITable = (): JSX.Element => {
           o decimal, binário, hexadecimal, octal etc. Essa codificação possui{' '}
           <span className="underline-text">sete</span> bits de larguras.
         </p>
-        <p>Segue abaixo -a tabela ASCII:</p>
+        <p>Segue abaixo a tabela ASCII:</p>
         <div className="flex-center-column">
           <Table
             rowClassName={'ascii-table-row'}

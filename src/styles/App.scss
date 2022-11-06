@@ -283,15 +283,20 @@ table {
   }
 }
 
+.homepage-grid-wrapper {
+  padding: 3rem;
+}
+
 .grid-container-homepage {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  row-gap: 10rem;
+  row-gap: 2rem;
+  width: 90vw;
 }
 
 .grid-container-homepage-item {
-  height: 30rem;
+  height: 35rem;
 
   h4 {
     font-size: 1.7rem;
@@ -315,4 +320,16 @@ table {
     text-align: justify;
     font-size: 1.188rem;
   }
+}
+
+.eight-bit-computer-image {
+  text-align: center;
+
+  img {
+    width: 60%;
+  }
+}
+
+.assembly-funny {
+  width: 40%;
 }
