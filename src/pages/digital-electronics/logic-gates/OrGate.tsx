@@ -23,10 +23,10 @@ export const OrGate = (): JSX.Element => {
   ];
 
   const dataSource: TwoInputGate[] = [
-    { inputA: 0, inputB: 0, outputQ: 0 },
-    { inputA: 0, inputB: 1, outputQ: 1 },
-    { inputA: 1, inputB: 0, outputQ: 1 },
-    { inputA: 1, inputB: 1, outputQ: 1 },
+    { key: 1, inputA: 0, inputB: 0, outputQ: 0 },
+    { key: 2, inputA: 0, inputB: 1, outputQ: 1 },
+    { key: 3, inputA: 1, inputB: 0, outputQ: 1 },
+    { key: 4, inputA: 1, inputB: 1, outputQ: 1 },
   ];
 
   return (
@@ -56,6 +56,7 @@ export const OrGate = (): JSX.Element => {
         <p>Tabela verdade para uma porta OR de duas entradas:</p>
         <div className="flex-center-column">
           <Table
+            rowClassName={'truth-table-row'}
             columns={columns}
             bordered
             size="middle"

@@ -20,8 +20,8 @@ export const NotGate = (): JSX.Element => {
   ];
 
   const dataSource: SingleInputGate[] = [
-    { inputA: 0, outputQ: 1 },
-    { inputA: 1, outputQ: 0 },
+    { key: 1, inputA: 0, outputQ: 1 },
+    { key: 2, inputA: 1, outputQ: 0 },
   ];
 
   return (
@@ -53,6 +53,7 @@ export const NotGate = (): JSX.Element => {
         <p>Tabela verdade da porta lógica NOT:</p>
         <div className="flex-center-column">
           <Table
+            rowClassName={'truth-table-row'}
             columns={columns}
             bordered
             size="middle"

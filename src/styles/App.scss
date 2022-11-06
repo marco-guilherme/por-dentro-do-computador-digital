@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Consolas';
+  src: url(../fonts/consola.ttf) format('truetype');
+}
+
 #wrapper {
   min-height: 100%;
   height: 100vh;
@@ -110,6 +115,7 @@ div.body-content {
 
 #open-drawer-icon {
   padding-right: 1rem;
+  cursor: pointer;
 
   svg {
     height: 2.188rem;
@@ -131,6 +137,12 @@ div.body-content {
     align-items: center;
     font-weight: 700;
     font-size: 3rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
   }
 }
 
@@ -168,4 +180,54 @@ div.body-content {
 .circuit-frame {
   height: 40rem;
   width: 70rem;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+.foo {
+  border-color: black !important;
+}
+.ant-table-cell {
+  font-size: 1.313rem;
+}
+
+.ant-table-container,
+.ant-table-cell,
+table {
+  border-color: black !important;
+}
+
+.truth-table-row,
+.ascii-table-row,
+.monospaced-snippet {
+  font-family: 'Consolas', monospace;
+}
+
+.ascii-table-decimal-column {
+  color: rgb(0, 0, 156);
+}
+
+.ascii-table-hexadecimal-column {
+  color: rgb(107, 0, 0);
+}
+
+.ascii-table-binary-column {
+  color: green;
+}
+
+.ascii-table-octal-column {
+  color: rgb(95, 1, 95);
+}
+
+.ascii-table-character-column {
+  color: rgb(17, 139, 177);
 }
