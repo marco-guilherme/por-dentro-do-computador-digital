@@ -7,26 +7,31 @@ export const ASCIITable = (): JSX.Element => {
       title: 'Decimal',
       align: 'center',
       dataIndex: 'decimal',
+      className: 'ascii-table-decimal-column',
     },
     {
       title: 'Hexadecimal',
       align: 'center',
       dataIndex: 'hexadecimal',
+      className: 'ascii-table-hexadecimal-column',
     },
     {
       title: 'Binário',
       align: 'center',
       dataIndex: 'binary',
+      className: 'ascii-table-binary-column',
     },
     {
       title: 'Octal',
       align: 'center',
       dataIndex: 'octal',
+      className: 'ascii-table-octal-column',
     },
     {
       title: 'Caractere',
       align: 'center',
       dataIndex: 'character',
+      className: 'ascii-table-character-column',
     },
   ];
 
@@ -51,10 +56,10 @@ export const ASCIITable = (): JSX.Element => {
       '[SHIFT OUT]',
       '[SHIFT IN]',
       '[DATA LINK ESCAPE]',
-      '[DEVIE CONTROL 1]',
-      '[DEVIE CONTROL 2]',
-      '[DEVIE CONTROL 3]',
-      '[DEVIE CONTROL 4]',
+      '[DEVICE CONTROL 1]',
+      '[DEVICE CONTROL 2]',
+      '[DEVICE CONTROL 3]',
+      '[DEVICE CONTROL 4]',
       '[NEGATIVE ACKNOWLEDGE]',
       '[SYNCHRONOUS IDLE]',
       '[END OF TRANSMISSION BLOCK]',
@@ -132,7 +137,7 @@ export const ASCIITable = (): JSX.Element => {
           o decimal, binário, hexadecimal, octal etc. Essa codificação possui{' '}
           <span className="underline-text">sete</span> bits de larguras.
         </p>
-        <p>Segue a tabela ASCII abaixo:</p>
+        <p>Segue abaixo -a tabela ASCII:</p>
         <div className="flex-center-column">
           <Table
             rowClassName={'ascii-table-row'}
@@ -141,26 +146,31 @@ export const ASCIITable = (): JSX.Element => {
             size="middle"
             dataSource={generateAsciiTable()}
             pagination={false}
-            onRow={(record, rowIndex) => {
-              return {
-                onClick: event => {
-                  console.log(event);
-                },
-              };
-            }}
           />
         </div>
         <br />
         <p>
-          Por exemplo, a letra C maiúscula é representada por 1000011 (7 bits)
-          em binário, 67 em decimal, 43 em hexadecimal e 103 em octal. O seu
-          computador não faz a mínima ideia do que é a letra C, mas ele sabe
-          muito bem o que é 1000011.
+          Por exemplo, a letra <span className="monospaced-snippet">C</span>{' '}
+          maiúscula é representada por{' '}
+          <span className="monospaced-snippet">1000011</span> (7 bits) em
+          binário, <span className="monospaced-snippet">67</span> em decimal,{' '}
+          <span className="monospaced-snippet">43</span> em hexadecimal e{' '}
+          <span className="monospaced-snippet">103</span> em octal. O seu
+          computador não faz a mínima ideia do que é a letra{' '}
+          <span className="monospaced-snippet">C</span>, mas ele sabe muito bem
+          o que é <span className="monospaced-snippet">1000011</span>.
         </p>
         <p>
           Okay, mas qual é a utilidade dessa tabela? Simples! Poder representar
           diversos caracteres em dispositivos eletrônicos utilizando a
           codificação apropriada.
+        </p>
+        <p>
+          Podemos agrupar esses 128 caracteres em dois grupos principais:{' '}
+          <span className="underline-text">
+            caracteres imprimíveis e caracteres de controle
+          </span>
+          .
         </p>
         <br />
         <h2>Caracteres Imprimíveis</h2>
@@ -168,18 +178,39 @@ export const ASCIITable = (): JSX.Element => {
           A maior parte da tabela ASCII é composta por{' '}
           <span className="bold-text">caracteres imprimíveis</span> (ou{' '}
           <span className="italic-text">printable characters</span> em inglês).
-          Os caracteres imprimíveis são visuais (letras, números e símbolos).
+          Os caracteres imprimíveis são visuais, i.e.:{' '}
+          <span className="underline-text">letras, números e símbolos</span>.
+          Ainda voltando ao exemplo da letra{' '}
+          <span className="monospaced-snippet">C</span>, ela é considerada um
+          caractere imprimível. Já o caractere{' '}
+          <span className="monospaced-snippet">0A</span> é considerado um
+          caractere de controle. Veremos a seguir o porquê.
         </p>
         <br />
         <h2>Caracteres de Controle</h2>
         <p>
           Os 32 primeiros códigos ASCII (números de 0 a 31 em decimal) são
-          reservados para os caracteres de controle, assim como o último (número
-          127 em decimal). Os caracteres de controle são códigos que ao
-          contrário dos caracteres imprimíveis, não possuem uma representação
-          visual, pois o intuito é controlar dispositivos (como impressoras) que
-          fazem uso do ASCII ou fornecer meta-informações sobre fluxos de dados
-          como aqueles armazenados em fita magnéticas.
+          reservados para os{' '}
+          <span className="bold-text">caracteres de controle</span> (ou{' '}
+          <span className="italic-text">control characters</span> em inglês),
+          assim como o último (número 127 em decimal). Os caracteres de controle
+          são códigos que ao contrário dos caracteres imprimíveis, não possuem
+          necessariamente uma representação visual, pois{' '}
+          <span className="underline-text">
+            o intuito é controlar dispositivos
+          </span>{' '}
+          (como impressoras) que fazem uso do ASCII ou fornecer meta-informações
+          sobre fluxos de dados como aqueles armazenados em fita magnéticas.
+        </p>
+        <p>
+          Por exemplo, o caractre <span className="monospaced-snippet">0A</span>{' '}
+          representa a função "line feed", que gera uma quebra de linha. Na
+          linguagem C, o caractere{' '}
+          <span className="monospaced-snippet">0A</span> é representado pela
+          sequência de escape "<span className="monospaced-snippet">\n</span>" e
+          ao tentar exibir esse caractere no console (utilizando alguma função
+          como o <span className="monospaced-snippet">printf</span>), uma quebra
+          de linha entre o texto será gerada.
         </p>
       </div>
     </div>

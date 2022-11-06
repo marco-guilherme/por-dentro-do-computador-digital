@@ -115,6 +115,7 @@ div.body-content {
 
 #open-drawer-icon {
   padding-right: 1rem;
+  cursor: pointer;
 
   svg {
     height: 2.188rem;
@@ -206,6 +207,27 @@ table {
 }
 
 .truth-table-row,
-.ascii-table-row {
+.ascii-table-row,
+.monospaced-snippet {
   font-family: 'Consolas', monospace;
+}
+
+.ascii-table-decimal-column {
+  color: rgb(0, 0, 156);
+}
+
+.ascii-table-hexadecimal-column {
+  color: rgb(107, 0, 0);
+}
+
+.ascii-table-binary-column {
+  color: green;
+}
+
+.ascii-table-octal-column {
+  color: rgb(95, 1, 95);
+}
+
+.ascii-table-character-column {
+  color: rgb(17, 139, 177);
 }
