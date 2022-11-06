@@ -85,6 +85,13 @@ export const AndGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-two-input-and-gate"
+            src="https://www.tinkercad.com/embed/eO7ZXmNGCt1"
+            className="circuit-frame"
+          />
+        </div>
       </div>
     </div>
   );

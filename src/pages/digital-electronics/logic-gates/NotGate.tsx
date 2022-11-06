@@ -77,6 +77,13 @@ export const NotGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-not-gate"
+            src="https://www.tinkercad.com/embed/7RVdKySnyUV?editbtn=1"
+            className="circuit-frame"
+          />
+        </div>
       </div>
     </div>
   );

@@ -76,6 +76,13 @@ export const XorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-two-input-xor-gate"
+            src="https://www.tinkercad.com/embed/4Nr6eZxRQCH?editbtn=1"
+            className="circuit-frame"
+          />
+        </div>
       </div>
     </div>
   );

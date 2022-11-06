@@ -83,6 +83,13 @@ export const OrGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-two-input-or-gate"
+            src="https://www.tinkercad.com/embed/9Xq4DPq1vLp?editbtn=1"
+            className="circuit-frame"
+          />
+        </div>
       </div>
     </div>
   );

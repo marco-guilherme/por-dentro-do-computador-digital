@@ -79,6 +79,13 @@ export const NandGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-two-input-nand-gate"
+            src="https://www.tinkercad.com/embed/2D4nqsdrZfj?editbtn=1"
+            className="circuit-frame"
+          />
+        </div>
       </div>
     </div>
   );

@@ -79,6 +79,13 @@ export const NorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-two-input-nor-gate"
+            src="https://www.tinkercad.com/embed/cRgJkIV4g8O?editbtn=1"
+            className="circuit-frame"
+          />
+        </div>
       </div>
     </div>
   );

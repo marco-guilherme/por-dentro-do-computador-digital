@@ -80,6 +80,13 @@ export const XnorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-two-input-xnor-gate"
+            src="https://www.tinkercad.com/embed/7O4UNaIaxRk?editbtn=1"
+            className="circuit-frame"
+          />
+        </div>
       </div>
     </div>
   );
