@@ -2,6 +2,8 @@ import Table, { ColumnsType } from 'antd/lib/table';
 import { TwoInputGate } from '../../../store/application/types';
 import xnorGateAnsi from '../../../images/xnor-gate-ansi.png';
 import xnorGateIec from '../../../images/xnor-gate-iec.png';
+import xnorGateDin from '../../../images/xnor-gate-din.png';
+import xnorGateDin2 from '../../../images/xnor-gate-din-2.png';
 import Latex from 'react-latex';
 
 export const XnorGate = (): JSX.Element => {
@@ -34,9 +36,13 @@ export const XnorGate = (): JSX.Element => {
       <div className="site-content">
         <p>
           Uma porta XNOR é na verdade, uma porta XOR com sua saída sempre
-          invertida. Com isso, temos que, em uma porta XNOR com duas ou mais
-          entradas, a saída só será 1 se houver uma quantidade par de 1's nas
-          entradas (considere zero como par).
+          invertida. Com isso, temos que, em uma porta XNOR com{' '}
+          <span className="underline-text">duas ou mais entradas</span>
+          entradas, a saída só será 1 se houver uma{' '}
+          <span className="underline-text">
+            quantidade par de 1's nas entradas (considere zero como par)
+          </span>
+          .
         </p>
         <p>Simbologia no padrão ANSI:</p>
         <div className="site-image">
@@ -52,6 +58,22 @@ export const XnorGate = (): JSX.Element => {
             src={xnorGateIec}
             className="logic-gate-symbol-image"
             alt="Simbologia da porta lógica XNOR no padrão IEC"
+          />
+        </div>
+        <p>Simbologia no padrão DIN:</p>
+        <div className="site-image">
+          <img
+            src={xnorGateDin}
+            className="logic-gate-symbol-image"
+            alt="Simbologia da porta lógica XNOR no padrão DIN"
+          />
+        </div>
+        <p>Simbologia alternativa no padrão DIN:</p>
+        <div className="site-image">
+          <img
+            src={xnorGateDin2}
+            className="logic-gate-symbol-image"
+            alt="Simbologia alternativa da porta lógica XNOR no padrão DIN"
           />
         </div>
         <p>Tabela verdade para uma porta XNOR de duas entradas:</p>

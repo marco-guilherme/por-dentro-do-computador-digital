@@ -2,6 +2,7 @@ import Table, { ColumnsType } from 'antd/lib/table';
 import { TwoInputGate } from '../../../store/application/types';
 import norGateAnsi from '../../../images/nor-gate-ansi.png';
 import norGateIec from '../../../images/nor-gate-iec.png';
+import norGateDin from '../../../images/nor-gate-din.png';
 import Latex from 'react-latex';
 
 export const NorGate = (): JSX.Element => {
@@ -34,8 +35,11 @@ export const NorGate = (): JSX.Element => {
       <div className="site-content">
         <p>
           Uma porta NOR é na verdade, uma porta OR com sua saída sempre
-          invertida. Com isso, temos que, em uma porta NOR, a saída um se todas
-          as suas entradas forem iguais a zero.
+          invertida. Com isso, temos que, em uma porta NOR,{' '}
+          <span className="underline-text">
+            a saída um se todas as suas entradas forem iguais a zero
+          </span>
+          .
         </p>
         <p>Simbologia no padrão ANSI:</p>
         <div className="site-image">
@@ -51,6 +55,14 @@ export const NorGate = (): JSX.Element => {
             src={norGateIec}
             className="logic-gate-symbol-image"
             alt="Simbologia da porta lógica NOR no padrão IEC"
+          />
+        </div>
+        <p>Simbologia no padrão DIN:</p>
+        <div className="site-image">
+          <img
+            src={norGateDin}
+            className="logic-gate-symbol-image"
+            alt="Simbologia da porta lógica NOR no padrão DIN"
           />
         </div>
         <p>Tabela verdade para uma porta NOR de duas entradas:</p>

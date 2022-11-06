@@ -2,6 +2,7 @@ import Table, { ColumnsType } from 'antd/lib/table';
 import { TwoInputGate } from '../../../store/application/types';
 import nandGateAnsi from '../../../images/nand-gate-ansi.png';
 import nandGateIec from '../../../images/nand-gate-iec.png';
+import nandGateDin from '../../../images/nand-gate-din.png';
 import Latex from 'react-latex';
 
 export const NandGate = (): JSX.Element => {
@@ -34,8 +35,11 @@ export const NandGate = (): JSX.Element => {
       <div className="site-content">
         <p>
           Uma porta NAND é na verdade, uma porta AND com sua saída sempre
-          invertida. Com isso, temos que, em uma porta NAND, a saída só será
-          zero se todas as suas entradas forem iguais a um.
+          invertida. Com isso, temos que, em uma porta NAND,{' '}
+          <span className="underline-text">
+            a saída só será zero se todas as suas entradas forem iguais a um
+          </span>
+          .
         </p>
         <p>Simbologia no padrão ANSI:</p>
         <div className="site-image">
@@ -51,6 +55,14 @@ export const NandGate = (): JSX.Element => {
             src={nandGateIec}
             className="logic-gate-symbol-image"
             alt="Simbologia da porta lógica NAND no padrão IEC"
+          />
+        </div>
+        <p>Simbologia no padrão DIN:</p>
+        <div className="site-image">
+          <img
+            src={nandGateDin}
+            className="logic-gate-symbol-image"
+            alt="Simbologia da porta lógica NAND no padrão DIN"
           />
         </div>
         <p>Tabela verdade para uma porta AND de duas entradas:</p>
