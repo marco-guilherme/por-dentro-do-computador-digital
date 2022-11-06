@@ -3,6 +3,7 @@ import { ColumnsType } from 'antd/lib/table';
 import { TwoInputGate } from '../../../store/application/types';
 import orGateAnsi from '../../../images/or-gate-ansi.png';
 import orGateIec from '../../../images/or-gate-iec.png';
+import orGateDin from '../../../images/or-gate-din.png';
 import Latex from 'react-latex';
 
 export const OrGate = (): JSX.Element => {
@@ -34,8 +35,13 @@ export const OrGate = (): JSX.Element => {
       <h1>Porta Lógica OR</h1>
       <div className="site-content">
         <p>
-          Na porta OR, a saída será verdadeira se pelo menos uma das entradas
-          for verdadeira.
+          Na porta OR,{' '}
+          <span className="underline-text">
+            a saída será verdadeira se{' '}
+            <span className="bold-text">pelo menos uma</span> das entradas for
+            verdadeira
+          </span>
+          .
         </p>
         <p>Simbologia no padrão ANSI:</p>
         <div className="site-image">
@@ -51,6 +57,14 @@ export const OrGate = (): JSX.Element => {
             src={orGateIec}
             className="logic-gate-symbol-image"
             alt="Simbologia da porta lógica AND no padrão IEC"
+          />
+        </div>
+        <p>Simbologia no padrão DIN:</p>
+        <div className="site-image">
+          <img
+            src={orGateDin}
+            className="logic-gate-symbol-image"
+            alt="Simbologia da porta lógica OR no padrão DIN"
           />
         </div>
         <p>Tabela verdade para uma porta OR de duas entradas:</p>
@@ -80,6 +94,13 @@ export const OrGate = (): JSX.Element => {
           <iframe
             title="two-input-or-gate"
             src="https://circuitverse.org/simulator/embed/or-gate-478e4150-bd2b-46eb-babb-b027250ef4fd"
+            className="circuit-frame"
+          />
+        </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-two-input-or-gate"
+            src="https://www.tinkercad.com/embed/9Xq4DPq1vLp?editbtn=1"
             className="circuit-frame"
           />
         </div>

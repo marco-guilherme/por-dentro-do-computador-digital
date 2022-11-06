@@ -2,6 +2,8 @@ import Table, { ColumnsType } from 'antd/lib/table';
 import Latex from 'react-latex';
 import xorGateAnsi from '../../../images/xor-gate-ansi.png';
 import xorGateIec from '../../../images/xor-gate-iec.png';
+import xorGateDin from '../../../images/xor-gate-din.png';
+import xorGateDin2 from '../../../images/xor-gate-din-2.png';
 import { TwoInputGate } from '../../../store/application/types';
 
 export const XorGate = (): JSX.Element => {
@@ -33,8 +35,13 @@ export const XorGate = (): JSX.Element => {
       <h1>Porta Lógica XOR</h1>
       <div className="site-content">
         <p>
-          Em uma porta XOR com duas ou mais entradas, a saída só será 1 se
-          houver uma quantidade ímpar de 1's nas entradas.
+          Em uma porta XOR com{' '}
+          <span className="underline-text">duas ou mais entradas</span>, a saída
+          só será 1 se houver uma{' '}
+          <span className="underline-text">
+            quantidade ímpar de 1's nas entradas
+          </span>
+          .
         </p>
         <p>Simbologia no padrão ANSI:</p>
         <div className="site-image">
@@ -50,6 +57,22 @@ export const XorGate = (): JSX.Element => {
             src={xorGateIec}
             className="logic-gate-symbol-image"
             alt="Simbologia da porta lógica XOR no padrão IEC"
+          />
+        </div>
+        <p>Simbologia no padrão DIN:</p>
+        <div className="site-image">
+          <img
+            src={xorGateDin}
+            className="logic-gate-symbol-image"
+            alt="Simbologia da porta lógica XOR no padrão DIN"
+          />
+        </div>
+        <p>Simbologia alternativa no padrão DIN:</p>
+        <div className="site-image">
+          <img
+            src={xorGateDin2}
+            className="logic-gate-symbol-image"
+            alt="Simbologia alternativa da porta lógica AND no padrão DIN"
           />
         </div>
         <p>Tabela verdade para uma porta XOR de duas entradas:</p>
@@ -73,6 +96,13 @@ export const XorGate = (): JSX.Element => {
           <iframe
             title="two-input-xor-gate"
             src="https://circuitverse.org/simulator/embed/xor-gate-3ed6be09-0bd5-4eec-8135-fdf33d6df9c8"
+            className="circuit-frame"
+          />
+        </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-two-input-xor-gate"
+            src="https://www.tinkercad.com/embed/4Nr6eZxRQCH?editbtn=1"
             className="circuit-frame"
           />
         </div>

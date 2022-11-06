@@ -3,6 +3,7 @@ import { ColumnsType } from 'antd/lib/table';
 import { SingleInputGate } from '../../../store/application/types';
 import notGateAnsi from '../../../images/not-gate-ansi.png';
 import notGateIec from '../../../images/not-gate-iec.png';
+import notGateDin from '../../../images/not-gate-din.png';
 import Latex from 'react-latex';
 
 export const NotGate = (): JSX.Element => {
@@ -29,10 +30,15 @@ export const NotGate = (): JSX.Element => {
       <h1>Porta Lógica NOT</h1>
       <div className="site-content">
         <p>
-          A porta NOT (também chamada de porta inversora) possui uma entrada e
-          uma saída. O nível lógico na saída sempre será igual ao contrário da
-          entrada. E.g., se a entrada estiver em nível lógico alto, a saída
-          estará em nível lógico baixo, e vice-versa.
+          A porta NOT (também chamada de{' '}
+          <span className="bold-text">porta inversora</span>) possui uma entrada
+          e uma saída.{' '}
+          <span className="underline-text">
+            O nível lógico na saída sempre será igual ao contrário do nível
+            lógico da entrada
+          </span>
+          . E.g., se a entrada estiver em nível lógico alto, a saída estará em
+          nível lógico baixo, e vice-versa.
         </p>
         <p>Simbologia no padrão ANSI:</p>
         <div className="site-image">
@@ -48,6 +54,14 @@ export const NotGate = (): JSX.Element => {
             src={notGateIec}
             className="logic-gate-symbol-image"
             alt="Simbologia da porta lógica AND no padrão IEC"
+          />
+        </div>
+        <p>Simbologia no padrão DIN:</p>
+        <div className="site-image">
+          <img
+            src={notGateDin}
+            className="logic-gate-symbol-image"
+            alt="Simbologia da porta lógica NOT no padrão DIN"
           />
         </div>
         <p>Tabela verdade da porta lógica NOT:</p>
@@ -74,6 +88,13 @@ export const NotGate = (): JSX.Element => {
           <iframe
             title="two-input-or-gate"
             src="https://circuitverse.org/simulator/embed/not-gate-4790ded4-3bb0-42d1-9120-e3726bb29174"
+            className="circuit-frame"
+          />
+        </div>
+        <div className="space-around flex-center-column">
+          <iframe
+            title="tinkercad-not-gate"
+            src="https://www.tinkercad.com/embed/7RVdKySnyUV?editbtn=1"
             className="circuit-frame"
           />
         </div>
