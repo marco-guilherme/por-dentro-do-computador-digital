@@ -198,10 +198,9 @@ div.body-content {
 .underline-text {
   text-decoration: underline;
 }
-.foo {
-  border-color: black !important;
-}
-.ant-table-cell {
+
+.ant-table-cell,
+.ant-list-item.page-list {
   font-size: 1.313rem;
 }
 
@@ -336,4 +335,17 @@ table {
 
 .space-around {
   padding: 4rem;
+}
+
+.book-icon {
+  height: 2.188rem;
+  width: 2.188rem;
+}
+
+.page-list {
+  cursor: pointer;
+
+  &:hover {
+    color: blue;
+  }
 }

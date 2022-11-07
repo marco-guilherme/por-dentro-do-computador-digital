@@ -4,7 +4,7 @@ import { ApplicationActionType } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import { Dispatch } from 'redux';
 import { setDrawerVisibility } from '../store/application/actions';
-import { useNavigate } from 'react-router-dom';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { Key } from 'rc-tree/lib/interface';
 
 export const TreeDrawer = (): JSX.Element => {
@@ -14,7 +14,7 @@ export const TreeDrawer = (): JSX.Element => {
 
   const dispatch: Dispatch<ApplicationActionType> = useDispatch();
 
-  const navigate = useNavigate();
+  const navigate: NavigateFunction = useNavigate();
 
   const treeData = [
     {

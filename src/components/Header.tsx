@@ -12,20 +12,20 @@ export const Header = (): JSX.Element => {
   return (
     <header className="header">
       <div className="header-logo-wrapper">
-        <img src={unipLogo} alt="logo" />
+        <img src={unipLogo} alt="Logotipo da Universidade Paulista" />
       </div>
 
       <nav>
-        <NavLink to="/inicio">
+        <NavLink className="header-item" to="/inicio">
           <span>Início</span>
         </NavLink>
-        <NavLink to="/aulas">
+        <NavLink className="header-item" to="/aulas">
           <span>Aulas</span>
         </NavLink>
-        <NavLink to="/ascii">
+        <NavLink className="header-item" to="/ascii">
           <span>ASCII</span>
         </NavLink>
-        <NavLink to="/sobre">
+        <NavLink className="header-item" to="/sobre">
           <span>Sobre</span>
         </NavLink>
       </nav>
