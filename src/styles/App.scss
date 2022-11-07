@@ -343,9 +343,15 @@ table {
 }
 
 .page-list {
+  font-size: 1.313rem;
   cursor: pointer;
 
   &:hover {
     color: blue;
   }
+}
+
+.horizontal-space {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }

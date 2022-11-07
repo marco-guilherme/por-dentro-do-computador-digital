@@ -126,7 +126,7 @@ export const Home = (): JSX.Element => {
         </figure>
       </div>
 
-      <br />
+      <div className="horizontal-space" />
 
       <h2>Por Que Aprender Assembly?</h2>
 

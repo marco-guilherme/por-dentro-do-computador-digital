@@ -76,8 +76,10 @@ export const Content = (): JSX.Element => {
           itemLayout="horizontal"
           dataSource={dataSource}
           renderItem={item => (
-            <List.Item className="page-list" onClick={() => navigate(item.url)}>
-              {item.title}
+            <List.Item>
+              <span className="page-list" onClick={() => navigate(item.url)}>
+                {item.title}
+              </span>
             </List.Item>
           )}
         />
