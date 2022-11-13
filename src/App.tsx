@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { HashRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { About } from './components/About';
 import { ASCIITable } from './components/ASCIITable';
 import { Content } from './components/Content';
@@ -25,7 +25,7 @@ const App = (): JSX.Element => {
       <HashRouter>
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Navigate to="/inicio" />} />
 
             <Route path="/inicio" element={<Home />} />
 

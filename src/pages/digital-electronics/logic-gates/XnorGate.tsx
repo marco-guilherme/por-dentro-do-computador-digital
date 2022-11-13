@@ -5,6 +5,7 @@ import xnorGateIec from '../../../images/xnor-gate-iec.png';
 import xnorGateDin from '../../../images/xnor-gate-din.png';
 import xnorGateDin2 from '../../../images/xnor-gate-din-2.png';
 import Latex from 'react-latex';
+import { PageInformation } from '../../../components/PageInformation';
 
 export const XnorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -109,6 +110,17 @@ export const XnorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="29/10/2022"
+        />
       </div>
     </div>
   );

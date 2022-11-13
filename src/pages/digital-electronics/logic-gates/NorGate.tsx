@@ -4,6 +4,7 @@ import norGateAnsi from '../../../images/nor-gate-ansi.png';
 import norGateIec from '../../../images/nor-gate-iec.png';
 import norGateDin from '../../../images/nor-gate-din.png';
 import Latex from 'react-latex';
+import { PageInformation } from '../../../components/PageInformation';
 
 export const NorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -98,6 +99,17 @@ export const NorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="29/10/2022"
+        />
       </div>
     </div>
   );

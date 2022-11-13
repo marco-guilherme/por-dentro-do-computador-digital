@@ -35,4 +35,11 @@ export type ASCIICharacter = {
   character: string;
 };
 
+export type VersionControl = {
+  key: number;
+  releaseDate: string;
+  version: string;
+  changes: string;
+};
+
 export type ApplicationActionType = SetDrawerVisibility;

@@ -1,3 +1,5 @@
+import { PageInformation } from '../../../components/PageInformation';
+
 export const LogicGates = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
@@ -10,15 +12,18 @@ export const LogicGates = (): JSX.Element => {
           codificadores e decodificadores, memórias etc.
         </p>
         <p>
-          Uma porta lógica (logic gate) é um circuito integrado que implementa
-          uma função booleana, i.e., uma operação lógica realizada entre uma ou
-          mais entradas digitais que produz uma única saída digital.
+          Uma porta lógica (ou <span className="italic-text">logic gate</span>{' '}
+          em inglês) é um{' '}
+          <span className="underline-text">circuito integrado</span> que
+          implementa uma função booleana, i.e., uma operação lógica realizada
+          entre uma ou mais entradas digitais que produz uma única saída
+          digital.
         </p>
         <p>
           As portas e circuitos lógicos podem ser representados por uma
           expressão lógica/booleana. Um circuito que implementa uma função
           booleana é chamado de porta lógica e pode ser graficamente
-          representado pela simbologia no padrão ANSI ou no padrão IEC.
+          representado pela simbologia no padrão ANSI, IEC ou DIN.
         </p>
         <p>
           Um típico circuito integrado de porta lógica contém quatro portas
@@ -37,6 +42,17 @@ export const LogicGates = (): JSX.Element => {
           NAND (NÃO-E) e NOR (NÃO-OU).
         </p>
         <p>Outros: buffer digital.</p>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="07/10/2022"
+        />
       </div>
     </div>
   );

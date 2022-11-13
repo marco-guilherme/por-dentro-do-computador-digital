@@ -5,6 +5,7 @@ import orGateAnsi from '../../../images/or-gate-ansi.png';
 import orGateIec from '../../../images/or-gate-iec.png';
 import orGateDin from '../../../images/or-gate-din.png';
 import Latex from 'react-latex';
+import { PageInformation } from '../../../components/PageInformation';
 
 export const OrGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -104,6 +105,17 @@ export const OrGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="29/10/2022"
+        />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import xorGateIec from '../../../images/xor-gate-iec.png';
 import xorGateDin from '../../../images/xor-gate-din.png';
 import xorGateDin2 from '../../../images/xor-gate-din-2.png';
 import { TwoInputGate } from '../../../store/application/types';
+import { PageInformation } from '../../../components/PageInformation';
 
 export const XorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -106,6 +107,17 @@ export const XorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="29/10/2022"
+        />
       </div>
     </div>
   );
