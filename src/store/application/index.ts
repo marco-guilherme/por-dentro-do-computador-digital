@@ -6,8 +6,11 @@ import {
   ApplicationTypes,
 } from './types';
 
+import { generateWebsiteRoutes } from '../../utils/generateWebsiteRoutes';
+
 const INITIAL_STATE: ApplicationState = {
   drawerVisibility: false,
+  relativeUrlAndPageName: generateWebsiteRoutes(),
 };
 
 const reducerLayout: Reducer<ApplicationState, ApplicationActionType> = (

@@ -1,5 +1,6 @@
 export interface ApplicationState {
   drawerVisibility: boolean;
+  relativeUrlAndPageName: RelativeUrlAndPageName;
 }
 
 export enum ApplicationTypes {
@@ -40,6 +41,14 @@ export type VersionControl = {
   releaseDate: string;
   version: string;
   changes: string;
+};
+
+export type UrlPiecesAndPageName = {
+  [key: string]: {} | string;
+};
+
+export type RelativeUrlAndPageName = {
+  [key: string]: string;
 };
 
 export type ApplicationActionType = SetDrawerVisibility;
