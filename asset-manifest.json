@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/por-dentro-do-computador-digital/static/css/main.d5585874.css",
+    "main.js": "/por-dentro-do-computador-digital/static/js/main.8f9cd4c6.js",
+    "static/media/wr-kits-8-bit-computer.gif": "/por-dentro-do-computador-digital/static/media/wr-kits-8-bit-computer.97225f9cf9f0e3ea43a2.gif",
+    "static/media/board-tracks.gif": "/por-dentro-do-computador-digital/static/media/board-tracks.e738afa34d73a5c15db1.gif",
+    "static/media/asembly-funny.gif": "/por-dentro-do-computador-digital/static/media/asembly-funny.57294ffa60d87fbfeed9.gif",
+    "static/media/arial.ttf": "/por-dentro-do-computador-digital/static/media/arial.5afb1f7c7464ace62524.ttf",
+    "static/media/old-microprocessor.png": "/por-dentro-do-computador-digital/static/media/old-microprocessor.5e037f64bb8845abfbf1.png",
+    "static/media/consola.ttf": "/por-dentro-do-computador-digital/static/media/consola.b23ff2e9649f2098ea7a.ttf",
+    "static/media/learn-electronics.jpg": "/por-dentro-do-computador-digital/static/media/learn-electronics.76623e580b2255b7ee07.jpg",
+    "static/media/unip-logo.png": "/por-dentro-do-computador-digital/static/media/unip-logo.7888247aacc36887b83e.png",
+    "static/media/unip-araraquara.jpg": "/por-dentro-do-computador-digital/static/media/unip-araraquara.d5669818950c39a9e09e.jpg",
+    "static/media/pga-processor.png": "/por-dentro-do-computador-digital/static/media/pga-processor.a7605df0621d5fa575a0.png",
+    "static/media/joystix-monospace.ttf": "/por-dentro-do-computador-digital/static/media/joystix-monospace.03fd394186f4c9707258.ttf",
+    "static/media/skull-and-crossbones.png": "/por-dentro-do-computador-digital/static/media/skull-and-crossbones.9a7eff32697747fb21b3.png",
+    "static/media/sr-clocked-flip-flop2.png": "/por-dentro-do-computador-digital/static/media/sr-clocked-flip-flop2.b36f1bcdde81a9d87db5.png",
+    "static/media/transistor-npn.png": "/por-dentro-do-computador-digital/static/media/transistor-npn.7f2845e9d9745f7e3c5e.png",
+    "static/media/home-automation.png": "/por-dentro-do-computador-digital/static/media/home-automation.1b740aa6b57bd84f15c2.png",
+    "static/media/speedometer.png": "/por-dentro-do-computador-digital/static/media/speedometer.7bac8c41b76668ecd026.png",
+    "static/media/nand-gate-din.png": "/por-dentro-do-computador-digital/static/media/nand-gate-din.fadd5e9bf7207a11fef0.png",
+    "static/media/interface.png": "/por-dentro-do-computador-digital/static/media/interface.d50c6863de9fad14d45f.png",
+    "static/media/xnor-gate-ansi.png": "/por-dentro-do-computador-digital/static/media/xnor-gate-ansi.3c754dc4370135ca333f.png",
+    "static/media/and-gate-din.png": "/por-dentro-do-computador-digital/static/media/and-gate-din.772dae9c72ee0100634e.png",
+    "static/media/xor-gate-ansi.png": "/por-dentro-do-computador-digital/static/media/xor-gate-ansi.c574e6dcd9ccbd0765fa.png",
+    "static/media/nor-gate-ansi.png": "/por-dentro-do-computador-digital/static/media/nor-gate-ansi.19b3bd97300dc49856ef.png",
+    "static/media/or-gate-ansi.png": "/por-dentro-do-computador-digital/static/media/or-gate-ansi.5ea52b4d9b5e40704455.png",
+    "static/media/nand-gate-ansi.png": "/por-dentro-do-computador-digital/static/media/nand-gate-ansi.e4f61f2a4989e3321db2.png",
+    "index.html": "/por-dentro-do-computador-digital/index.html",
+    "static/media/github-logo.svg": "/por-dentro-do-computador-digital/static/media/github-logo.3ea7d9bcdf7bb4836e2175ac2a12c306.svg",
+    "main.d5585874.css.map": "/por-dentro-do-computador-digital/static/css/main.d5585874.css.map",
+    "main.8f9cd4c6.js.map": "/por-dentro-do-computador-digital/static/js/main.8f9cd4c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5585874.css",
+    "static/js/main.8f9cd4c6.js"
+  ]
+}
