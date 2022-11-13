@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { RelativeUrlAndPageName } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
+import learnElectronics from '../images/learn-electronics.jpg';
 
 export const Content = (): JSX.Element => {
   const {
@@ -44,7 +45,19 @@ export const Content = (): JSX.Element => {
           . Caso contrário, pode ser que os circuitos não sejam exibidos
           corretamente.
         </p>
+
         <br />
+
+        <div className="flex-center-column">
+          <img
+            src={learnElectronics}
+            alt="Estudando e testando um circuito eletrônico"
+            style={{ width: '60vw' }}
+          />
+        </div>
+
+        <div className="horizontal-space-2" />
+
         <List
           bordered
           itemLayout="horizontal"

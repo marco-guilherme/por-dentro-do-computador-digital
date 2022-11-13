@@ -38,9 +38,9 @@ export type ASCIICharacter = {
 
 export type VersionControl = {
   key: number;
-  releaseDate: string;
-  version: string;
-  changes: string;
+  releaseDate: React.ReactNode | string;
+  version: React.ReactNode | string;
+  changes: React.ReactNode | string;
 };
 
 export type UrlPiecesAndPageName = {

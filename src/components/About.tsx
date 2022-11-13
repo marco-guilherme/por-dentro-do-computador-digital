@@ -24,7 +24,17 @@ export const About = (): JSX.Element => {
   ];
 
   const dataSource: VersionControl[] = [
-    { key: 1, releaseDate: 'DD/MM/YYYY', version: '1.0.0', changes: 'foo bar' },
+    {
+      key: 1,
+      releaseDate: <span className="monospaced-snippet">13/11/2022</span>,
+      version: <span className="monospaced-snippet">1.0.0</span>,
+      changes: (
+        <span>
+          Adição do cabeçalho, rodapé, páginas para cada item do cabeçalho,
+          drawer de conteúdo e páginas para as portas lógicas.
+        </span>
+      ),
+    },
   ];
 
   return (
@@ -75,7 +85,6 @@ export const About = (): JSX.Element => {
         </p>
         <div className="flex-center-column">
           <Table
-            rowClassName={'truth-table-row'}
             columns={columns}
             bordered
             size="middle"

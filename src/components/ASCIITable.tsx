@@ -1,6 +1,7 @@
 import Table, { ColumnsType } from 'antd/lib/table';
 import { ASCIICharacter } from '../store/application/types';
 import { PageInformation } from './PageInformation';
+import oldMicroprocessor from '../images/old-microprocessor.png';
 
 export const ASCIITable = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -138,6 +139,19 @@ export const ASCIITable = (): JSX.Element => {
           o decimal, binário, hexadecimal, octal etc. Essa codificação possui{' '}
           <span className="underline-text">sete</span> bits de larguras.
         </p>
+
+        <br />
+
+        <div className="flex-center-column">
+          <img
+            src={oldMicroprocessor}
+            alt="Microprocessador antigo"
+            style={{ width: '60vw' }}
+          />
+        </div>
+
+        <div className="horizontal-space-2" />
+
         <p>Segue abaixo a tabela ASCII:</p>
         <div className="flex-center-column">
           <Table

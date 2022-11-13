@@ -8,6 +8,11 @@
   src: url(../fonts/joystix-monospace.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Arial';
+  src: url(../fonts/arial.ttf) format('truetype');
+}
+
 #wrapper {
   min-height: 100%;
   height: 100vh;
@@ -157,7 +162,7 @@ div.body-content {
   text-align: justify;
 
   p {
-    font-family: Arial;
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
     font-size: 1.313rem; /* 21 pixels */
   }
 }
