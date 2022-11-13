@@ -5,6 +5,7 @@ import notGateAnsi from '../../../images/not-gate-ansi.png';
 import notGateIec from '../../../images/not-gate-iec.png';
 import notGateDin from '../../../images/not-gate-din.png';
 import Latex from 'react-latex';
+import { PageInformation } from '../../../components/PageInformation';
 
 export const NotGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -98,6 +99,17 @@ export const NotGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="29/10/2022"
+        />
       </div>
     </div>
   );

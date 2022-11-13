@@ -18,8 +18,8 @@ export const Home = (): JSX.Element => {
         </h1>
         <h3>
           <span>
-            Website Interativo Para Ensino de Tópicos de Eletrônica Digital e
-            Linguagem Assembly
+            Website Interativo Para Ensino de Fundamentos da Eletrônica Digital
+            e da Linguagem Assembly
           </span>
         </h3>
       </div>
@@ -116,7 +116,7 @@ export const Home = (): JSX.Element => {
 
       <br />
 
-      <div className="eight-bit-computer-image">
+      <div className="eight-bit-computer-image site-figure">
         <figure>
           <img
             src={wrKits8BitComputer}
@@ -126,7 +126,7 @@ export const Home = (): JSX.Element => {
         </figure>
       </div>
 
-      <br />
+      <div className="horizontal-space-4" />
 
       <h2>Por Que Aprender Assembly?</h2>
 

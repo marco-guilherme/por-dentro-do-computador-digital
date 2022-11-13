@@ -4,6 +4,7 @@ import nandGateAnsi from '../../../images/nand-gate-ansi.png';
 import nandGateIec from '../../../images/nand-gate-iec.png';
 import nandGateDin from '../../../images/nand-gate-din.png';
 import Latex from 'react-latex';
+import { PageInformation } from '../../../components/PageInformation';
 
 export const NandGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -98,6 +99,17 @@ export const NandGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="29/10/2022"
+        />
       </div>
     </div>
   );

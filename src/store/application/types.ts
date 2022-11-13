@@ -1,5 +1,6 @@
 export interface ApplicationState {
   drawerVisibility: boolean;
+  relativeUrlAndPageName: RelativeUrlAndPageName;
 }
 
 export enum ApplicationTypes {
@@ -33,6 +34,21 @@ export type ASCIICharacter = {
   binary: string;
   octal: string;
   character: string;
+};
+
+export type VersionControl = {
+  key: number;
+  releaseDate: React.ReactNode | string;
+  version: React.ReactNode | string;
+  changes: React.ReactNode | string;
+};
+
+export type UrlPiecesAndPageName = {
+  [key: string]: {} | string;
+};
+
+export type RelativeUrlAndPageName = {
+  [key: string]: string;
 };
 
 export type ApplicationActionType = SetDrawerVisibility;

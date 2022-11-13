@@ -5,6 +5,7 @@ import andGateAnsi from '../../../images/and-gate-ansi.png';
 import andGateIec from '../../../images/and-gate-iec.png';
 import andGateDin from '../../../images/and-gate-din.png';
 import { TwoInputGate } from '../../../store/application/types';
+import { PageInformation } from '../../../components/PageInformation';
 
 export const AndGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -113,6 +114,17 @@ export const AndGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="05/10/2022"
+        />
       </div>
     </div>
   );

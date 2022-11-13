@@ -1,5 +1,7 @@
 import Table, { ColumnsType } from 'antd/lib/table';
 import { ASCIICharacter } from '../store/application/types';
+import { PageInformation } from './PageInformation';
+import oldMicroprocessor from '../images/old-microprocessor.png';
 
 export const ASCIITable = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -137,6 +139,19 @@ export const ASCIITable = (): JSX.Element => {
           o decimal, binário, hexadecimal, octal etc. Essa codificação possui{' '}
           <span className="underline-text">sete</span> bits de larguras.
         </p>
+
+        <br />
+
+        <div className="flex-center-column">
+          <img
+            src={oldMicroprocessor}
+            alt="Microprocessador antigo"
+            style={{ width: '60vw' }}
+          />
+        </div>
+
+        <div className="horizontal-space-2" />
+
         <p>Segue abaixo a tabela ASCII:</p>
         <div className="flex-center-column">
           <Table
@@ -204,14 +219,25 @@ export const ASCIITable = (): JSX.Element => {
         </p>
         <p>
           Por exemplo, o caractre <span className="monospaced-snippet">0A</span>{' '}
-          representa a função "line feed", que gera uma quebra de linha. Na
-          linguagem C, o caractere{' '}
+          representa a função "<span className="italic-text">line feed</span>",
+          que gera uma quebra de linha. Na linguagem C, o caractere{' '}
           <span className="monospaced-snippet">0A</span> é representado pela
           sequência de escape "<span className="monospaced-snippet">\n</span>" e
           ao tentar exibir esse caractere no console (utilizando alguma função
           como o <span className="monospaced-snippet">printf</span>), uma quebra
           de linha entre o texto será gerada.
         </p>
+
+        <br />
+
+        <hr />
+
+        <br />
+
+        <PageInformation
+          lastUpdateDate="13/11/2022"
+          originalPublicationDate="30/09/2022"
+        />
       </div>
     </div>
   );
