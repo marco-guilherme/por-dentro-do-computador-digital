@@ -161,7 +161,8 @@ div.body-content {
   margin-right: 3rem;
   text-align: justify;
 
-  p {
+  p,
+  li {
     font-family: 'Arial', Arial, Helvetica, sans-serif;
     font-size: 1.313rem; /* 21 pixels */
   }
@@ -171,6 +172,8 @@ div.body-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .site-figure {
@@ -206,6 +209,10 @@ div.body-content {
 
 .underline-text {
   text-decoration: underline;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .ant-table-cell,
@@ -376,4 +383,8 @@ table {
   }
 
   padding-left: 4rem;
+}
+
+.large-image {
+  width: 70vw;
 }
