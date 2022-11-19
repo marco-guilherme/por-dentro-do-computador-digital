@@ -64,7 +64,13 @@ export const Content = (): JSX.Element => {
           dataSource={getDataSource()}
           renderItem={(item: RelativeUrlAndPageName) => (
             <List.Item>
-              <span className="page-list" onClick={() => navigate(item.url)}>
+              <span
+                className="page-list"
+                onClick={() => {
+                  navigate(item.url);
+                  window.scrollTo(0, 0);
+                }}
+              >
                 {item.title}
               </span>
             </List.Item>
