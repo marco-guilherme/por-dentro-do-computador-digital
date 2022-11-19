@@ -18,6 +18,7 @@ import { XorGate } from './pages/digital-electronics/logic-gates/XorGate';
 import { XnorGate } from './pages/digital-electronics/logic-gates/XnorGate';
 import { NandGate } from './pages/digital-electronics/logic-gates/NandGate';
 import { NorGate } from './pages/digital-electronics/logic-gates/NorGate';
+import { ProgrammingLanguages } from './pages/assembly-language/ProgrammingLanguages';
 
 const App = (): JSX.Element => {
   return (
@@ -66,6 +67,13 @@ const App = (): JSX.Element => {
                 </Route>
 
                 <Route path="" element={<PageNotFound />} />
+              </Route>
+
+              <Route path="linguagem-assembly" element={<Outlet />}>
+                <Route
+                  path="linguagens-de-programacao"
+                  element={<ProgrammingLanguages />}
+                />
               </Route>
             </Route>
 

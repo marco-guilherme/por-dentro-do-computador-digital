@@ -460,7 +460,11 @@ export const TreeDrawer = (): JSX.Element => {
       title: 'Linguagem Assembly x86-16',
       key: '1',
       children: [
-        { title: 'Linguagens de Programação', key: '1-0', children: [] },
+        {
+          title: 'Linguagens de Programação',
+          key: '/aulas/linguagem-assembly/linguagens-de-programacao',
+          children: [],
+        },
       ],
       selectable: false,
     },
