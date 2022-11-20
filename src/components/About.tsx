@@ -127,11 +127,7 @@ export const About = (): JSX.Element => {
         <div className="horizontal-space-2" />
 
         <div className="card-rounded-border icon-and-text" id="contact-card">
-          <img
-            src={windows95Letter}
-            alt="Ícone de carta do Windows 95"
-            className="small-image"
-          />
+          <img src={windows95Letter} alt="Ícone de carta do Windows 95" />
 
           <address>
             <a href="mailto:marcoilhermepereira@outlook.com">

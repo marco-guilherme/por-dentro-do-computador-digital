@@ -19,7 +19,7 @@ export const PageInformation = ({
           avatar={
             <Avatar
               size={40}
-              src="https://avatars.githubusercontent.com/u/58197183?s=400&u=579e7c7f22c2c897edcc8c5afee438c882f7d723&v=4"
+              src="https://avatars.githubusercontent.com/u/58197183?s=400&u=f3d38601430f8670397c818c6d883571761b201e&v=4"
             />
           }
           title={`Data da última atualização: ${lastUpdateDate}`}
