@@ -41,6 +41,7 @@ export const About = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Sobre Este Site</h1>
+
       <div className="site-content">
         <p>
           Este site foi desenvolvido por Marco Guilherme como Trabalho de

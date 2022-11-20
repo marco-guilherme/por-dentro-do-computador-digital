@@ -21,6 +21,7 @@ import { NorGate } from './pages/digital-electronics/logic-gates/NorGate';
 import { ProgrammingLanguages } from './pages/assembly-language/ProgrammingLanguages';
 import { AnalogueElectronics } from './pages/digital-electronics/about-electronics/AnalogueElectronics';
 import { DigitalElectronics } from './pages/digital-electronics/about-electronics/DigitalElectronics';
+import { AssemblyLanguage } from './pages/assembly-language/AssemblyLanguage';
 
 const App = (): JSX.Element => {
   return (
@@ -85,6 +86,11 @@ const App = (): JSX.Element => {
                 <Route
                   path="linguagens-de-programacao"
                   element={<ProgrammingLanguages />}
+                />
+
+                <Route
+                  path="linguagem-assembly"
+                  element={<AssemblyLanguage />}
                 />
               </Route>
             </Route>

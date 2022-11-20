@@ -5,6 +5,7 @@ export const WhatIsElectronics = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>O Que é Eletrônica?</h1>
+
       <div className="site-content">
         <p>
           A <span className="bold-text">eletrônica</span> é um campo derivado da

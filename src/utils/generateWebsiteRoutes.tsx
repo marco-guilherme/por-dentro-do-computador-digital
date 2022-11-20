@@ -111,6 +111,8 @@ export const generateWebsiteRoutes = (): RelativeUrlAndPageName => {
       },
       '/linguagem-assembly': {
         '/linguagens-de-programacao': 'Linguagens de Programação',
+        '/linguagem-assembly': 'Linguagem Assembly',
+        '/assembly-ou-assembler': 'Assembly ou Assembler?',
       },
     },
   };

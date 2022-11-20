@@ -465,6 +465,96 @@ export const TreeDrawer = (): JSX.Element => {
           key: '/aulas/linguagem-assembly/linguagens-de-programacao',
           children: [],
         },
+        {
+          title: 'Linguagem Assembly',
+          key: '/aulas/linguagem-assembly/linguagem-assembly',
+          children: [],
+        },
+        {
+          title: 'Assembly ou Assembler?',
+          key: '/aulas/linguagem-assembly/assembly-ou-assembler',
+          children: [],
+        },
+        {
+          title: 'Sintaxe Intel e AT&T',
+          key: '/aulas/linguagem-assembly/sintaxe-intel-e-at-e-t',
+          children: [],
+        },
+        {
+          title: 'Endianness',
+          key: '/aulas/linguagem-assembly/endianness',
+          children: [],
+        },
+        {
+          title: 'Arquitetura x86-16',
+          key: '/aulas/linguagem-assembly/arquitetura-x86-16',
+          children: [],
+        },
+        {
+          title: 'Memória',
+          key: '/aulas/linguagem-assembly/memória',
+          children: [],
+        },
+        {
+          title: 'Ponteiros',
+          key: '/aulas/linguagem-assembly/ponteiros',
+          children: [],
+        },
+        {
+          title: 'Instruções Aritméticas',
+          key: '/aulas/linguagem-assembly/instrucoes-aritmeticas',
+          children: [],
+        },
+        {
+          title: 'Instruções Lógicas',
+          key: '/aulas/linguagem-assembly/instrucoes-logicas',
+          children: [],
+        },
+        {
+          title: 'Instruções de Salto',
+          key: '/aulas/linguagem-assembly/instrucoes-de-salto',
+          children: [],
+        },
+        {
+          title: 'Segmentação',
+          key: '/aulas/linguagem-assembly/segmentacao',
+          children: [],
+        },
+        {
+          title: 'Extensão do Sinal',
+          key: '/aulas/linguagem-assembly/extensao-do-sinal',
+          children: [],
+        },
+        {
+          title: 'Modos de Operação',
+          key: '/aulas/linguagem-assembly/modos-de-operacao',
+          children: [],
+        },
+        {
+          title: 'Interrupções',
+          key: '/aulas/linguagem-assembly/interrupcoes',
+          children: [],
+        },
+        {
+          title: 'BIOS',
+          key: '/aulas/linguagem-assembly/bios',
+          children: [],
+        },
+        {
+          title: 'Flags',
+          key: '/aulas/linguagem-assembly/flags',
+          children: [],
+        },
+        {
+          title: 'Pilha',
+          key: '/aulas/linguagem-assembly/pilha',
+          children: [],
+        },
+        {
+          title: 'Convenções de Chamada',
+          key: '/aulas/linguagem-assembly/convencoes-de-chamada',
+          children: [],
+        },
       ],
       selectable: false,
     },
