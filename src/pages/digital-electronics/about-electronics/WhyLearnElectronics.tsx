@@ -5,6 +5,7 @@ export const WhyLearnElectronics = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Por Que Aprender Eletrônica?</h1>
+
       <div className="site-content">
         <p>
           É inegável o fato de que a eletrônica teve uma influência gigantesca

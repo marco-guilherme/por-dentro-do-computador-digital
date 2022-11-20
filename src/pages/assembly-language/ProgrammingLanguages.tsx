@@ -7,6 +7,7 @@ export const ProgrammingLanguages = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Linguagens de Programação</h1>
+
       <div className="site-content">
         <p>
           Um <span className="bold-text">computador</span> é um dispositivo

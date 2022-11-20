@@ -6,6 +6,7 @@ export const DigitalElectronics = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Eletrônica Digital</h1>
+
       <div className="site-content">
         <p>
           A <span className="bold-text">eletrônica digital</span> é um subcampo
