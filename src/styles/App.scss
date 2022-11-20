@@ -162,7 +162,8 @@ div.body-content {
   text-align: justify;
 
   p,
-  li {
+  li,
+  a {
     font-family: 'Arial', Arial, Helvetica, sans-serif;
     font-size: 1.313rem; /* 21 pixels */
   }
@@ -391,4 +392,49 @@ table {
 
 .medium-image {
   width: 40vw;
+}
+
+.small-image {
+  width: 20vw;
+}
+
+.ant-table-wrapper.versioning-table {
+  width: 80vw;
+}
+
+.icon-and-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.card-rounded-border {
+  border: 0.063rem solid rgb(53, 53, 53);
+  border-radius: 1rem;
+}
+
+#contact-card {
+  padding-right: 2rem;
+
+  address {
+    margin-bottom: 0rem;
+  }
+
+  img {
+    width: 8vw;
+  }
+}
+
+.github-logo {
+  width: 10vw;
+  animation: github-logo-spin infinite 10s linear;
+}
+
+@keyframes github-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
