@@ -19,6 +19,7 @@ import { XnorGate } from './pages/digital-electronics/logic-gates/XnorGate';
 import { NandGate } from './pages/digital-electronics/logic-gates/NandGate';
 import { NorGate } from './pages/digital-electronics/logic-gates/NorGate';
 import { ProgrammingLanguages } from './pages/assembly-language/ProgrammingLanguages';
+import { AnalogueElectronics } from './pages/digital-electronics/about-electronics/AnalogueElectronics';
 
 const App = (): JSX.Element => {
   return (
@@ -43,6 +44,11 @@ const App = (): JSX.Element => {
                   <Route
                     path="por-que-aprender-eletronica"
                     element={<WhyLearnElectronics />}
+                  />
+
+                  <Route
+                    path="eletronica-analogica"
+                    element={<AnalogueElectronics />}
                   />
 
                   <Route path="" element={<PageNotFound />} />
