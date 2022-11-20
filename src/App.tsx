@@ -20,6 +20,7 @@ import { NandGate } from './pages/digital-electronics/logic-gates/NandGate';
 import { NorGate } from './pages/digital-electronics/logic-gates/NorGate';
 import { ProgrammingLanguages } from './pages/assembly-language/ProgrammingLanguages';
 import { AnalogueElectronics } from './pages/digital-electronics/about-electronics/AnalogueElectronics';
+import { DigitalElectronics } from './pages/digital-electronics/about-electronics/DigitalElectronics';
 
 const App = (): JSX.Element => {
   return (
@@ -49,6 +50,11 @@ const App = (): JSX.Element => {
                   <Route
                     path="eletronica-analogica"
                     element={<AnalogueElectronics />}
+                  />
+
+                  <Route
+                    path="eletronica-digital"
+                    element={<DigitalElectronics />}
                   />
 
                   <Route path="" element={<PageNotFound />} />

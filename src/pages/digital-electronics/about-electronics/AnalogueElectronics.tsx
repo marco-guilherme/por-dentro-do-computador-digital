@@ -30,21 +30,9 @@ export const AnalogueElectronics = (): JSX.Element => {
         </div>
 
         <p>
-          Os <span className="bold-text">componentes analógicos</span> podem ser
-          combinados para formar um{' '}
-          <span className="bold-text">circuito eletrônico analógico</span>. Nos
-          circuitos analógicos, os componentes normalmente operam de forma
-          contínua ou <span className="bold-text">linear</span>. Exemplos de
-          componentes analógicos:
+          Em qualquer momento no tempo, um sinal analógico representará valores
+          contínuos (números reais) dentro de um intervalo definido.
         </p>
-
-        <ul>
-          <li>Resistores;</li>
-          <li>Capacitores;</li>
-          <li>Diodos;</li>
-          <li>Indutores;</li>
-          <li>Diodos.</li>
-        </ul>
 
         <p>
           Para se ter alguma noção do que significa algo ser "analógico", vamos
@@ -100,6 +88,23 @@ export const AnalogueElectronics = (): JSX.Element => {
           Como a temperatura pode variar infinitamente, o sinal analógico de
           saída também poderá variar infinitamente dentro da faixa de 0 a 20 mV.
         </p>
+
+        <p>
+          Os <span className="bold-text">componentes analógicos</span> podem ser
+          combinados para formar um{' '}
+          <span className="bold-text">circuito eletrônico analógico</span>. Nos
+          circuitos analógicos, os componentes normalmente operam de forma
+          contínua ou <span className="bold-text">linear</span>. Exemplos de
+          componentes analógicos:
+        </p>
+
+        <ul>
+          <li>Resistores;</li>
+          <li>Capacitores;</li>
+          <li>Diodos;</li>
+          <li>Indutores;</li>
+          <li>Diodos.</li>
+        </ul>
 
         <br />
 
