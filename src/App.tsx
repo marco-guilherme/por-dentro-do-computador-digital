@@ -22,6 +22,7 @@ import { ProgrammingLanguages } from './pages/assembly-language/ProgrammingLangu
 import { AnalogueElectronics } from './pages/digital-electronics/about-electronics/AnalogueElectronics';
 import { DigitalElectronics } from './pages/digital-electronics/about-electronics/DigitalElectronics';
 import { AssemblyLanguage } from './pages/assembly-language/AssemblyLanguage';
+import { Datasheets } from './pages/digital-electronics/about-electronics/Datasheets';
 
 const App = (): JSX.Element => {
   return (
@@ -57,6 +58,8 @@ const App = (): JSX.Element => {
                     path="eletronica-digital"
                     element={<DigitalElectronics />}
                   />
+
+                  <Route path="datasheets" element={<Datasheets />} />
 
                   <Route path="" element={<PageNotFound />} />
                 </Route>
