@@ -1,5 +1,6 @@
 import { PageInformation } from '../../../components/PageInformation';
 import benEaterDatasheet from '../../../images/ben-eater-datasheet.png';
+import englishPaper from '../../../images/english-paper.jpg';
 
 export const Datasheets = (): JSX.Element => {
   return (
@@ -8,24 +9,28 @@ export const Datasheets = (): JSX.Element => {
 
       <div className="site-content">
         <p>
-          Ao se aventurar pelo mundo da eletrônica, é de extrema importância que
-          se conheça as características gerais do componente/circuito integrado
-          que será manipulado. Isso evita, por exemplo, que você queime um
-          componente eletrônico por aplicar uma tensão entre seus terminais
-          maior do que a suportada por ele. Muitos componentes eletrônicos
-          possuem suas peculiaridades que você só descobre lendo o manual desse
-          componente!
+          Ao se aventurar pelo mundo da eletrônica,{' '}
+          <span className="underline-text">
+            é de extrema importância que se conheça as características gerais do
+            componente/circuito integrado que será manipulado
+          </span>
+          . Isso evita, por exemplo, que você queime um componente eletrônico ao
+          aplicar uma tensão entre seus terminais maior do que a suportada por
+          ele. Muitos componentes eletrônicos possuem peculiaridades que você só
+          descobrirá lendo o manual desse componente!
         </p>
 
         <p>
-          O datasheet (folha de dados ou folha de especificações) é justamente o
-          manual do componente eletrônico que PRECISA ser lido pelo projetista
-          do circuito antes de colocar a mão na massa. Ele é um documento que
-          resume o desempenho e outras características de um produto, máquina,
-          componente, material, subsistema (e.g.:, uma fonte de alimentação) ou
-          software. O datasheet possui detalhes suficientes para permitir ao
-          cliente entender o que é o produto e ao engenheiro de projeto entender
-          a função do componente no sistema geral.
+          O <span className="bold-text">datasheet</span> (
+          <span className="bold-text">folha de dados</span> ou{' '}
+          <span className="bold-text">folha de especificações</span>) é
+          justamente o manual do componente eletrônico que PRECISA ser lido pelo
+          projetista do circuito antes de colocar a mão na massa. Ele é um
+          documento que resume o desempenho e outras características de um
+          produto, máquina, componente, material, subsistema (e.g.:, uma fonte
+          de alimentação) ou software. O datasheet possui detalhes suficientes
+          para permitir ao cliente entender o que é o produto e ao engenheiro de
+          projeto entender a função do componente no sistema geral.
         </p>
 
         <div className="site-image">
@@ -47,6 +52,12 @@ export const Datasheets = (): JSX.Element => {
           típico, uma faixa típica, tolerâncias de engenharia ou um valor
           nominal. O tipo e a fonte dos dados geralmente são declarados no
           próprio datasheet.
+        </p>
+
+        <p>
+          Fique tranquilo(a), você não precisa decorar o datasheet de ponta a
+          ponta, você só precisa saber ler e interpretar a informação
+          corretamente.
         </p>
 
         <br />
@@ -73,23 +84,33 @@ export const Datasheets = (): JSX.Element => {
           livros um pouco mais complexos e depender menos do dicionário. Leia
           livros sobre assuntos que você goste, tente ler um datasheet e
           entender que uma palavra pode ter mais de uma tradução, o que vai
-          depender do contexto. A palavra "bus", por exemplo, pode significar
-          "ônibus" ou "barramento"; isso dependende se estamos falando no
-          contexto automobilístico (bus é um veículo) ou da eletrônica (bus é o
-          barramento de dados).
+          depender do contexto. A palavra "
+          <span className="italic-text">bus</span>", por exemplo, pode
+          significar "ônibus" ou "barramento"; isso dependende se estamos
+          falando no contexto automobilístico (bus é um veículo) ou da
+          eletrônica (bus é o barramento de dados).
         </p>
 
+        <div className="site-image">
+          <img
+            src={englishPaper}
+            className="medium-image"
+            alt="Página de um dicionário em inglês"
+          />
+        </div>
+
         <p>
-          E por último, a dica mais importante que posso te dar: faça mais
-          esforço tentando mapear uma palavra com o que ela representa do que
-          com sua tradução no português. Muitas das vezes, as palavras ou não
-          tem tradução para o português, ou a tradução é estranha demais. Por
-          exemplo, "buffer" pode ser uma porta lógica, uma porção de memória
-          temporária etc. Agora, a tradução de buffer é algo como "amortecedor".
-          Acho que não faz muito sentido no contexto da eletrônica/computação;
-          portanto, esse é um caso onde é preferível manter o nome em inglês e
-          simplesmente associá-lo com o que ele representa na realidade do que
-          tentar traduzir e provocar um olhar de confusão.
+          Agora, a dica mais importante que posso te dar: faça mais esforço
+          tentando mapear uma palavra com o que ela representa do que com sua
+          tradução no português. Muitas das vezes, as palavras ou não tem
+          tradução para o português, ou a tradução é estranha demais. Por
+          exemplo, "<span className="italic-text">buffer</span>" pode ser uma
+          porta lógica, uma porção de memória temporária etc. Agora, a tradução
+          de buffer é algo como "amortecedor". Acho que não faz muito sentido no
+          contexto da eletrônica/computação; portanto, esse é um caso onde é
+          preferível manter o nome em inglês e simplesmente associá-lo com o que
+          ele representa na realidade do que tentar traduzir e provocar um olhar
+          de confusão.
         </p>
 
         <p>
@@ -98,7 +119,11 @@ export const Datasheets = (): JSX.Element => {
           exemplo, ao ler a palavra "book", pense naquele conjunto de páginas
           com muito texto, e não no que a palavra significa. Isso pode parecer
           estranho e difícil no começo, mas é a chave para desenrolar a sua
-          leitura no inglês.
+          leitura no inglês. Por último, acho que não preciso nem dar muita
+          ênfase no fato de que, seu aprendizado e evolução devem ser
+          constantes, por isso, tente ler um pouco em inglês diariamente. Isso é
+          realmente interessante, pois com o tempo, a leitura vai se tornando
+          cada vez mais natural.
         </p>
 
         <br />
