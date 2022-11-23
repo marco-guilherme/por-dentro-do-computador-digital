@@ -36,6 +36,17 @@ export const About = (): JSX.Element => {
         </span>
       ),
     },
+    {
+      key: 2,
+      releaseDate: <span className="monospaced-snippet">23/11/2022</span>,
+      version: <span className="monospaced-snippet">1.0.1</span>,
+      changes: (
+        <span>
+          Desenvolvimento de novas páginas sobre eletrônica digital e linguagem
+          asembly.
+        </span>
+      ),
+    },
   ];
 
   return (
