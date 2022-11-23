@@ -60,6 +60,19 @@ export const Datasheets = (): JSX.Element => {
           corretamente.
         </p>
 
+        <p>
+          Para começar a leitura de datasheets, que tal começar por alguma coisa
+          um pouco mais simples? Dê uma olhada{' '}
+          <a
+            href="https://www.farnell.com/datasheets/1498852.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            nesse datasheet
+          </a>{' '}
+          e tente entender alguma coisa.
+        </p>
+
         <br />
 
         <h2>Eletrônica, Computação e Inglês</h2>
@@ -133,7 +146,7 @@ export const Datasheets = (): JSX.Element => {
         <br />
 
         <PageInformation
-          lastUpdateDate="21/11/2022"
+          lastUpdateDate="22/11/2022"
           originalPublicationDate="21/11/2022"
         />
       </div>
