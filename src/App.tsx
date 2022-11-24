@@ -24,6 +24,7 @@ import { DigitalElectronics } from './pages/digital-electronics/about-electronic
 import { AssemblyLanguage } from './pages/assembly-language/AssemblyLanguage';
 import { Datasheets } from './pages/digital-electronics/about-electronics/Datasheets';
 import { ElectronicComponents } from './pages/digital-electronics/about-electronics/ElectronicComponents';
+import { Voltage } from './pages/digital-electronics/review-of-basic-concepts/Voltage';
 
 const App = (): JSX.Element => {
   return (
@@ -66,8 +67,10 @@ const App = (): JSX.Element => {
                   />
 
                   <Route path="datasheets" element={<Datasheets />} />
+                </Route>
 
-                  <Route path="" element={<PageNotFound />} />
+                <Route path="revisao-de-conceitos-basicos" element={<Outlet />}>
+                  <Route path="tensao" element={<Voltage />} />
                 </Route>
 
                 <Route path="portas-logicas" element={<Outlet />}>
@@ -87,8 +90,6 @@ const App = (): JSX.Element => {
 
                   <Route path="porta-nor" element={<NorGate />} />
                 </Route>
-
-                <Route path="" element={<PageNotFound />} />
               </Route>
 
               <Route path="linguagem-assembly" element={<Outlet />}>
