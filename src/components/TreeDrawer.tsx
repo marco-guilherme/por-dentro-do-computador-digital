@@ -124,33 +124,38 @@ export const TreeDrawer = (): JSX.Element => {
           key: '0-2',
           children: [
             {
+              title: 'Sistemas de Numeração',
+              key: '/aulas/eletronica-digital/sistemas-de-numeracao-e-codigos/sistemas-de-numeracao',
+              children: [],
+            },
+            {
               title: 'Decimal',
-              key: '/aulas/eletronica-digital/sistemas-numericos-e-codigos/decimal',
+              key: '/aulas/eletronica-digital/sistemas-de-numeracao-e-codigos/decimal',
               children: [],
             },
             {
               title: 'Binário',
-              key: '/aulas/eletronica-digital/sistemas-numericos-e-codigos/binario',
+              key: '/aulas/eletronica-digital/sistemas-de-numeracao-e-codigos/binario',
               children: [],
             },
             {
               title: 'Hexadecimal',
-              key: '/aulas/eletronica-digital/sistemas-numericos-e-codigos/hexadecimal',
+              key: '/aulas/eletronica-digital/sistemas-de-numeracao-e-codigos/hexadecimal',
               children: [],
             },
             {
               title: 'Octal',
-              key: '/aulas/eletronica-digital/sistemas-numericos-e-codigos/octal',
+              key: '/aulas/eletronica-digital/sistemas-de-numeracao-e-codigos/octal',
               children: [],
             },
             {
               title: 'BCD',
-              key: '/aulas/eletronica-digital/sistemas-numericos-e-codigos/bcd',
+              key: '/aulas/eletronica-digital/sistemas-de-numeracao-e-codigos/bcd',
               children: [],
             },
             {
               title: 'ASCII',
-              key: '/aulas/eletronica-digital/sistemas-numericos-e-codigos/ascii',
+              key: '/aulas/eletronica-digital/sistemas-de-numeracao-e-codigos/ascii',
               children: [],
             },
           ],
