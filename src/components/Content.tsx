@@ -1,10 +1,13 @@
-import { List } from 'antd';
+import { List, Input } from 'antd';
 import { GiNotebook } from 'react-icons/gi';
 import { useSelector } from 'react-redux';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { RelativeUrlAndPageName } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import learnElectronics from '../images/learn-electronics.jpg';
+import { useEffect, useState } from 'react';
+
+const { Search } = Input;
 
 export const Content = (): JSX.Element => {
   const {
@@ -13,10 +16,22 @@ export const Content = (): JSX.Element => {
 
   const navigate: NavigateFunction = useNavigate();
 
-  const getDataSource = (): RelativeUrlAndPageName[] => {
+  const [currentDataSource, setCurrentDataSource] = useState<
+    RelativeUrlAndPageName[]
+  >([]);
+
+  useEffect(() => {
+    setCurrentDataSource(getDataSource());
+  }, []);
+
+  const getDataSource = (search: string = ''): RelativeUrlAndPageName[] => {
     const dataSource: RelativeUrlAndPageName[] = [];
 
     for (const [key, value] of Object.entries(relativeUrlAndPageName)) {
+      if (search && !value.toLowerCase().includes(search)) {
+        continue;
+      }
+
       dataSource.push({
         title: value,
         url: key,
@@ -58,10 +73,21 @@ export const Content = (): JSX.Element => {
 
         <div className="horizontal-space-2" />
 
+        <Search
+          placeholder="Procurar"
+          onInput={(event: React.FormEvent<HTMLInputElement>) =>
+            setCurrentDataSource(
+              getDataSource(event.currentTarget.value.toLocaleLowerCase())
+            )
+          }
+          enterButton
+          allowClear
+        />
+
         <List
           bordered
           itemLayout="horizontal"
-          dataSource={getDataSource()}
+          dataSource={currentDataSource}
           renderItem={(item: RelativeUrlAndPageName) => (
             <List.Item>
               <span
