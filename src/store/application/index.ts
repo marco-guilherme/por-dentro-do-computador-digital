@@ -11,6 +11,7 @@ import { generateWebsiteRoutes } from '../../utils/generateWebsiteRoutes';
 const INITIAL_STATE: ApplicationState = {
   drawerVisibility: false,
   relativeUrlAndPageName: generateWebsiteRoutes(),
+  currentPage: '/inicio',
 };
 
 const reducerLayout: Reducer<ApplicationState, ApplicationActionType> = (
@@ -22,6 +23,12 @@ const reducerLayout: Reducer<ApplicationState, ApplicationActionType> = (
       return {
         ...state,
         drawerVisibility: action.payload.visible,
+      };
+
+    case ApplicationTypes.SET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.payload.currentPage,
       };
 
     default:

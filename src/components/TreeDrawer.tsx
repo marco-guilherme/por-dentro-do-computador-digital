@@ -3,7 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ApplicationActionType } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import { Dispatch } from 'redux';
-import { setDrawerVisibility } from '../store/application/actions';
+import {
+  setCurrentPage,
+  setDrawerVisibility,
+} from '../store/application/actions';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { Key } from 'rc-tree/lib/interface';
 
@@ -584,6 +587,7 @@ export const TreeDrawer = (): JSX.Element => {
 
     if (selectedKey.includes('/')) {
       navigate(selectedKey);
+      dispatch(setCurrentPage(selectedKey));
     }
   };
 
