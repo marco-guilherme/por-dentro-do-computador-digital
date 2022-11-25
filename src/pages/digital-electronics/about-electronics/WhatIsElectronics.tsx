@@ -1,3 +1,4 @@
+import { NavigationButtons } from '../../../components/NavigationButtons';
 import { PageInformation } from '../../../components/PageInformation';
 import appleOneComputer from '../../../images/apple-one-computer.jpg';
 
@@ -40,6 +41,8 @@ export const WhatIsElectronics = (): JSX.Element => {
         </ul>
 
         <br />
+
+        <NavigationButtons nextPageUrl="/aulas/eletronica-digital/sobre-eletronica/por-que-aprender-eletronica" />
 
         <hr />
 

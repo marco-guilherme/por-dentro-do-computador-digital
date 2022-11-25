@@ -1,6 +1,7 @@
 import { PageInformation } from '../../../components/PageInformation';
 import thermocouple from '../../../images/thermocouple.png';
 import analogsignal from '../../../images/analog-signal.png';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const AnalogueElectronics = (): JSX.Element => {
   return (
@@ -108,6 +109,11 @@ export const AnalogueElectronics = (): JSX.Element => {
         </ul>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/sobre-eletronica/por-que-aprender-eletronica"
+          nextPageUrl="/aulas/eletronica-digital/sobre-eletronica/eletronica-digital"
+        />
 
         <hr />
 

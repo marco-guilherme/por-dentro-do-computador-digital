@@ -465,3 +465,14 @@ table {
 .content-search {
   padding: 2rem;
 }
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+}
