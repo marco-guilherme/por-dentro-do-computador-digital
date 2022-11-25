@@ -1,4 +1,4 @@
-import { List, Input } from 'antd';
+import { List, Input, ConfigProvider, Empty } from 'antd';
 import { GiNotebook } from 'react-icons/gi';
 import { useSelector } from 'react-redux';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
@@ -73,35 +73,49 @@ export const Content = (): JSX.Element => {
 
         <div className="horizontal-space-2" />
 
-        <Search
-          placeholder="Procurar"
-          onInput={(event: React.FormEvent<HTMLInputElement>) =>
-            setCurrentDataSource(
-              getDataSource(event.currentTarget.value.toLocaleLowerCase())
-            )
-          }
-          enterButton
-          allowClear
-        />
+        <div className="content-search">
+          <Search
+            placeholder="Procurar por uma aula"
+            onInput={(event: React.FormEvent<HTMLInputElement>) =>
+              setCurrentDataSource(
+                getDataSource(event.currentTarget.value.toLocaleLowerCase())
+              )
+            }
+            onSearch={(value: string) => {
+              if (!value) {
+                setCurrentDataSource(getDataSource());
+              }
+            }}
+            enterButton
+            allowClear
+            showCount
+            maxLength={200}
+            size={'large'}
+          />
+        </div>
 
-        <List
-          bordered
-          itemLayout="horizontal"
-          dataSource={currentDataSource}
-          renderItem={(item: RelativeUrlAndPageName) => (
-            <List.Item>
-              <span
-                className="page-list"
-                onClick={() => {
-                  navigate(item.url);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                {item.title}
-              </span>
-            </List.Item>
-          )}
-        />
+        <ConfigProvider
+          renderEmpty={() => <Empty description="Nenhuma aula encontrada" />}
+        >
+          <List
+            bordered
+            itemLayout="horizontal"
+            dataSource={currentDataSource}
+            renderItem={(item: RelativeUrlAndPageName) => (
+              <List.Item>
+                <span
+                  className="page-list"
+                  onClick={() => {
+                    navigate(item.url);
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  {item.title}
+                </span>
+              </List.Item>
+            )}
+          />
+        </ConfigProvider>
       </div>
     </div>
   );
