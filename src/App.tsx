@@ -27,6 +27,7 @@ import { ElectronicComponents } from './pages/digital-electronics/about-electron
 import { Voltage } from './pages/digital-electronics/review-of-basic-concepts/Voltage';
 import { Current } from './pages/digital-electronics/review-of-basic-concepts/Current';
 import { Resistance } from './pages/digital-electronics/review-of-basic-concepts/Resistance';
+import { Power } from './pages/digital-electronics/review-of-basic-concepts/Power';
 
 const App = (): JSX.Element => {
   return (
@@ -77,6 +78,8 @@ const App = (): JSX.Element => {
                   <Route path="corrente" element={<Current />} />
 
                   <Route path="resistencia" element={<Resistance />} />
+
+                  <Route path="potencia" element={<Power />} />
                 </Route>
 
                 <Route path="portas-logicas" element={<Outlet />}>
