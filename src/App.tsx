@@ -26,6 +26,7 @@ import { Datasheets } from './pages/digital-electronics/about-electronics/Datash
 import { ElectronicComponents } from './pages/digital-electronics/about-electronics/ElectronicComponents';
 import { Voltage } from './pages/digital-electronics/review-of-basic-concepts/Voltage';
 import { Current } from './pages/digital-electronics/review-of-basic-concepts/Current';
+import { Resistance } from './pages/digital-electronics/review-of-basic-concepts/Resistance';
 
 const App = (): JSX.Element => {
   return (
@@ -74,6 +75,8 @@ const App = (): JSX.Element => {
                   <Route path="tensao" element={<Voltage />} />
 
                   <Route path="corrente" element={<Current />} />
+
+                  <Route path="resistencia" element={<Resistance />} />
                 </Route>
 
                 <Route path="portas-logicas" element={<Outlet />}>
