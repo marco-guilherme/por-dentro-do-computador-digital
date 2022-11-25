@@ -25,6 +25,7 @@ import { AssemblyLanguage } from './pages/assembly-language/AssemblyLanguage';
 import { Datasheets } from './pages/digital-electronics/about-electronics/Datasheets';
 import { ElectronicComponents } from './pages/digital-electronics/about-electronics/ElectronicComponents';
 import { Voltage } from './pages/digital-electronics/review-of-basic-concepts/Voltage';
+import { Current } from './pages/digital-electronics/review-of-basic-concepts/Current';
 
 const App = (): JSX.Element => {
   return (
@@ -71,6 +72,8 @@ const App = (): JSX.Element => {
 
                 <Route path="revisao-de-conceitos-basicos" element={<Outlet />}>
                   <Route path="tensao" element={<Voltage />} />
+
+                  <Route path="corrente" element={<Current />} />
                 </Route>
 
                 <Route path="portas-logicas" element={<Outlet />}>

@@ -4,6 +4,7 @@ import ion from '../../../images/ion.webp';
 import voltage from '../../../images/voltage.jpg';
 import powerSupply from '../../../images/power-supply.jpg';
 import voltmeter from '../../../images/voltmeter.jpg';
+import atom2 from '../../../images/atom-2.webp';
 
 export const Voltage = (): JSX.Element => {
   return (
@@ -11,6 +12,48 @@ export const Voltage = (): JSX.Element => {
       <h1>Tensão</h1>
 
       <div className="site-content">
+        <p>
+          Antes de tudo, vamos relembrar brevemente o que é um átomo, afinal,
+          você precisará desse conhecimento básico para entender a tensão,
+          corrente e resistência elétrica.
+        </p>
+
+        <p>
+          A <span className="bold-text">matéria</span> é qualquer substância que
+          tenha massa e que ocupe espaço por ter volume. Todos os objetos
+          cotidianos que podem ser tocados são, em última análise, compostos de
+          átomos. Um elemento químico é composto por{' '}
+          <span className="bold-text">átomos</span> que possuem um determinado
+          número de <span className="bold-text">prótons</span> em seus{' '}
+          <span className="bold-text">núcleos</span>. Um átomo é a menor unidade
+          de matéria comum que forma um elemento químico. Um átomo é a menor
+          divisão reconhecível de um elemento químico. Normalmente, os átomos
+          podem ser imaginados como um núcleo de prótons,{' '}
+          <span className="bold-text">nêutrons</span> e uma "nuvem" circundante
+          de <span className="bold-text">elétrons</span> em órbita que "ocupa
+          espaço". Apesar de os átomos serem inimaginávelmente pequenos, eles
+          não possuem tamanhos ou posições bem definidas.
+        </p>
+
+        <div className="site-image">
+          <img
+            src={atom2}
+            className="medium-image"
+            alt="Modelo conceitual de um átomo"
+          />
+        </div>
+
+        <p>
+          Uma partícula subatômica pode ter{' '}
+          <span className="bold-text">carga elétrica positiva</span>,{' '}
+          <span className="bold-text">negativa</span> ou{' '}
+          <span className="bold-text">neutra</span> (nem positiva e nem
+          negativa). Partículas dessa natureza, são chamadas de prótons,
+          elétrons e neutrôns, respectivamente. O núcleo atômico é uma região
+          pequena e densa que consiste em prótons e nêutrons no centro de um
+          átomo.
+        </p>
+
         <p>
           A distribuição dos elétrons nas diversas camadas ao redor do núcleo de
           um átomo obedece a regras bem definidas. A regra mais importante para
@@ -102,6 +145,10 @@ export const Voltage = (): JSX.Element => {
           .
         </p>
 
+        <div className="horizontal-space-2" />
+
+        <h2>O Átomo na Eletrônica</h2>
+
         <p>
           A <span className="bold-text">tensão elétrica</span> é a{' '}
           <span className="bold-text">diferença de potencial elétrico</span>{' '}
@@ -118,6 +165,33 @@ export const Voltage = (): JSX.Element => {
             className="large-image"
             alt="Símbolo interncional da tensão elétrica"
           />
+        </div>
+
+        <p>
+          No SI (Sistema Internacional de Unidades), a unidade derivada para a
+          tensão é o volt ou V, em homenagem ao físico italiano Alessandro
+          Volta. Na física, a tensão também é chamada de força eletromotriz e
+          você também pode encontrá-la com a letra E ao invés de V.
+        </p>
+
+        <p>
+          Um <span className="bold-text">voltímetro</span> pode ser usado para
+          medir a tensão entre dois pontos em um sistema. Frequentemente, um
+          potencial de referência comum, como o "
+          <span className="bold-text">terra</span>" do sistema, é usado como um
+          dos pontos. Uma tensão pode representar uma fonte de energia ou a
+          perda, dissipação ou armazenamento de energia.
+        </p>
+
+        <div className="site-image site-figure">
+          <figure>
+            <img
+              src={voltmeter}
+              alt="Multímetros e fontes"
+              className="large-image"
+            />
+            <figcaption>Voltímetros e fontes</figcaption>
+          </figure>
         </div>
 
         <p>
@@ -159,26 +233,6 @@ export const Voltage = (): JSX.Element => {
         </p>
 
         <p>
-          Um <span className="bold-text">voltímetro</span> pode ser usado para
-          medir a tensão entre dois pontos em um sistema. Frequentemente, um
-          potencial de referência comum, como o "
-          <span className="bold-text">terra</span>" do sistema, é usado como um
-          dos pontos. Uma tensão pode representar uma fonte de energia ou a
-          perda, dissipação ou armazenamento de energia.
-        </p>
-
-        <div className="site-image site-figure">
-          <figure>
-            <img
-              src={voltmeter}
-              alt="Multímetros e fontes"
-              className="large-image"
-            />
-            <figcaption>Voltímetros e fontes</figcaption>
-          </figure>
-        </div>
-
-        <p>
           Note que, a tensão é sempre aplicada (ou aparece) ATRAVÉS da coisas.
           Portanto, sempre se refira à tensão como "
           <span className="underline-text">
@@ -196,28 +250,23 @@ export const Voltage = (): JSX.Element => {
 
         <div className="flex-center-column circuit-frame-wrapper">
           <iframe
-            title="potentiometer"
+            title="electric-voltage"
             src="https://www.tinkercad.com/embed/56Y4CXAZTiI?editbtn=1"
             className="circuit-frame"
           />
         </div>
 
         <p>
-          No SI (Sistema Internacional de Unidades), a unidade derivada para a
-          tensão é o volt ou V, em homenagem ao físico italiano Alessandro
-          Volta. Na física, a tensão também é chamada de força eletromotriz e
-          você também pode encontrá-la com a letra E ao invés de V.
-        </p>
-
-        <p>
-          O termo voltagem, apesar de ser mais conhecido pelos leigos, é um
-          termo incorreto. Esse nome foi derivado da unidade volt e da palavra
-          "voltage", que é tensão em inglês. Ou seja, voltagem é uma tradução
-          equivocada da palavra voltage. Sendo assim,{' '}
+          O termo <span className="bold-text">voltagem</span>, apesar de ser
+          mais conhecido pelos leigos, é um termo incorreto. Esse nome foi
+          derivado da unidade volt e da palavra "voltage", que é tensão em
+          inglês. Ou seja, voltagem é uma tradução equivocada da palavra
+          voltage. Sendo assim,{' '}
           <span className="underline-text">
             dê preferência para o termo correto
           </span>
-          : tensão elétrica ou DDP.
+          : tensão elétrica ou DDP. E.g.: a tensão de alimentação do circuito é
+          de 5 V. Outro exemplo: a queda de tensão no resistor R4 é de 3,2 V.
         </p>
 
         <br />
