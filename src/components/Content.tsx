@@ -1,10 +1,13 @@
-import { List } from 'antd';
+import { List, Input, ConfigProvider, Empty } from 'antd';
 import { GiNotebook } from 'react-icons/gi';
 import { useSelector } from 'react-redux';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { RelativeUrlAndPageName } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import learnElectronics from '../images/learn-electronics.jpg';
+import { useEffect, useState } from 'react';
+
+const { Search } = Input;
 
 export const Content = (): JSX.Element => {
   const {
@@ -13,10 +16,22 @@ export const Content = (): JSX.Element => {
 
   const navigate: NavigateFunction = useNavigate();
 
-  const getDataSource = (): RelativeUrlAndPageName[] => {
+  const [currentDataSource, setCurrentDataSource] = useState<
+    RelativeUrlAndPageName[]
+  >([]);
+
+  useEffect(() => {
+    setCurrentDataSource(getDataSource());
+  }, []);
+
+  const getDataSource = (search: string = ''): RelativeUrlAndPageName[] => {
     const dataSource: RelativeUrlAndPageName[] = [];
 
     for (const [key, value] of Object.entries(relativeUrlAndPageName)) {
+      if (search && !value.toLowerCase().includes(search)) {
+        continue;
+      }
+
       dataSource.push({
         title: value,
         url: key,
@@ -58,24 +73,49 @@ export const Content = (): JSX.Element => {
 
         <div className="horizontal-space-2" />
 
-        <List
-          bordered
-          itemLayout="horizontal"
-          dataSource={getDataSource()}
-          renderItem={(item: RelativeUrlAndPageName) => (
-            <List.Item>
-              <span
-                className="page-list"
-                onClick={() => {
-                  navigate(item.url);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                {item.title}
-              </span>
-            </List.Item>
-          )}
-        />
+        <div className="content-search">
+          <Search
+            placeholder="Procurar por uma aula"
+            onInput={(event: React.FormEvent<HTMLInputElement>) =>
+              setCurrentDataSource(
+                getDataSource(event.currentTarget.value.toLocaleLowerCase())
+              )
+            }
+            onSearch={(value: string) => {
+              if (!value) {
+                setCurrentDataSource(getDataSource());
+              }
+            }}
+            enterButton
+            allowClear
+            showCount
+            maxLength={200}
+            size={'large'}
+          />
+        </div>
+
+        <ConfigProvider
+          renderEmpty={() => <Empty description="Nenhuma aula encontrada" />}
+        >
+          <List
+            bordered
+            itemLayout="horizontal"
+            dataSource={currentDataSource}
+            renderItem={(item: RelativeUrlAndPageName) => (
+              <List.Item>
+                <span
+                  className="page-list"
+                  onClick={() => {
+                    navigate(item.url);
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  {item.title}
+                </span>
+              </List.Item>
+            )}
+          />
+        </ConfigProvider>
       </div>
     </div>
   );
