@@ -29,7 +29,8 @@ import { Current } from './pages/digital-electronics/review-of-basic-concepts/Cu
 import { Resistance } from './pages/digital-electronics/review-of-basic-concepts/Resistance';
 import { Power } from './pages/digital-electronics/review-of-basic-concepts/Power';
 import { Circuits } from './pages/digital-electronics/review-of-basic-concepts/Circuits';
-import { ArithmeticCircuits } from './pages/digital-electronics/about-electronics/ArithmeticCircuits';
+import { ArithmeticCircuits } from './pages/digital-electronics/arithmetic-circuits/ArithmeticCircuits';
+import { HalfAdder } from './pages/digital-electronics/arithmetic-circuits/HalfAdder';
 
 const App = (): JSX.Element => {
   return (
@@ -106,6 +107,8 @@ const App = (): JSX.Element => {
 
                 <Route path="circuitos-aritmeticos" element={<Outlet />}>
                   <Route index element={<ArithmeticCircuits />} />
+
+                  <Route path="meio-somador" element={<HalfAdder />} />
                 </Route>
               </Route>
 
