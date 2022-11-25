@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavigateFunction, NavLink, useNavigate } from 'react-router-dom';
 import unipLogo from '../images/unip-logo.png';
 import { GiNotebook } from 'react-icons/gi';
 import { useDispatch } from 'react-redux';
@@ -8,11 +8,16 @@ import { setDrawerVisibility } from '../store/application/actions';
 
 export const Header = (): JSX.Element => {
   const dispatch: Dispatch<ApplicationActionType> = useDispatch();
+  const navigate: NavigateFunction = useNavigate();
 
   return (
     <header className="header">
       <div className="header-logo-wrapper">
-        <img src={unipLogo} alt="Logotipo da Universidade Paulista" />
+        <img
+          src={unipLogo}
+          alt="Logotipo da Universidade Paulista"
+          onClick={() => navigate('/inicio')}
+        />
       </div>
 
       <nav>

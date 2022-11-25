@@ -77,7 +77,11 @@ export const Power = (): JSX.Element => {
 
         <div className="site-image site-figure">
           <figure>
-            <img src={shower} alt="Silício" className="medium-image" />
+            <img
+              src={shower}
+              alt="Chuveiro Lorenzetti"
+              className="medium-image"
+            />
             <figcaption>O famoso Lorenzetti brasileiro</figcaption>
           </figure>
         </div>
