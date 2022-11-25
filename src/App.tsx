@@ -31,6 +31,7 @@ import { Power } from './pages/digital-electronics/review-of-basic-concepts/Powe
 import { Circuits } from './pages/digital-electronics/review-of-basic-concepts/Circuits';
 import { ArithmeticCircuits } from './pages/digital-electronics/arithmetic-circuits/ArithmeticCircuits';
 import { HalfAdder } from './pages/digital-electronics/arithmetic-circuits/HalfAdder';
+import { NumeralSystem } from './pages/digital-electronics/numeral-system/NumeralSystem';
 
 const App = (): JSX.Element => {
   return (
@@ -85,6 +86,16 @@ const App = (): JSX.Element => {
                   <Route path="potencia" element={<Power />} />
 
                   <Route path="circuitos" element={<Circuits />} />
+                </Route>
+
+                <Route
+                  path="sistemas-de-numeracao-e-codigos"
+                  element={<Outlet />}
+                >
+                  <Route
+                    path="sistemas-de-numeracao"
+                    element={<NumeralSystem />}
+                  />
                 </Route>
 
                 <Route path="portas-logicas" element={<Outlet />}>

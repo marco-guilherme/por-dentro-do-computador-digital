@@ -31,7 +31,8 @@ export const generateWebsiteRoutes = (): RelativeUrlAndPageName => {
           '/primeira-e-segunda-lei-de-kirchhoff':
             'Primeira e Segunda Lei de Kirchhoff',
         },
-        '/sistemas-numericos-e-codigos': {
+        '/sistemas-de-numeracao-e-codigos': {
+          '/sistemas-de-numeracao': 'Sistemas de Numeração',
           '/decimal': 'Decimal',
           '/binario': 'Binário',
           '/hexadecimal': 'Hexadecimal',
@@ -69,6 +70,7 @@ export const generateWebsiteRoutes = (): RelativeUrlAndPageName => {
         '/chips': 'Chips',
         '/familias-logicas': 'Famílias Lógicas',
         '/portas-logicas': {
+          '/portas-logicas': 'Portas Lógicas',
           '/porta-and': 'Porta AND',
           '/porta-or': 'Porta OR',
           '/porta-not': 'Porta NOT',
@@ -81,6 +83,7 @@ export const generateWebsiteRoutes = (): RelativeUrlAndPageName => {
         '/cicuitos-combinacionais': 'Circuitos Combinacionais',
         '/circuitos-sequenciais': 'Circuitos Sequenciais',
         '/circuitos-aritmeticos': {
+          '/circuitos-aritmeticos': 'Circuitos Aritméticos',
           '/meio-somador': 'Meio Somador',
           '/somador-completo': 'Somador Completo',
           '/meio-subtrator': 'Meio Subtrator',
