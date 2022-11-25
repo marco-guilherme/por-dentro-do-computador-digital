@@ -28,7 +28,7 @@ export const Resistance = (): JSX.Element => {
           Isso significa que esses elétrons possuem uma maior facilidade em
           romper a ligação com o átomo e percorrer um meio condutor. Os cabos
           elétricos são compostos por cobre, que é um exemplo de material
-          isolante. Os condutores elétricos possuem uma alta condutância.
+          condutor. Os condutores elétricos possuem uma alta condutância.
         </p>
 
         <div className="site-image">
@@ -45,8 +45,10 @@ export const Resistance = (): JSX.Element => {
           impedimento elevado a circulação da corrente elétrica pois seus
           elétrons livres estão fortemente vinculados ao núcleo do átomo e
           dificilmente conseguirão romper essa ligação para participar do fluxo.
-          Um exemplo típico de isolante é a borracha. Os isolantes elétricos
-          possuem uma baixa condutância.
+          Um exemplo típico de isolante é a borracha ou o ar. Apesar de o ar ser
+          um isolante, caso a tensão seja muito elevada, ele pode se tornar um
+          condutor (basta observar os raios). Os isolantes elétricos possuem uma
+          baixa condutância.
         </p>
 
         <div className="site-image">
