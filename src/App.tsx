@@ -29,6 +29,7 @@ import { Current } from './pages/digital-electronics/review-of-basic-concepts/Cu
 import { Resistance } from './pages/digital-electronics/review-of-basic-concepts/Resistance';
 import { Power } from './pages/digital-electronics/review-of-basic-concepts/Power';
 import { Circuits } from './pages/digital-electronics/review-of-basic-concepts/Circuits';
+import { ArithmeticCircuits } from './pages/digital-electronics/about-electronics/ArithmeticCircuits';
 
 const App = (): JSX.Element => {
   return (
@@ -101,6 +102,10 @@ const App = (): JSX.Element => {
                   <Route path="porta-nand" element={<NandGate />} />
 
                   <Route path="porta-nor" element={<NorGate />} />
+                </Route>
+
+                <Route path="circuitos-aritmeticos" element={<Outlet />}>
+                  <Route index element={<ArithmeticCircuits />} />
                 </Route>
               </Route>
 

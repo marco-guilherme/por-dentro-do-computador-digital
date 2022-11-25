@@ -281,8 +281,13 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Portas Lógicas',
-          key: '/aulas/eletronica-digital/portas-logicas',
+          key: '0-7',
           children: [
+            {
+              title: 'Portas Lógicas',
+              key: '/aulas/eletronica-digital/portas-logicas',
+              children: [],
+            },
             {
               title: 'Porta AND',
               key: '/aulas/eletronica-digital/portas-logicas/porta-and',
@@ -337,8 +342,13 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Circuitos Aritméticos',
-          key: '',
+          key: '0-8',
           children: [
+            {
+              title: 'Circuitos Aritméticos',
+              key: '/aulas/eletronica-digital/circuitos-aritmeticos',
+              children: [],
+            },
             {
               title: 'Meio Somador',
               key: '/aulas/eletronica-digital/circuitos-aritmeticos/meio-somador',
@@ -368,7 +378,7 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Flip-Flop e Latch',
-          key: '',
+          key: '0-9',
           children: [
             {
               title: 'D',
@@ -399,27 +409,27 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Codificadores e Decodificadores',
-          key: '',
+          key: '0-10',
           children: [],
         },
         {
           title: 'Multiplexadores e Demultiplexadores',
-          key: '',
+          key: '0-11',
           children: [],
         },
         {
           title: 'Contadores',
-          key: '',
+          key: '0-12',
           children: [],
         },
         {
           title: 'Registradores',
-          key: '',
+          key: '0-13',
           children: [],
         },
         {
           title: 'Memórias',
-          key: '',
+          key: '0-14',
           children: [
             {
               title: 'RAM',
@@ -450,7 +460,7 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Microprocessadores e Microcontroladores',
-          key: '',
+          key: '0-15',
           children: [],
         },
       ],
