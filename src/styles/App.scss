@@ -37,6 +37,7 @@ div.body-content {
       margin-left: 5vw;
       width: 10rem;
       // height: 20%;
+      cursor: pointer;
     }
   }
 
@@ -152,6 +153,12 @@ div.body-content {
   h2 {
     text-align: center;
     font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 2rem;
     font-weight: bold;
   }
 }

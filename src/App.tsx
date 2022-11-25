@@ -28,6 +28,7 @@ import { Voltage } from './pages/digital-electronics/review-of-basic-concepts/Vo
 import { Current } from './pages/digital-electronics/review-of-basic-concepts/Current';
 import { Resistance } from './pages/digital-electronics/review-of-basic-concepts/Resistance';
 import { Power } from './pages/digital-electronics/review-of-basic-concepts/Power';
+import { Circuits } from './pages/digital-electronics/review-of-basic-concepts/Circuits';
 
 const App = (): JSX.Element => {
   return (
@@ -80,6 +81,8 @@ const App = (): JSX.Element => {
                   <Route path="resistencia" element={<Resistance />} />
 
                   <Route path="potencia" element={<Power />} />
+
+                  <Route path="circuitos" element={<Circuits />} />
                 </Route>
 
                 <Route path="portas-logicas" element={<Outlet />}>
