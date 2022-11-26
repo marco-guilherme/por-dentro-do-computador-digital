@@ -1,3 +1,4 @@
+import { NavigationButtons } from '../../../components/NavigationButtons';
 import { PageInformation } from '../../../components/PageInformation';
 
 export const ArithmeticCircuits = (): JSX.Element => {
@@ -58,6 +59,11 @@ export const ArithmeticCircuits = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/circuitos-sequenciais"
+          nextPageUrl="/aulas/eletronica-digital/circuitos-aritmeticos/meio-somador"
+        />
 
         <hr />
 

@@ -1,3 +1,4 @@
+import { NavigationButtons } from '../../../components/NavigationButtons';
 import { PageInformation } from '../../../components/PageInformation';
 import lightBulb from '../../../images/light-bulb.gif';
 import shower from '../../../images/shower.png';
@@ -98,6 +99,11 @@ export const Power = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/resistencia"
+          nextPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/circuitos"
+        />
 
         <hr />
 

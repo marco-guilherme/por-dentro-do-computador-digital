@@ -5,6 +5,7 @@ import nandGateIec from '../../../images/nand-gate-iec.png';
 import nandGateDin from '../../../images/nand-gate-din.png';
 import Latex from 'react-latex';
 import { PageInformation } from '../../../components/PageInformation';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const NandGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -33,6 +34,7 @@ export const NandGate = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Porta Lógica NAND</h1>
+
       <div className="site-content">
         <p>
           Uma porta NAND é na verdade, uma porta AND com sua saída sempre
@@ -42,7 +44,9 @@ export const NandGate = (): JSX.Element => {
           </span>
           .
         </p>
+
         <p>Simbologia no padrão ANSI:</p>
+
         <div className="site-image">
           <img
             src={nandGateAnsi}
@@ -50,7 +54,9 @@ export const NandGate = (): JSX.Element => {
             alt="Simbologia da porta lógica NAND no padrão ANSI"
           />
         </div>
+
         <p>Simbologia no padrão IEC:</p>
+
         <div className="site-image">
           <img
             src={nandGateIec}
@@ -58,7 +64,9 @@ export const NandGate = (): JSX.Element => {
             alt="Simbologia da porta lógica NAND no padrão IEC"
           />
         </div>
+
         <p>Simbologia no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={nandGateDin}
@@ -66,7 +74,9 @@ export const NandGate = (): JSX.Element => {
             alt="Simbologia da porta lógica NAND no padrão DIN"
           />
         </div>
+
         <p>Tabela verdade para uma porta AND de duas entradas:</p>
+
         <div className="flex-center-column">
           <Table
             rowClassName={'truth-table-row'}
@@ -77,14 +87,19 @@ export const NandGate = (): JSX.Element => {
             pagination={false}
           />
         </div>
+
         <p>Expressão lógica:</p>
+
         <div className="flex-center-column logic-expression">
           <Latex>
             {'$Q \\space = \\space \\overline{A \\space . \\space B}$'}
           </Latex>
         </div>
+
         <p>Lê-se: a saída Q é igual a A não-e B.</p>
+
         <p>Porta lógica NAND interativa:</p>
+
         <div className="flex-center-column">
           <iframe
             title="two-input-nand-gate"
@@ -92,6 +107,7 @@ export const NandGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
         <div className="space-around flex-center-column">
           <iframe
             title="tinkercad-two-input-nand-gate"
@@ -101,6 +117,11 @@ export const NandGate = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/portas-logicas/porta-xnor"
+          nextPageUrl="/aulas/eletronica-digital/portas-logicas/porta-nor"
+        />
 
         <hr />
 

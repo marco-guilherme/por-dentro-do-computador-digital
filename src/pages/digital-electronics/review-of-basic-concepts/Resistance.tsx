@@ -2,6 +2,7 @@ import { PageInformation } from '../../../components/PageInformation';
 import coiledCable from '../../../images/coiled-cable.webp';
 import boot from '../../../images/boot.webp';
 import silicon from '../../../images/silicon.jpg';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const Resistance = (): JSX.Element => {
   return (
@@ -101,6 +102,11 @@ export const Resistance = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/corrente"
+          nextPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/potencia"
+        />
 
         <hr />
 

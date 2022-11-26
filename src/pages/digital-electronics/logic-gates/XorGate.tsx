@@ -6,6 +6,7 @@ import xorGateDin from '../../../images/xor-gate-din.png';
 import xorGateDin2 from '../../../images/xor-gate-din-2.png';
 import { TwoInputGate } from '../../../store/application/types';
 import { PageInformation } from '../../../components/PageInformation';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const XorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -34,6 +35,7 @@ export const XorGate = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Porta Lógica XOR</h1>
+
       <div className="site-content">
         <p>
           Em uma porta XOR com{' '}
@@ -44,7 +46,9 @@ export const XorGate = (): JSX.Element => {
           </span>
           .
         </p>
+
         <p>Simbologia no padrão ANSI:</p>
+
         <div className="site-image">
           <img
             src={xorGateAnsi}
@@ -52,7 +56,9 @@ export const XorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica XOR no padrão ANSI"
           />
         </div>
+
         <p>Simbologia no padrão IEC:</p>
+
         <div className="site-image">
           <img
             src={xorGateIec}
@@ -60,7 +66,9 @@ export const XorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica XOR no padrão IEC"
           />
         </div>
+
         <p>Simbologia no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={xorGateDin}
@@ -68,7 +76,9 @@ export const XorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica XOR no padrão DIN"
           />
         </div>
+
         <p>Simbologia alternativa no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={xorGateDin2}
@@ -76,7 +86,9 @@ export const XorGate = (): JSX.Element => {
             alt="Simbologia alternativa da porta lógica AND no padrão DIN"
           />
         </div>
+
         <p>Tabela verdade para uma porta XOR de duas entradas:</p>
+
         <div className="flex-center-column">
           <Table
             rowClassName={'truth-table-row'}
@@ -87,12 +99,17 @@ export const XorGate = (): JSX.Element => {
             pagination={false}
           />
         </div>
+
         <p>Expressão lógica:</p>
+
         <div className="flex-center-column logic-expression">
           <Latex>{'$Q \\space = \\space A \\space \\oplus \\space B$'}</Latex>
         </div>
+
         <p>Lê-se: a saída Q é igual a A ou-exclusivo B.</p>
+
         <p>Porta lógica XOR interativa:</p>
+
         <div className="flex-center-column">
           <iframe
             title="two-input-xor-gate"
@@ -100,6 +117,7 @@ export const XorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
         <div className="space-around flex-center-column">
           <iframe
             title="tinkercad-two-input-xor-gate"
@@ -109,6 +127,11 @@ export const XorGate = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/portas-logicas/porta-not"
+          nextPageUrl="/aulas/eletronica-digital/portas-logicas/porta-xnor"
+        />
 
         <hr />
 

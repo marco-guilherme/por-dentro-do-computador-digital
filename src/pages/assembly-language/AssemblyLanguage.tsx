@@ -9,6 +9,7 @@ import Table, { ColumnsType } from 'antd/lib/table';
 import binaryNumber from '../../images/binary-number.gif';
 import epromProgrammer from '../../images/eprom-programmer.jpg';
 import assembler from '../../images/assembler.png';
+import { NavigationButtons } from '../../components/NavigationButtons';
 
 type AssemblyTable = {
   key: number;
@@ -461,6 +462,11 @@ export const AssemblyLanguage = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/linguagem-assembly/linguagens-de-programacao"
+          nextPageUrl="/aulas/linguagem-assembly/assembly-ou-assembler"
+        />
 
         <hr />
 

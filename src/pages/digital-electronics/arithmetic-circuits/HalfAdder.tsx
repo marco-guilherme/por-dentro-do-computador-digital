@@ -5,6 +5,7 @@ import carry from '../../../images/carry.png';
 import halfAdderSum from '../../../images/half-adder-sum.png';
 import halfAdderinput from '../../../images/half-adder-input.jpg';
 import halfAdderSymbol from '../../../images/half-adder-symbol.png';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const HalfAdder = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -157,6 +158,11 @@ export const HalfAdder = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/circuitos-aritmeticos"
+          nextPageUrl="/aulas/eletronica-digital/circuitos-aritmeticos/somador-completo"
+        />
 
         <hr />
 

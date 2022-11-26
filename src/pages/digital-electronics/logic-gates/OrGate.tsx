@@ -6,6 +6,7 @@ import orGateIec from '../../../images/or-gate-iec.png';
 import orGateDin from '../../../images/or-gate-din.png';
 import Latex from 'react-latex';
 import { PageInformation } from '../../../components/PageInformation';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const OrGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -34,6 +35,7 @@ export const OrGate = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Porta Lógica OR</h1>
+
       <div className="site-content">
         <p>
           Na porta OR,{' '}
@@ -44,7 +46,9 @@ export const OrGate = (): JSX.Element => {
           </span>
           .
         </p>
+
         <p>Simbologia no padrão ANSI:</p>
+
         <div className="site-image">
           <img
             src={orGateAnsi}
@@ -52,7 +56,9 @@ export const OrGate = (): JSX.Element => {
             alt="Simbologia da porta lógica AND no padrão ANSI"
           />
         </div>
+
         <p>Simbologia no padrão IEC:</p>
+
         <div className="site-image">
           <img
             src={orGateIec}
@@ -60,7 +66,9 @@ export const OrGate = (): JSX.Element => {
             alt="Simbologia da porta lógica AND no padrão IEC"
           />
         </div>
+
         <p>Simbologia no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={orGateDin}
@@ -68,7 +76,9 @@ export const OrGate = (): JSX.Element => {
             alt="Simbologia da porta lógica OR no padrão DIN"
           />
         </div>
+
         <p>Tabela verdade para uma porta OR de duas entradas:</p>
+
         <div className="flex-center-column">
           <Table
             rowClassName={'truth-table-row'}
@@ -79,18 +89,24 @@ export const OrGate = (): JSX.Element => {
             pagination={false}
           />
         </div>
+
         <p>Expressão lógica:</p>
+
         <div className="flex-center-column logic-expression">
           <Latex>{'$Q \\space = \\space A \\space + \\space B$'}</Latex>
         </div>
+
         <p>Lê-se: a saída Q é igual a A ou B.</p>
+
         <p>
           Repare que a porta OR realiza uma operação de adição binária com o
           valor de suas entradas. Em uma soma de zeros e uns, se o número um
           aparecer na expressão, o resultado com certeza será diferente de zero.
           Ainda assim, evite ler "a saída Q é igual a A mais B".
         </p>
+
         <p>Porta lógica OR interativa:</p>
+
         <div className="flex-center-column">
           <iframe
             title="two-input-or-gate"
@@ -98,6 +114,7 @@ export const OrGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
         <div className="space-around flex-center-column">
           <iframe
             title="tinkercad-two-input-or-gate"
@@ -107,6 +124,11 @@ export const OrGate = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/portas-logicas/porta-and"
+          nextPageUrl="/aulas/eletronica-digital/portas-logicas/porta-not"
+        />
 
         <hr />
 

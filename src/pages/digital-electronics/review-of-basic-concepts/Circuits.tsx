@@ -8,6 +8,7 @@ import circuitTerminals from '../../../images/circuit-terminals.png';
 import seriesCircuit from '../../../images/series-circuit.webp';
 import parallelCircuit from '../../../images/parallel-circuit.png';
 import seriesParallelCircuit from '../../../images/series-parallel-circuit.png';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const Circuits = (): JSX.Element => {
   return (
@@ -209,6 +210,11 @@ export const Circuits = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/potencia"
+          nextPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/resistores"
+        />
 
         <hr />
 

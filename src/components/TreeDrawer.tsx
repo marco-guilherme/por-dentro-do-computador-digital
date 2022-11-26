@@ -468,7 +468,7 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Microprocessadores e Microcontroladores',
-          key: '0-15',
+          key: '/aulas/eletronica-digital/microprocessadores-e-microcontroladores',
           children: [],
         },
       ],

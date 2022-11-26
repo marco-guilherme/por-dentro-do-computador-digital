@@ -5,6 +5,7 @@ import norGateIec from '../../../images/nor-gate-iec.png';
 import norGateDin from '../../../images/nor-gate-din.png';
 import Latex from 'react-latex';
 import { PageInformation } from '../../../components/PageInformation';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const NorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -33,6 +34,7 @@ export const NorGate = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Porta Lógica NOR</h1>
+
       <div className="site-content">
         <p>
           Uma porta NOR é na verdade, uma porta OR com sua saída sempre
@@ -42,7 +44,9 @@ export const NorGate = (): JSX.Element => {
           </span>
           .
         </p>
+
         <p>Simbologia no padrão ANSI:</p>
+
         <div className="site-image">
           <img
             src={norGateAnsi}
@@ -50,7 +54,9 @@ export const NorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica NOR no padrão ANSI"
           />
         </div>
+
         <p>Simbologia no padrão IEC:</p>
+
         <div className="site-image">
           <img
             src={norGateIec}
@@ -58,7 +64,9 @@ export const NorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica NOR no padrão IEC"
           />
         </div>
+
         <p>Simbologia no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={norGateDin}
@@ -66,7 +74,9 @@ export const NorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica NOR no padrão DIN"
           />
         </div>
+
         <p>Tabela verdade para uma porta NOR de duas entradas:</p>
+
         <div className="flex-center-column">
           <Table
             rowClassName={'truth-table-row'}
@@ -77,14 +87,19 @@ export const NorGate = (): JSX.Element => {
             pagination={false}
           />
         </div>
+
         <p>Expressão lógica:</p>
+
         <div className="flex-center-column logic-expression">
           <Latex>
             {'$Q \\space = \\space \\overline{A \\space + \\space B}$'}
           </Latex>
         </div>
+
         <p>Lê-se: a saída Q é igual a A não-ou B.</p>
+
         <p>Porta lógica OR interativa:</p>
+
         <div className="flex-center-column">
           <iframe
             title="two-input-nor-gate"
@@ -92,6 +107,7 @@ export const NorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
         <div className="space-around flex-center-column">
           <iframe
             title="tinkercad-two-input-nor-gate"
@@ -101,6 +117,11 @@ export const NorGate = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/portas-logicas/porta-nand"
+          nextPageUrl="/aulas/eletronica-digital/clock"
+        />
 
         <hr />
 
