@@ -8,8 +8,11 @@ import leds from '../../../images/leds.png';
 import integratedCircuits from '../../../images/integrated-circuits.jpg';
 import relays from '../../../images/relays.webp';
 import { NavigationButtons } from '../../../components/NavigationButtons';
+import { useThirdPartyCookieCheck } from '../../../hooks/useThirdPartyCookieCheck ';
 
 export const ElectronicComponents = (): JSX.Element => {
+  useThirdPartyCookieCheck();
+
   return (
     <div className="site-content-wrapper">
       <h1>Componentes Eletrônicos</h1>

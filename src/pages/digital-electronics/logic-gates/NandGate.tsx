@@ -6,6 +6,7 @@ import nandGateDin from '../../../images/nand-gate-din.png';
 import Latex from 'react-latex';
 import { PageInformation } from '../../../components/PageInformation';
 import { NavigationButtons } from '../../../components/NavigationButtons';
+import { useThirdPartyCookieCheck } from '../../../hooks/useThirdPartyCookieCheck ';
 
 export const NandGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -30,6 +31,8 @@ export const NandGate = (): JSX.Element => {
     { key: 3, inputA: 1, inputB: 0, outputQ: 1 },
     { key: 4, inputA: 1, inputB: 1, outputQ: 0 },
   ];
+
+  useThirdPartyCookieCheck();
 
   return (
     <div className="site-content-wrapper">

@@ -6,8 +6,11 @@ import powerSupply from '../../../images/power-supply.jpg';
 import voltmeter from '../../../images/voltmeter.jpg';
 import atom2 from '../../../images/atom-2.webp';
 import { NavigationButtons } from '../../../components/NavigationButtons';
+import { useThirdPartyCookieCheck } from '../../../hooks/useThirdPartyCookieCheck ';
 
 export const Voltage = (): JSX.Element => {
+  useThirdPartyCookieCheck();
+
   return (
     <div className="site-content-wrapper">
       <h1>Tensão</h1>
