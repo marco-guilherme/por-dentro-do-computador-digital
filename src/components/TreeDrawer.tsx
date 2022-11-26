@@ -10,6 +10,7 @@ import {
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { Key } from 'rc-tree/lib/interface';
 import { useEffect, useState } from 'react';
+import { flattenDeep } from 'lodash';
 
 export const TreeDrawer = (): JSX.Element => {
   const {
@@ -20,7 +21,10 @@ export const TreeDrawer = (): JSX.Element => {
 
   const navigate: NavigateFunction = useNavigate();
 
-  const [keys, setKeys] = useState<string[]>([]);
+  const [keys, setKeys] = useState<string[]>([
+    '/aulas/eletronica-digital/sobre-eletronica/o-que-e-eletronica',
+    '/aulas/eletronica-digital/sobre-eletronica/por-que-aprender-eletronica',
+  ]);
 
   const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
 
@@ -588,15 +592,25 @@ export const TreeDrawer = (): JSX.Element => {
     },
   ];
 
+  const getAllKeys = (data: any): any => {
+    const nestedKeys = data.map((node: any) => {
+      let childKeys: any = [];
+
+      if (node.children) {
+        childKeys = getAllKeys(node.children);
+      }
+
+      return [childKeys, node.key];
+    });
+
+    return flattenDeep(nestedKeys);
+  };
+
   useEffect(() => {
-    const treeKeysCopy: string[] = [];
+    const x = getAllKeys(treeData);
 
-    for (const [key] of Object.entries(relativeUrlAndPageName)) {
-      treeKeysCopy.push(key);
-    }
-
-    setKeys([...treeKeysCopy]);
-    setExpandedKeys([...treeKeysCopy]);
+    setKeys(x);
+    setExpandedKeys(x);
   }, []);
 
   const onSelect = (selectedKeys: Key[]): void => {
@@ -612,8 +626,6 @@ export const TreeDrawer = (): JSX.Element => {
     }
   };
 
-  console.log('expandedKeys.length', expandedKeys.length);
-
   return (
     <div>
       <Drawer
@@ -625,7 +637,6 @@ export const TreeDrawer = (): JSX.Element => {
         <div className="icon-and-text expand-and-collapse">
           <Switch
             defaultChecked
-            disabled
             onChange={(checked: boolean) => {
               if (checked) {
                 setExpandedKeys([...keys]);
