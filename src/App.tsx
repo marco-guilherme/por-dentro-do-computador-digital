@@ -139,9 +139,9 @@ const App = (): JSX.Element => {
             <Route path="/ascii" element={<ASCIITable />} />
 
             <Route path="/sobre" element={<About />} />
-
-            <Route path="*" element={<PageNotFound />} />
           </Route>
+
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </HashRouter>
     </Provider>

@@ -441,7 +441,7 @@ export const AssemblyLanguage = (): JSX.Element => {
         <div className="site-image">
           <img
             src={assembler}
-            className="medium -image"
+            className="medium-image"
             alt="Conversão de assembly para código de máquina"
           />
         </div>
