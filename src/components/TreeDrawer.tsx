@@ -20,6 +20,10 @@ export const TreeDrawer = (): JSX.Element => {
 
   const navigate: NavigateFunction = useNavigate();
 
+  const [keys, setKeys] = useState<string[]>([]);
+
+  const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
+
   const treeData = [
     {
       title: 'Eletrônica Digital',
@@ -590,7 +594,10 @@ export const TreeDrawer = (): JSX.Element => {
     for (const [key] of Object.entries(relativeUrlAndPageName)) {
       treeKeysCopy.push(key);
     }
-  }, [relativeUrlAndPageName]);
+
+    setKeys([...treeKeysCopy]);
+    setExpandedKeys([...treeKeysCopy]);
+  }, []);
 
   const onSelect = (selectedKeys: Key[]): void => {
     if (!selectedKeys.length) {
@@ -605,6 +612,8 @@ export const TreeDrawer = (): JSX.Element => {
     }
   };
 
+  console.log('expandedKeys.length', expandedKeys.length);
+
   return (
     <div>
       <Drawer
@@ -616,7 +625,16 @@ export const TreeDrawer = (): JSX.Element => {
         <div className="icon-and-text expand-and-collapse">
           <Switch
             defaultChecked
-            onChange={(checked: boolean) => console.log(checked)}
+            disabled
+            onChange={(checked: boolean) => {
+              if (checked) {
+                setExpandedKeys([...keys]);
+
+                return;
+              }
+
+              setExpandedKeys([]);
+            }}
           />
           <span>Expandir tudo</span>
         </div>
@@ -628,6 +646,10 @@ export const TreeDrawer = (): JSX.Element => {
           defaultExpandAll
           onSelect={onSelect}
           selectedKeys={[currentPage]}
+          expandedKeys={expandedKeys}
+          onExpand={(onExpandedKeys: Key[]) =>
+            setExpandedKeys(onExpandedKeys as string[])
+          }
         />
       </Drawer>
     </div>
