@@ -6,6 +6,7 @@ import halfAdderSum from '../../../images/half-adder-sum.png';
 import halfAdderinput from '../../../images/half-adder-input.jpg';
 import halfAdderSymbol from '../../../images/half-adder-symbol.png';
 import { NavigationButtons } from '../../../components/NavigationButtons';
+import { useThirdPartyCookieCheck } from '../../../hooks/useThirdPartyCookieCheck ';
 
 export const HalfAdder = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -33,6 +34,8 @@ export const HalfAdder = (): JSX.Element => {
     { key: 3, inputA: 1, inputB: 0, outputC: 0, outputS: 1 },
     { key: 4, inputA: 1, inputB: 1, outputC: 1, outputS: 0 },
   ];
+
+  useThirdPartyCookieCheck();
 
   return (
     <div className="site-content-wrapper">

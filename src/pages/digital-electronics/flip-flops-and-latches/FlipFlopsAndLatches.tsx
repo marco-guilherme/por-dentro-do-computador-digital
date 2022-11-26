@@ -1,7 +1,10 @@
 import { NavigationButtons } from '../../../components/NavigationButtons';
 import { PageInformation } from '../../../components/PageInformation';
+import { useThirdPartyCookieCheck } from '../../../hooks/useThirdPartyCookieCheck ';
 
 export const FlipFlopsAndLatches = (): JSX.Element => {
+  useThirdPartyCookieCheck();
+
   return (
     <div className="site-content-wrapper">
       <h1>Flip-Flops e Latches</h1>

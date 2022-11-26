@@ -7,6 +7,7 @@ import notGateDin from '../../../images/not-gate-din.png';
 import Latex from 'react-latex';
 import { PageInformation } from '../../../components/PageInformation';
 import { NavigationButtons } from '../../../components/NavigationButtons';
+import { useThirdPartyCookieCheck } from '../../../hooks/useThirdPartyCookieCheck ';
 
 export const NotGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -26,6 +27,8 @@ export const NotGate = (): JSX.Element => {
     { key: 1, inputA: 0, outputQ: 1 },
     { key: 2, inputA: 1, outputQ: 0 },
   ];
+
+  useThirdPartyCookieCheck();
 
   return (
     <div className="site-content-wrapper">

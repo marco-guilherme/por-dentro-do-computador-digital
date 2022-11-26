@@ -10,6 +10,7 @@ import binaryNumber from '../../images/binary-number.gif';
 import epromProgrammer from '../../images/eprom-programmer.jpg';
 import assembler from '../../images/assembler.png';
 import { NavigationButtons } from '../../components/NavigationButtons';
+import { useThirdPartyCookieCheck } from '../../hooks/useThirdPartyCookieCheck ';
 
 type AssemblyTable = {
   key: number;
@@ -69,6 +70,8 @@ export const AssemblyLanguage = (): JSX.Element => {
       opcode: <span className="monospaced-snippet">0x1F</span>,
     },
   ];
+
+  useThirdPartyCookieCheck();
 
   return (
     <div className="site-content-wrapper">

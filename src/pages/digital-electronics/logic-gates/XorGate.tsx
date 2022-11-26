@@ -7,6 +7,7 @@ import xorGateDin2 from '../../../images/xor-gate-din-2.png';
 import { TwoInputGate } from '../../../store/application/types';
 import { PageInformation } from '../../../components/PageInformation';
 import { NavigationButtons } from '../../../components/NavigationButtons';
+import { useThirdPartyCookieCheck } from '../../../hooks/useThirdPartyCookieCheck ';
 
 export const XorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -31,6 +32,8 @@ export const XorGate = (): JSX.Element => {
     { key: 3, inputA: 1, inputB: 0, outputQ: 1 },
     { key: 4, inputA: 1, inputB: 1, outputQ: 0 },
   ];
+
+  useThirdPartyCookieCheck();
 
   return (
     <div className="site-content-wrapper">

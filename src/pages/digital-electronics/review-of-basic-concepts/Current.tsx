@@ -6,8 +6,11 @@ import dcAndAcCurrent from '../../../images/dc-and-ac-current.png';
 import currentDirection from '../../../images/current-direction.gif';
 import magneticFieldDirection from '../../../images/magnetic-field-direction.webp';
 import { NavigationButtons } from '../../../components/NavigationButtons';
+import { useThirdPartyCookieCheck } from '../../../hooks/useThirdPartyCookieCheck ';
 
 export const Current = (): JSX.Element => {
+  useThirdPartyCookieCheck();
+
   return (
     <div className="site-content-wrapper">
       <h1>Corrente</h1>
