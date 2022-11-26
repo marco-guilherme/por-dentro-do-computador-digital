@@ -461,6 +461,19 @@ export const AssemblyLanguage = (): JSX.Element => {
           são diferentes.
         </p>
 
+        <p>
+          Abaixo, podemos conferir um exemplo de "olá mundo" escrito em
+          linguagem assembly x86-64. O assembler utilizado é o GNU GAS 11.1.0.
+        </p>
+
+        <div className="space-around flex-center-column">
+          <iframe
+            title="first-program"
+            src="https://www.jdoodle.com/embed/v0/5y0Y"
+            className="circuit-frame"
+          />
+        </div>
+
         <br />
 
         <NavigationButtons
