@@ -61,4 +61,10 @@ export type RelativeUrlAndPageName = {
   [key: string]: string;
 };
 
+export type TreeDataType = {
+  title: string;
+  key: string;
+  children: TreeDataType[];
+};
+
 export type ApplicationActionType = SetDrawerVisibility | SetCurrentPage;

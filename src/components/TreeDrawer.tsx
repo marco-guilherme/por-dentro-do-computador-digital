@@ -1,6 +1,9 @@
 import { Tree, Drawer, Switch } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { ApplicationActionType } from '../store/application/types';
+import {
+  ApplicationActionType,
+  TreeDataType,
+} from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import { Dispatch } from 'redux';
 import {
@@ -14,21 +17,18 @@ import { flattenDeep } from 'lodash';
 
 export const TreeDrawer = (): JSX.Element => {
   const {
-    application: { drawerVisibility, currentPage, relativeUrlAndPageName },
+    application: { drawerVisibility, currentPage },
   } = useSelector((state: RootApplicationState) => state);
 
   const dispatch: Dispatch<ApplicationActionType> = useDispatch();
 
   const navigate: NavigateFunction = useNavigate();
 
-  const [keys, setKeys] = useState<string[]>([
-    '/aulas/eletronica-digital/sobre-eletronica/o-que-e-eletronica',
-    '/aulas/eletronica-digital/sobre-eletronica/por-que-aprender-eletronica',
-  ]);
+  const [keys, setKeys] = useState<string[]>([]);
 
   const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
 
-  const treeData = [
+  const treeData: TreeDataType[] = [
     {
       title: 'Eletrônica Digital',
       key: '0',
@@ -68,7 +68,6 @@ export const TreeDrawer = (): JSX.Element => {
               children: [],
             },
           ],
-          selectable: false,
         },
         {
           title: 'Revisão de Conceitos Básicos',
@@ -486,7 +485,6 @@ export const TreeDrawer = (): JSX.Element => {
           children: [],
         },
       ],
-      selectable: false,
     },
     {
       title: 'Linguagem Assembly x86-16',
@@ -588,13 +586,12 @@ export const TreeDrawer = (): JSX.Element => {
           children: [],
         },
       ],
-      selectable: false,
     },
   ];
 
-  const getAllKeys = (data: any): any => {
-    const nestedKeys = data.map((node: any) => {
-      let childKeys: any = [];
+  const getAllKeys = (data: TreeDataType[]): string[] => {
+    const nestedKeys = data.map((node: TreeDataType) => {
+      let childKeys: string[] = [];
 
       if (node.children) {
         childKeys = getAllKeys(node.children);
@@ -607,10 +604,10 @@ export const TreeDrawer = (): JSX.Element => {
   };
 
   useEffect(() => {
-    const x = getAllKeys(treeData);
+    const allKeys: string[] = getAllKeys(treeData);
 
-    setKeys(x);
-    setExpandedKeys(x);
+    setKeys(allKeys);
+    setExpandedKeys(allKeys);
   }, []);
 
   const onSelect = (selectedKeys: Key[]): void => {
