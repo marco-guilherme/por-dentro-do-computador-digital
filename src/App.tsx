@@ -33,6 +33,7 @@ import { ArithmeticCircuits } from './pages/digital-electronics/arithmetic-circu
 import { HalfAdder } from './pages/digital-electronics/arithmetic-circuits/HalfAdder';
 import { NumeralSystem } from './pages/digital-electronics/numeral-system/NumeralSystem';
 import { FlipFlopsAndLatches } from './pages/digital-electronics/flip-flops-and-latches/FlipFlopsAndLatches';
+import { AssemblyOrAssembler } from './pages/assembly-language/AssemblyOrAssembler';
 
 const App = (): JSX.Element => {
   return (
@@ -143,6 +144,11 @@ const App = (): JSX.Element => {
                 <Route
                   path="linguagem-assembly"
                   element={<AssemblyLanguage />}
+                />
+
+                <Route
+                  path="assembly-ou-assembler"
+                  element={<AssemblyOrAssembler />}
                 />
               </Route>
             </Route>

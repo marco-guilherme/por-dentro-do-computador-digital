@@ -1,3 +1,4 @@
+import { NavigationButtons } from '../../../components/NavigationButtons';
 import { PageInformation } from '../../../components/PageInformation';
 import digitalSignal from '../../../images/digital-signal.png';
 import electronicCircuit2 from '../../../images/electronic-circuit-2.jpg';
@@ -114,6 +115,11 @@ export const DigitalElectronics = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/sobre-eletronica/eletronica-analogica"
+          nextPageUrl="/aulas/eletronica-digital/sobre-eletronica/componentes-eletronicos"
+        />
 
         <hr />
 
