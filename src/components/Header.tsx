@@ -4,7 +4,10 @@ import { GiNotebook } from 'react-icons/gi';
 import { useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
 import { ApplicationActionType } from '../store/application/types';
-import { setDrawerVisibility } from '../store/application/actions';
+import {
+  setCurrentPage,
+  setDrawerVisibility,
+} from '../store/application/actions';
 
 export const Header = (): JSX.Element => {
   const dispatch: Dispatch<ApplicationActionType> = useDispatch();
@@ -16,7 +19,10 @@ export const Header = (): JSX.Element => {
         <img
           src={unipLogo}
           alt="Logotipo da Universidade Paulista"
-          onClick={() => navigate('/inicio')}
+          onClick={() => {
+            navigate('/inicio');
+            dispatch(setCurrentPage('/inicio'));
+          }}
         />
       </div>
 

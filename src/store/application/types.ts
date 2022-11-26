@@ -50,6 +50,7 @@ export type VersionControl = {
   releaseDate: React.ReactNode | string;
   version: React.ReactNode | string;
   changes: React.ReactNode | string;
+  requirements: React.ReactNode;
 };
 
 export type UrlPiecesAndPageName = {

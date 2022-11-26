@@ -1,5 +1,9 @@
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
+import { Dispatch } from 'redux';
+import { setCurrentPage } from '../store/application/actions';
+import { ApplicationActionType } from '../store/application/types';
 
 type Props = {
   previousPageUrl?: string;
@@ -11,6 +15,17 @@ export const NavigationButtons = ({
   nextPageUrl = '',
 }: Props): JSX.Element => {
   const navigate: NavigateFunction = useNavigate();
+  const dispatch: Dispatch<ApplicationActionType> = useDispatch();
+
+  const handleNavigate = (destinationPage: string): void => {
+    if (!destinationPage) {
+      return;
+    }
+
+    navigate(destinationPage);
+    dispatch(setCurrentPage(destinationPage));
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className="navigation-buttons">
@@ -19,15 +34,7 @@ export const NavigationButtons = ({
           cursor: previousPageUrl ? 'pointer' : '',
           color: previousPageUrl ? 'black' : '#c3c3c3',
         }}
-        onClick={() => {
-          if (!previousPageUrl) {
-            return;
-          }
-
-          navigate(previousPageUrl);
-
-          window.scrollTo(0, 0);
-        }}
+        onClick={() => handleNavigate(previousPageUrl)}
       >
         <BsArrowLeftCircle />
         <p>Anterior</p>
@@ -38,15 +45,7 @@ export const NavigationButtons = ({
           cursor: nextPageUrl ? 'pointer' : '',
           color: nextPageUrl ? 'black' : '#c3c3c3',
         }}
-        onClick={() => {
-          if (!nextPageUrl) {
-            return;
-          }
-
-          navigate(nextPageUrl);
-
-          window.scrollTo(0, 0);
-        }}
+        onClick={() => handleNavigate(nextPageUrl)}
       >
         <BsArrowRightCircle />
         <p>Próximo</p>

@@ -4,6 +4,9 @@ import unipAraraquara from '../images/unip-araraquara.jpg';
 import gitHubLogo from '../images/github-logo.svg';
 import { VersionControl } from '../store/application/types';
 import windows95Letter from '../images/windows-95-letter.png';
+import release100 from '../pdfs/1.0.0.pdf';
+import release101 from '../pdfs/1.0.1.pdf';
+import pdfIcon from '../images/pdf-icon.png';
 
 export const About = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -22,11 +25,32 @@ export const About = (): JSX.Element => {
       dataIndex: 'changes',
       align: 'center',
     },
+    {
+      title: 'Requisitos',
+      dataIndex: 'requirements',
+      align: 'center',
+    },
   ];
 
   const dataSource: VersionControl[] = [
     {
       key: 1,
+      releaseDate: <span className="monospaced-snippet">23/11/2022</span>,
+      version: <span className="monospaced-snippet">1.0.1</span>,
+      changes: (
+        <span>
+          Desenvolvimento de novas páginas sobre eletrônica digital e linguagem
+          asembly.
+        </span>
+      ),
+      requirements: (
+        <a href={release101} target="_blank" rel="noreferrer">
+          <img src={pdfIcon} alt="Ícone de PDF" width={'40rem'} />
+        </a>
+      ),
+    },
+    {
+      key: 2,
       releaseDate: <span className="monospaced-snippet">13/11/2022</span>,
       version: <span className="monospaced-snippet">1.0.0</span>,
       changes: (
@@ -35,16 +59,10 @@ export const About = (): JSX.Element => {
           drawer de conteúdo e páginas para as portas lógicas.
         </span>
       ),
-    },
-    {
-      key: 2,
-      releaseDate: <span className="monospaced-snippet">23/11/2022</span>,
-      version: <span className="monospaced-snippet">1.0.1</span>,
-      changes: (
-        <span>
-          Desenvolvimento de novas páginas sobre eletrônica digital e linguagem
-          asembly.
-        </span>
+      requirements: (
+        <a href={release100} target="_blank" rel="noreferrer">
+          <img src={pdfIcon} alt="Ícone de PDF" width={'40rem'} />
+        </a>
       ),
     },
   ];
