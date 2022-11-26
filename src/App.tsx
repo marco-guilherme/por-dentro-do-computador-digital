@@ -32,6 +32,7 @@ import { Circuits } from './pages/digital-electronics/review-of-basic-concepts/C
 import { ArithmeticCircuits } from './pages/digital-electronics/arithmetic-circuits/ArithmeticCircuits';
 import { HalfAdder } from './pages/digital-electronics/arithmetic-circuits/HalfAdder';
 import { NumeralSystem } from './pages/digital-electronics/numeral-system/NumeralSystem';
+import { FlipFlopsAndLatches } from './pages/digital-electronics/flip-flops-and-latches/FlipFlopsAndLatches';
 
 const App = (): JSX.Element => {
   return (
@@ -117,9 +118,19 @@ const App = (): JSX.Element => {
                 </Route>
 
                 <Route path="circuitos-aritmeticos" element={<Outlet />}>
-                  <Route index element={<ArithmeticCircuits />} />
+                  <Route
+                    path="circuitos-aritmeticos"
+                    element={<ArithmeticCircuits />}
+                  />
 
                   <Route path="meio-somador" element={<HalfAdder />} />
+                </Route>
+
+                <Route path="flip-flops-e-latches" element={<Outlet />}>
+                  <Route
+                    path="flip-flops-e-latches"
+                    element={<FlipFlopsAndLatches />}
+                  />
                 </Route>
               </Route>
 

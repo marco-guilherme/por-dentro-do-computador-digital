@@ -1,6 +1,9 @@
-import { Tree, Drawer } from 'antd';
+import { Tree, Drawer, Switch } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { ApplicationActionType } from '../store/application/types';
+import {
+  ApplicationActionType,
+  TreeDataType,
+} from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import { Dispatch } from 'redux';
 import {
@@ -9,6 +12,8 @@ import {
 } from '../store/application/actions';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { Key } from 'rc-tree/lib/interface';
+import { useEffect, useState } from 'react';
+import { flattenDeep } from 'lodash';
 
 export const TreeDrawer = (): JSX.Element => {
   const {
@@ -19,7 +24,11 @@ export const TreeDrawer = (): JSX.Element => {
 
   const navigate: NavigateFunction = useNavigate();
 
-  const treeData = [
+  const [keys, setKeys] = useState<string[]>([]);
+
+  const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
+
+  const treeData: TreeDataType[] = [
     {
       title: 'Eletrônica Digital',
       key: '0',
@@ -59,7 +68,6 @@ export const TreeDrawer = (): JSX.Element => {
               children: [],
             },
           ],
-          selectable: false,
         },
         {
           title: 'Revisão de Conceitos Básicos',
@@ -354,7 +362,7 @@ export const TreeDrawer = (): JSX.Element => {
           children: [
             {
               title: 'Circuitos Aritméticos',
-              key: '/aulas/eletronica-digital/circuitos-aritmeticos',
+              key: '/aulas/eletronica-digital/circuitos-aritmeticos/circuitos-aritmeticos',
               children: [],
             },
             {
@@ -385,32 +393,37 @@ export const TreeDrawer = (): JSX.Element => {
           ],
         },
         {
-          title: 'Flip-Flop e Latch',
+          title: 'Flip-Flops e Latches',
           key: '0-9',
           children: [
             {
+              title: 'Flip-Flops e Latches',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/flip-flops-e-latches',
+              children: [],
+            },
+            {
               title: 'D',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/d',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/d',
               children: [],
             },
             {
               title: 'T',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/t',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/t',
               children: [],
             },
             {
               title: 'RS',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/rs',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/rs',
               children: [],
             },
             {
               title: 'JK',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/jk',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/jk',
               children: [],
             },
             {
               title: 'Mestre-Escravo',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/mestre-escravo',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/mestre-escravo',
               children: [],
             },
           ],
@@ -472,7 +485,6 @@ export const TreeDrawer = (): JSX.Element => {
           children: [],
         },
       ],
-      selectable: false,
     },
     {
       title: 'Linguagem Assembly x86-16',
@@ -574,9 +586,29 @@ export const TreeDrawer = (): JSX.Element => {
           children: [],
         },
       ],
-      selectable: false,
     },
   ];
+
+  const getAllKeys = (data: TreeDataType[]): string[] => {
+    const nestedKeys = data.map((node: TreeDataType) => {
+      let childKeys: string[] = [];
+
+      if (node.children) {
+        childKeys = getAllKeys(node.children);
+      }
+
+      return [childKeys, node.key];
+    });
+
+    return flattenDeep(nestedKeys);
+  };
+
+  useEffect(() => {
+    const allKeys: string[] = getAllKeys(treeData);
+
+    setKeys(allKeys);
+    setExpandedKeys(allKeys);
+  }, []);
 
   const onSelect = (selectedKeys: Key[]): void => {
     if (!selectedKeys.length) {
@@ -599,6 +631,22 @@ export const TreeDrawer = (): JSX.Element => {
         open={drawerVisibility}
         onClose={() => dispatch(setDrawerVisibility(false))}
       >
+        <div className="icon-and-text expand-and-collapse">
+          <Switch
+            defaultChecked
+            onChange={(checked: boolean) => {
+              if (checked) {
+                setExpandedKeys([...keys]);
+
+                return;
+              }
+
+              setExpandedKeys([]);
+            }}
+          />
+          <span>Expandir tudo</span>
+        </div>
+
         <Tree
           treeData={treeData}
           showLine
@@ -606,6 +654,10 @@ export const TreeDrawer = (): JSX.Element => {
           defaultExpandAll
           onSelect={onSelect}
           selectedKeys={[currentPage]}
+          expandedKeys={expandedKeys}
+          onExpand={(onExpandedKeys: Key[]) =>
+            setExpandedKeys(onExpandedKeys as string[])
+          }
         />
       </Drawer>
     </div>
