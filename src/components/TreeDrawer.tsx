@@ -1,4 +1,4 @@
-import { Tree, Drawer } from 'antd';
+import { Tree, Drawer, Switch } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { ApplicationActionType } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
@@ -9,10 +9,11 @@ import {
 } from '../store/application/actions';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { Key } from 'rc-tree/lib/interface';
+import { useEffect, useState } from 'react';
 
 export const TreeDrawer = (): JSX.Element => {
   const {
-    application: { drawerVisibility, currentPage },
+    application: { drawerVisibility, currentPage, relativeUrlAndPageName },
   } = useSelector((state: RootApplicationState) => state);
 
   const dispatch: Dispatch<ApplicationActionType> = useDispatch();
@@ -354,7 +355,7 @@ export const TreeDrawer = (): JSX.Element => {
           children: [
             {
               title: 'Circuitos Aritméticos',
-              key: '/aulas/eletronica-digital/circuitos-aritmeticos',
+              key: '/aulas/eletronica-digital/circuitos-aritmeticos/circuitos-aritmeticos',
               children: [],
             },
             {
@@ -385,32 +386,37 @@ export const TreeDrawer = (): JSX.Element => {
           ],
         },
         {
-          title: 'Flip-Flop e Latch',
+          title: 'Flip-Flops e Latches',
           key: '0-9',
           children: [
             {
+              title: 'Flip-Flops e Latches',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/flip-flops-e-latches',
+              children: [],
+            },
+            {
               title: 'D',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/d',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/d',
               children: [],
             },
             {
               title: 'T',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/t',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/t',
               children: [],
             },
             {
               title: 'RS',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/rs',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/rs',
               children: [],
             },
             {
               title: 'JK',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/jk',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/jk',
               children: [],
             },
             {
               title: 'Mestre-Escravo',
-              key: '/aulas/eletronica-digital/flip-flop-e-latch/mestre-escravo',
+              key: '/aulas/eletronica-digital/flip-flops-e-latches/mestre-escravo',
               children: [],
             },
           ],
@@ -578,6 +584,14 @@ export const TreeDrawer = (): JSX.Element => {
     },
   ];
 
+  useEffect(() => {
+    const treeKeysCopy: string[] = [];
+
+    for (const [key] of Object.entries(relativeUrlAndPageName)) {
+      treeKeysCopy.push(key);
+    }
+  }, [relativeUrlAndPageName]);
+
   const onSelect = (selectedKeys: Key[]): void => {
     if (!selectedKeys.length) {
       return;
@@ -599,6 +613,14 @@ export const TreeDrawer = (): JSX.Element => {
         open={drawerVisibility}
         onClose={() => dispatch(setDrawerVisibility(false))}
       >
+        <div className="icon-and-text expand-and-collapse">
+          <Switch
+            defaultChecked
+            onChange={(checked: boolean) => console.log(checked)}
+          />
+          <span>Expandir tudo</span>
+        </div>
+
         <Tree
           treeData={treeData}
           showLine

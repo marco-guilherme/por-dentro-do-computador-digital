@@ -16,6 +16,7 @@ export const Home = (): JSX.Element => {
         <h1>
           <span>Por Dentro do Computador Digital</span>
         </h1>
+
         <h3>
           <span>
             Website Interativo Para Ensino de Fundamentos da Eletrônica Digital
@@ -38,7 +39,9 @@ export const Home = (): JSX.Element => {
                 className="grid-container-homepage-item-icon"
               />
             </div>
+
             <h4>Análise de circuitos eletrônicos</h4>
+
             <div className="grid-container-homepage-item-text-wrapper">
               <p>
                 Com um diagrama esquemático em mãos, você conseguirá identificar
@@ -50,6 +53,7 @@ export const Home = (): JSX.Element => {
               </p>
             </div>
           </div>
+
           <div className="grid-container-homepage-item flex-center-column">
             <div className="grid-container-homepage-item-icon-wrapper">
               <img
@@ -58,7 +62,9 @@ export const Home = (): JSX.Element => {
                 className="grid-container-homepage-item-icon"
               />
             </div>
+
             <h4>Construção de circuitos</h4>
+
             <div className="grid-container-homepage-item-text-wrapper">
               <p>
                 Com o conhecimento em eletrônica digital, você terá a base para
@@ -70,6 +76,7 @@ export const Home = (): JSX.Element => {
               </p>
             </div>
           </div>
+
           <div className="grid-container-homepage-item flex-center-column">
             <div className="grid-container-homepage-item-icon-wrapper">
               <img
@@ -78,7 +85,9 @@ export const Home = (): JSX.Element => {
                 className="grid-container-homepage-item-icon"
               />
             </div>
+
             <h4>Manutenção em PCBs</h4>
+
             <div className="grid-container-homepage-item-text-wrapper">
               <p>
                 As PCBs (sigla para Printed Circuit Board ou Placa de Circuito
@@ -91,6 +100,7 @@ export const Home = (): JSX.Element => {
               </p>
             </div>
           </div>
+
           <div className="grid-container-homepage-item flex-center-column">
             <div className="grid-container-homepage-item-icon-wrapper">
               <img
@@ -99,7 +109,9 @@ export const Home = (): JSX.Element => {
                 className="grid-container-homepage-item-icon"
               />
             </div>
+
             <h4>Desenvolvimento de projetos de automação</h4>
+
             <div className="grid-container-homepage-item-text-wrapper">
               <p>
                 Ter os conhecimentos básicos em eletrônica analógia e digital é

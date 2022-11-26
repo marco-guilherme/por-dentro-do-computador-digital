@@ -482,3 +482,11 @@ table {
   height: 100vh;
   background-color: black;
 }
+
+.expand-and-collapse {
+  padding-bottom: 2rem;
+
+  span {
+    margin-inline-start: 1rem;
+  }
+}

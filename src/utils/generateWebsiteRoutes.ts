@@ -90,7 +90,8 @@ export const generateWebsiteRoutes = (): RelativeUrlAndPageName => {
           '/subtrator-completo': 'Subtrator Completo',
           '/comparador-de-magnitude': 'Comparador de Magnitude',
         },
-        '/flip-flop-e-latch': {
+        '/flip-flops-e-latches': {
+          '/flip-flops-e-latches': 'Flip-Flops e Latches',
           '/d': 'D',
           '/t': 'T',
           '/rs': 'RS',
