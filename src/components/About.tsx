@@ -34,7 +34,23 @@ export const About = (): JSX.Element => {
 
   const dataSource: VersionControl[] = [
     {
-      key: 1,
+      key: 3,
+      releaseDate: <span className="monospaced-snippet">26/11/2022</span>,
+      version: <span className="monospaced-snippet">1.0.2</span>,
+      changes: (
+        <span>
+          Desenvolvimento de algumas das páginas sobre os conceitos básicos da
+          eletrônica, botões de navegação, assembler embarcado e campo de busca.
+        </span>
+      ),
+      requirements: (
+        <a href={'/'} target="_blank" rel="noreferrer">
+          <img src={pdfIcon} alt="Ícone de PDF" width={'40rem'} />
+        </a>
+      ),
+    },
+    {
+      key: 2,
       releaseDate: <span className="monospaced-snippet">23/11/2022</span>,
       version: <span className="monospaced-snippet">1.0.1</span>,
       changes: (
@@ -50,7 +66,7 @@ export const About = (): JSX.Element => {
       ),
     },
     {
-      key: 2,
+      key: 1,
       releaseDate: <span className="monospaced-snippet">13/11/2022</span>,
       version: <span className="monospaced-snippet">1.0.0</span>,
       changes: (
