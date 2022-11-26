@@ -5,6 +5,7 @@ import electricalCurrent2 from '../../../images/electrical-current-2.gif';
 import dcAndAcCurrent from '../../../images/dc-and-ac-current.png';
 import currentDirection from '../../../images/current-direction.gif';
 import magneticFieldDirection from '../../../images/magnetic-field-direction.webp';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const Current = (): JSX.Element => {
   return (
@@ -195,6 +196,11 @@ export const Current = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/tensao"
+          nextPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/resistencia"
+        />
 
         <hr />
 

@@ -1,5 +1,6 @@
 import { PageInformation } from '../../../components/PageInformation';
 import Latex from 'react-latex';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const NumeralSystem = (): JSX.Element => {
   return (
@@ -62,6 +63,11 @@ export const NumeralSystem = (): JSX.Element => {
         <p>Assim, sabemos que 1011 é um número binário, e não decimal.</p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/primeira-e-segunda-lei-de-kirchhoff"
+          nextPageUrl="/aulas/eletronica-digital/sistemas-de-numeracao-e-codigos/decimal"
+        />
 
         <hr />
 

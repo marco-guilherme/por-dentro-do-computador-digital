@@ -1,16 +1,25 @@
 export interface ApplicationState {
   drawerVisibility: boolean;
   relativeUrlAndPageName: RelativeUrlAndPageName;
+  currentPage: string;
 }
 
 export enum ApplicationTypes {
   SET_DRAWER_VISIBILITY = '@drawer/SET_DRAWER_VISIBILITY',
+  SET_CURRENT_PAGE = '@navigation/SET_CURRENT_PAGE',
 }
 
 interface SetDrawerVisibility {
   type: typeof ApplicationTypes.SET_DRAWER_VISIBILITY;
   payload: {
     visible: boolean;
+  };
+}
+
+interface SetCurrentPage {
+  type: typeof ApplicationTypes.SET_CURRENT_PAGE;
+  payload: {
+    currentPage: string;
   };
 }
 
@@ -41,6 +50,7 @@ export type VersionControl = {
   releaseDate: React.ReactNode | string;
   version: React.ReactNode | string;
   changes: React.ReactNode | string;
+  requirements: React.ReactNode;
 };
 
 export type UrlPiecesAndPageName = {
@@ -51,4 +61,4 @@ export type RelativeUrlAndPageName = {
   [key: string]: string;
 };
 
-export type ApplicationActionType = SetDrawerVisibility;
+export type ApplicationActionType = SetDrawerVisibility | SetCurrentPage;

@@ -6,6 +6,7 @@ import notGateIec from '../../../images/not-gate-iec.png';
 import notGateDin from '../../../images/not-gate-din.png';
 import Latex from 'react-latex';
 import { PageInformation } from '../../../components/PageInformation';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const NotGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -29,6 +30,7 @@ export const NotGate = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Porta Lógica NOT</h1>
+
       <div className="site-content">
         <p>
           A porta NOT (também chamada de{' '}
@@ -41,7 +43,9 @@ export const NotGate = (): JSX.Element => {
           . E.g., se a entrada estiver em nível lógico alto, a saída estará em
           nível lógico baixo, e vice-versa.
         </p>
+
         <p>Simbologia no padrão ANSI:</p>
+
         <div className="site-image">
           <img
             src={notGateAnsi}
@@ -49,7 +53,9 @@ export const NotGate = (): JSX.Element => {
             alt="Simbologia da porta lógica AND no padrão ANSI"
           />
         </div>
+
         <p>Simbologia no padrão IEC:</p>
+
         <div className="site-image">
           <img
             src={notGateIec}
@@ -57,7 +63,9 @@ export const NotGate = (): JSX.Element => {
             alt="Simbologia da porta lógica AND no padrão IEC"
           />
         </div>
+
         <p>Simbologia no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={notGateDin}
@@ -65,7 +73,9 @@ export const NotGate = (): JSX.Element => {
             alt="Simbologia da porta lógica NOT no padrão DIN"
           />
         </div>
+
         <p>Tabela verdade da porta lógica NOT:</p>
+
         <div className="flex-center-column">
           <Table
             rowClassName={'truth-table-row'}
@@ -76,15 +86,20 @@ export const NotGate = (): JSX.Element => {
             pagination={false}
           />
         </div>
+
         <p>Expressão lógica:</p>
+
         <div className="flex-center-column logic-expression">
           <Latex>{'$Q \\space = \\space \\overline{A}$'}</Latex>
         </div>
+
         <p>
           Lê-se: a saída Q é igual a não A. Também podemos ler como: a saída Q é
           igual a A barrado.
         </p>
+
         <p>Porta lógica NOT interativa:</p>
+
         <div className="flex-center-column">
           <iframe
             title="two-input-or-gate"
@@ -92,6 +107,7 @@ export const NotGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
         <div className="space-around flex-center-column">
           <iframe
             title="tinkercad-not-gate"
@@ -101,6 +117,11 @@ export const NotGate = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/portas-logicas/porta-or"
+          nextPageUrl="/aulas/eletronica-digital/portas-logicas/porta-xor"
+        />
 
         <hr />
 

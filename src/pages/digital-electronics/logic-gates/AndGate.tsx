@@ -6,6 +6,7 @@ import andGateIec from '../../../images/and-gate-iec.png';
 import andGateDin from '../../../images/and-gate-din.png';
 import { TwoInputGate } from '../../../store/application/types';
 import { PageInformation } from '../../../components/PageInformation';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const AndGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -34,6 +35,7 @@ export const AndGate = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Porta Lógica AND</h1>
+
       <div className="site-content">
         <p>
           Na porta AND,{' '}
@@ -44,7 +46,9 @@ export const AndGate = (): JSX.Element => {
           . Caso contrário, teremos <span className="bold-text">zero</span> na
           saída.
         </p>
+
         <p>Simbologia no padrão ANSI:</p>
+
         <div className="site-image">
           <img
             src={andGateAnsi}
@@ -52,7 +56,9 @@ export const AndGate = (): JSX.Element => {
             alt="Simbologia da porta lógica AND no padrão ANSI"
           />
         </div>
+
         <p>Simbologia no padrão IEC:</p>
+
         <div className="site-image">
           <img
             src={andGateIec}
@@ -60,7 +66,9 @@ export const AndGate = (): JSX.Element => {
             alt="Simbologia da porta lógica AND no padrão IEC"
           />
         </div>
+
         <p>Simbologia no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={andGateDin}
@@ -68,7 +76,9 @@ export const AndGate = (): JSX.Element => {
             alt="Simbologia da porta lógica AND no padrão DIN"
           />
         </div>
+
         <p>Tabela verdade para uma porta AND de duas entradas:</p>
+
         <div className="flex-center-column">
           <Table
             rowClassName={'truth-table-row'}
@@ -79,11 +89,15 @@ export const AndGate = (): JSX.Element => {
             pagination={false}
           />
         </div>
+
         <p>Expressão lógica:</p>
+
         <div className="flex-center-column logic-expression">
           <Latex>{'$Q \\space = \\space A \\space . \\space B$'}</Latex>
         </div>
+
         <p>Lê-se: a saída Q é igual a A e B.</p>
+
         <p>
           Note que: é incorreto ler como "A saída Q é igual a A vezes B". Apesar
           disso, a porta AND faz uma operação de multiplicação com suas entradas
@@ -99,7 +113,9 @@ export const AndGate = (): JSX.Element => {
           </span>
           .
         </p>
+
         <p>Porta lógica AND interativa:</p>
+
         <div className="flex-center-column">
           <iframe
             title="two-input-and-gate"
@@ -107,6 +123,7 @@ export const AndGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
         <div className="space-around flex-center-column">
           <iframe
             title="tinkercad-two-input-and-gate"
@@ -116,6 +133,11 @@ export const AndGate = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/portas-logicas"
+          nextPageUrl="/aulas/eletronica-digital/portas-logicas/porta-or"
+        />
 
         <hr />
 

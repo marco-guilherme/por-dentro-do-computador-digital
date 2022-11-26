@@ -1,3 +1,4 @@
+import { NavigationButtons } from '../../../components/NavigationButtons';
 import { PageInformation } from '../../../components/PageInformation';
 import electronicCircuit from '../../../images/electronic-circuit.jpg';
 
@@ -58,6 +59,11 @@ export const WhyLearnElectronics = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/sobre-eletronica/o-que-e-eletronica"
+          nextPageUrl="/aulas/eletronica-digital/sobre-eletronica/eletronica-analogica"
+        />
 
         <hr />
 

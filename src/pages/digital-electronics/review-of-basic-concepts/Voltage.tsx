@@ -5,6 +5,7 @@ import voltage from '../../../images/voltage.jpg';
 import powerSupply from '../../../images/power-supply.jpg';
 import voltmeter from '../../../images/voltmeter.jpg';
 import atom2 from '../../../images/atom-2.webp';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const Voltage = (): JSX.Element => {
   return (
@@ -270,6 +271,11 @@ export const Voltage = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/sobre-eletronica/datasheets"
+          nextPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/corrente"
+        />
 
         <hr />
 

@@ -7,6 +7,7 @@ import transistors from '../../../images/transistors.webp';
 import leds from '../../../images/leds.png';
 import integratedCircuits from '../../../images/integrated-circuits.jpg';
 import relays from '../../../images/relays.webp';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const ElectronicComponents = (): JSX.Element => {
   return (
@@ -155,6 +156,11 @@ export const ElectronicComponents = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/sobre-eletronica/eletronica-digital"
+          nextPageUrl="/aulas/eletronica-digital/sobre-eletronica/datasheets"
+        />
 
         <hr />
 

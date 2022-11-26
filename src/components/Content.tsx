@@ -1,11 +1,16 @@
 import { List, Input, ConfigProvider, Empty } from 'antd';
 import { GiNotebook } from 'react-icons/gi';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
-import { RelativeUrlAndPageName } from '../store/application/types';
+import {
+  ApplicationActionType,
+  RelativeUrlAndPageName,
+} from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import learnElectronics from '../images/learn-electronics.jpg';
 import { useEffect, useState } from 'react';
+import { Dispatch } from 'redux';
+import { setCurrentPage } from '../store/application/actions';
 
 const { Search } = Input;
 
@@ -13,6 +18,8 @@ export const Content = (): JSX.Element => {
   const {
     application: { relativeUrlAndPageName },
   } = useSelector((state: RootApplicationState) => state);
+
+  const dispatch: Dispatch<ApplicationActionType> = useDispatch();
 
   const navigate: NavigateFunction = useNavigate();
 
@@ -107,6 +114,7 @@ export const Content = (): JSX.Element => {
                   className="page-list"
                   onClick={() => {
                     navigate(item.url);
+                    dispatch(setCurrentPage(item.url));
                     window.scrollTo(0, 0);
                   }}
                 >

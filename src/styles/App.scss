@@ -465,3 +465,20 @@ table {
 .content-search {
   padding: 2rem;
 }
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.page-not-found {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}

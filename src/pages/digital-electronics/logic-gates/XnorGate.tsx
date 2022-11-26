@@ -6,6 +6,7 @@ import xnorGateDin from '../../../images/xnor-gate-din.png';
 import xnorGateDin2 from '../../../images/xnor-gate-din-2.png';
 import Latex from 'react-latex';
 import { PageInformation } from '../../../components/PageInformation';
+import { NavigationButtons } from '../../../components/NavigationButtons';
 
 export const XnorGate = (): JSX.Element => {
   const columns: ColumnsType<Object> = [
@@ -34,6 +35,7 @@ export const XnorGate = (): JSX.Element => {
   return (
     <div className="site-content-wrapper">
       <h1>Porta Lógica XNOR</h1>
+
       <div className="site-content">
         <p>
           Uma porta XNOR é na verdade, uma porta XOR com sua saída sempre
@@ -45,7 +47,9 @@ export const XnorGate = (): JSX.Element => {
           </span>
           .
         </p>
+
         <p>Simbologia no padrão ANSI:</p>
+
         <div className="site-image">
           <img
             src={xnorGateAnsi}
@@ -53,7 +57,9 @@ export const XnorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica XNOR no padrão ANSI"
           />
         </div>
+
         <p>Simbologia no padrão IEC:</p>
+
         <div className="site-image">
           <img
             src={xnorGateIec}
@@ -61,7 +67,9 @@ export const XnorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica XNOR no padrão IEC"
           />
         </div>
+
         <p>Simbologia no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={xnorGateDin}
@@ -69,7 +77,9 @@ export const XnorGate = (): JSX.Element => {
             alt="Simbologia da porta lógica XNOR no padrão DIN"
           />
         </div>
+
         <p>Simbologia alternativa no padrão DIN:</p>
+
         <div className="site-image">
           <img
             src={xnorGateDin2}
@@ -77,7 +87,9 @@ export const XnorGate = (): JSX.Element => {
             alt="Simbologia alternativa da porta lógica XNOR no padrão DIN"
           />
         </div>
+
         <p>Tabela verdade para uma porta XNOR de duas entradas:</p>
+
         <div className="flex-center-column">
           <Table
             rowClassName={'truth-table-row'}
@@ -88,14 +100,19 @@ export const XnorGate = (): JSX.Element => {
             pagination={false}
           />
         </div>
+
         <p>Expressão lógica:</p>
+
         <div className="flex-center-column logic-expression">
           <Latex>
             {'$Q \\space = \\space \\overline{A \\space \\oplus \\space B}$'}
           </Latex>
         </div>
+
         <p>Lê-se: a saída Q é igual a A não-ou-exclusivo B.</p>
+
         <p>Porta lógica XNOR interativa:</p>
+
         <div className="flex-center-column">
           <iframe
             title="two-input-xnor-gate"
@@ -103,6 +120,7 @@ export const XnorGate = (): JSX.Element => {
             className="circuit-frame"
           />
         </div>
+
         <div className="space-around flex-center-column">
           <iframe
             title="tinkercad-two-input-xnor-gate"
@@ -112,6 +130,11 @@ export const XnorGate = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/portas-logicas/porta-xor"
+          nextPageUrl="/aulas/eletronica-digital/portas-logicas/porta-nand"
+        />
 
         <hr />
 

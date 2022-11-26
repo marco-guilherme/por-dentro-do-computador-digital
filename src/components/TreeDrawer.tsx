@@ -3,13 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ApplicationActionType } from '../store/application/types';
 import { RootApplicationState } from '../store/rootReducer';
 import { Dispatch } from 'redux';
-import { setDrawerVisibility } from '../store/application/actions';
+import {
+  setCurrentPage,
+  setDrawerVisibility,
+} from '../store/application/actions';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { Key } from 'rc-tree/lib/interface';
 
 export const TreeDrawer = (): JSX.Element => {
   const {
-    application: { drawerVisibility },
+    application: { drawerVisibility, currentPage },
   } = useSelector((state: RootApplicationState) => state);
 
   const dispatch: Dispatch<ApplicationActionType> = useDispatch();
@@ -465,7 +468,7 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Microprocessadores e Microcontroladores',
-          key: '0-15',
+          key: '/aulas/eletronica-digital/microprocessadores-e-microcontroladores',
           children: [],
         },
       ],
@@ -584,6 +587,7 @@ export const TreeDrawer = (): JSX.Element => {
 
     if (selectedKey.includes('/')) {
       navigate(selectedKey);
+      dispatch(setCurrentPage(selectedKey));
     }
   };
 
@@ -601,6 +605,7 @@ export const TreeDrawer = (): JSX.Element => {
           showIcon={false}
           defaultExpandAll
           onSelect={onSelect}
+          selectedKeys={[currentPage]}
         />
       </Drawer>
     </div>

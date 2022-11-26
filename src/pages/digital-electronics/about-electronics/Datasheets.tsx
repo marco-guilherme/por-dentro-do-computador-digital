@@ -1,3 +1,4 @@
+import { NavigationButtons } from '../../../components/NavigationButtons';
 import { PageInformation } from '../../../components/PageInformation';
 import benEaterDatasheet from '../../../images/ben-eater-datasheet.png';
 import englishPaper from '../../../images/english-paper.jpg';
@@ -140,6 +141,11 @@ export const Datasheets = (): JSX.Element => {
         </p>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/sobre-eletronica/componentes-eletronicos"
+          nextPageUrl="/aulas/eletronica-digital/revisao-de-conceitos-basicos/tensao"
+        />
 
         <hr />
 

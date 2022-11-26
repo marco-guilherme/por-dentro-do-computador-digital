@@ -1,3 +1,4 @@
+import { NavigationButtons } from '../../components/NavigationButtons';
 import { PageInformation } from '../../components/PageInformation';
 import oldComputer from '../../images/old-computer.jpg';
 import programmingLanguage from '../../images/programming-language.jpg';
@@ -43,7 +44,7 @@ export const ProgrammingLanguages = (): JSX.Element => {
         <div className="site-image">
           <img
             src={oldComputer}
-            className="large-image"
+            className="medium-image"
             alt="Computador antigo"
           />
         </div>
@@ -62,7 +63,7 @@ export const ProgrammingLanguages = (): JSX.Element => {
         <div className="site-image">
           <img
             src={programmingLanguage}
-            className="large-image"
+            className="medium-image"
             alt="Tela de notebok com linguagem de programação"
           />
         </div>
@@ -121,6 +122,11 @@ export const ProgrammingLanguages = (): JSX.Element => {
         </div>
 
         <br />
+
+        <NavigationButtons
+          previousPageUrl="/aulas/eletronica-digital/microprocessadores-e-microcontroladores"
+          nextPageUrl="/aulas/linguagem-assembly/linguagem-assembly"
+        />
 
         <hr />
 
