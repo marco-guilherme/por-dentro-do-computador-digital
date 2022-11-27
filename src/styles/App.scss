@@ -492,3 +492,8 @@ table {
     margin-inline-start: 1rem;
   }
 }
+
+.count-restarts .ant-table-tbody > tr.ant-table-row:hover > td,
+.count-restarts .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: unset !important;
+}

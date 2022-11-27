@@ -6,6 +6,7 @@ import { VersionControl } from '../store/application/types';
 import windows95Letter from '../images/windows-95-letter.png';
 import release100 from '../pdfs/1.0.0.pdf';
 import release101 from '../pdfs/1.0.1.pdf';
+import release102 from '../pdfs/1.0.2.pdf';
 import pdfIcon from '../images/pdf-icon.png';
 
 export const About = (): JSX.Element => {
@@ -44,7 +45,7 @@ export const About = (): JSX.Element => {
         </span>
       ),
       requirements: (
-        <a href={'/'} target="_blank" rel="noreferrer">
+        <a href={release102} target="_blank" rel="noreferrer">
           <img src={pdfIcon} alt="Ícone de PDF" width={'40rem'} />
         </a>
       ),
