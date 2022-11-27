@@ -34,6 +34,7 @@ import { HalfAdder } from './pages/digital-electronics/arithmetic-circuits/HalfA
 import { NumeralSystem } from './pages/digital-electronics/numeral-system/NumeralSystem';
 import { FlipFlopsAndLatches } from './pages/digital-electronics/flip-flops-and-latches/FlipFlopsAndLatches';
 import { AssemblyOrAssembler } from './pages/assembly-language/AssemblyOrAssembler';
+import { Counters } from './pages/digital-electronics/Counters';
 
 const App = (): JSX.Element => {
   return (
@@ -133,6 +134,8 @@ const App = (): JSX.Element => {
                     element={<FlipFlopsAndLatches />}
                   />
                 </Route>
+
+                <Route path="contadores" element={<Counters />} />
               </Route>
 
               <Route path="linguagem-assembly" element={<Outlet />}>

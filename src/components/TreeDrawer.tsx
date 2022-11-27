@@ -430,22 +430,22 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Codificadores e Decodificadores',
-          key: '0-10',
+          key: '/aulas/eletronica-digital/codificadores-e-decodificadores',
           children: [],
         },
         {
           title: 'Multiplexadores e Demultiplexadores',
-          key: '0-11',
+          key: '/aulas/eletronica-digital/multiplexadores-e-demultiplexadores',
           children: [],
         },
         {
           title: 'Contadores',
-          key: '0-12',
+          key: '/aulas/eletronica-digital/contadores',
           children: [],
         },
         {
           title: 'Registradores',
-          key: '0-13',
+          key: '/aulas/eletronica-digital/registradores',
           children: [],
         },
         {
