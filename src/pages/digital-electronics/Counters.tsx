@@ -17,34 +17,6 @@ import synchronousCounter from '../../images/synchronous-counter.png';
 import synchronousCounterControlled from '../../images/synchronous-counter-controlled.png';
 
 export const Counters = (): JSX.Element => {
-  const columns: ColumnsType<Object> = [
-    {
-      title: 'Número',
-      dataIndex: 'number',
-      children: [],
-      align: 'center',
-    },
-    {
-      title: 'A (MSB)',
-      dataIndex: 'inputA',
-      children: [],
-      align: 'center',
-    },
-    {
-      title: 'B (LSB)',
-      dataIndex: 'inputB',
-      children: [],
-      align: 'center',
-    },
-  ];
-
-  const dataSource = [
-    { key: 1, number: 0, inputA: 0, inputB: 0 },
-    { key: 2, number: 1, inputA: 0, inputB: 1 },
-    { key: 3, number: 2, inputA: 1, inputB: 0 },
-    { key: 4, number: 3, inputA: 1, inputB: 1 },
-  ];
-
   useThirdPartyCookieCheck();
 
   return (
@@ -53,9 +25,11 @@ export const Counters = (): JSX.Element => {
 
       <div className="site-content">
         <p>
-          Um contador é um registrador capaz de contar o número de pulsos de
-          clock que chegam em sua entrada. Os contadores podem ser crescentes ou
-          decrescentes. A contagem é feita em binário.
+          Um <span className="bold-text">contador</span> é um registrador capaz
+          de contar o número de pulsos de clock que chegam em sua entrada. Os
+          contadores podem ser <span className="bold-text">crescentes</span> ou{' '}
+          <span className="bold-text">decrescentes</span>. A contagem é feita em
+          binário.
         </p>
 
         <p>
@@ -64,10 +38,11 @@ export const Counters = (): JSX.Element => {
         </p>
 
         <p>
-          O módulo (ou modulus em inglês) é o número de estados estáveis que o
-          contador possui, ou seja, é a quantidade total de números que ele pode
-          contar. O módulo de um contador é dado por {<Latex>{'$2^n$'}</Latex>},
-          onde:
+          O <span className="bold-text">módulo</span> (ou{' '}
+          <span className="italic-text">modulus</span> em inglês) é o número de
+          estados estáveis que o contador possui, ou seja, é a quantidade total
+          de números que ele pode contar. O módulo de um contador é dado por{' '}
+          {<Latex>{'$2^n$'}</Latex>}, onde:
         </p>
 
         <p>
@@ -87,18 +62,14 @@ export const Counters = (): JSX.Element => {
         <p>Por exemplo, o módulo de um contador de 1 bit é:</p>
 
         <div className="flex-center-column logic-expression">
-          <Latex>
-            {
-              '$2^1 \\space - \\space 1 \\space = \\space 2 \\space - \\space 1 = \\space 1$'
-            }
-          </Latex>
+          <Latex>{'$2^1 = \\space 2$'}</Latex>
         </div>
 
         <p>
           Ou seja, podemos contar de 0 até 1 (2 números ao todo, ou, módulo 2).
         </p>
 
-        <p>Com 2 bits:</p>
+        <p>Com 2 bits, podemos contar de 0 até:</p>
 
         <div className="flex-center-column logic-expression">
           <Latex>
@@ -122,10 +93,34 @@ export const Counters = (): JSX.Element => {
         <div className="flex-center-column table-wrapper">
           <Table
             rowClassName={'truth-table-row'}
-            columns={columns}
+            columns={[
+              {
+                title: 'Número',
+                dataIndex: 'number',
+                children: [],
+                align: 'center',
+              },
+              {
+                title: 'A (MSB)',
+                dataIndex: 'inputA',
+                children: [],
+                align: 'center',
+              },
+              {
+                title: 'B (LSB)',
+                dataIndex: 'inputB',
+                children: [],
+                align: 'center',
+              },
+            ]}
             bordered
             size="middle"
-            dataSource={dataSource}
+            dataSource={[
+              { key: 1, number: 0, inputA: 0, inputB: 0 },
+              { key: 2, number: 1, inputA: 0, inputB: 1 },
+              { key: 3, number: 2, inputA: 1, inputB: 0 },
+              { key: 4, number: 3, inputA: 1, inputB: 1 },
+            ]}
             pagination={false}
           />
         </div>
@@ -143,14 +138,22 @@ export const Counters = (): JSX.Element => {
           limite, mas reinicie a contagem antes.
         </p>
 
-        <p>O contador de 0 até 9 é chamado de contador de década.</p>
+        <p>
+          O contador de 0 até 9 é chamado de{' '}
+          <span className="bold-text">contador de década</span> (
+          <span className="italic-text">decade counter</span>).
+        </p>
 
         <p>
           Na eletrônica digital, os contadores são feitos com flip-flops JK e
           seus derivados (tipo D ou tipo T).
         </p>
 
-        <p>Os contadores são classificados em síncronos ou assíncronos.</p>
+        <p>
+          Os contadores são classificados em{' '}
+          <span className="bold-text">síncronos</span> ou{' '}
+          <span className="bold-text">assíncronos</span>.
+        </p>
 
         <p>
           Nos contadores assíncronos, o pino de clock dos flip-flops são
@@ -284,11 +287,11 @@ export const Counters = (): JSX.Element => {
 
         <p>
           Conseguiu perceber o padrão? Quanto T = 1, a saída comuta de estado na
-          borda de subida do clock.
+          borda de descida do clock.
         </p>
 
         <p>
-          Seja a tabela-verdade de um contador de 3 bits com borda de descida:
+          Seja a tabela-verdade para um contador de 3 bits com borda de descida:
         </p>
 
         <div className="flex-center-column table-wrapper">
@@ -527,8 +530,8 @@ export const Counters = (): JSX.Element => {
 
         <p>
           Leitura: da direita para a esquerda, i.e., primeiro QB, depois QA.
-          Isso acontece pois, naturalmente, acabamos construindo o contador ao
-          com os bits "ao contrário".
+          Isso acontece pois, naturalmente, acabamos construindo o contador com
+          os bits "ao contrário".
         </p>
 
         <p>
@@ -846,9 +849,20 @@ export const Counters = (): JSX.Element => {
           ela recomeça.
         </p>
 
+        <p>Para demonstrar um contador de 4 bits, vamos utilizar o 74HC93:</p>
+
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="4-bit-counter"
+            src="https://www.tinkercad.com/embed/0NjRSacL7KU?editbtn=1"
+            className="circuit-frame"
+          />
+        </div>
+
         <p>
           Cada flip-flop da figura abaixo divide a frequência do clock por 2. É
-          por isso que às vezes ele é chamado de divide-by-2 circuit. Como cada
+          por isso que às vezes ele é chamado de{' '}
+          <span className="italic-text">divide-by-2 circuit</span>. Como cada
           flip-flop divide a frequência por 2, {<Latex>{'$n$'}</Latex>}{' '}
           flip-flops dividem a frequência por {<Latex>{'$2^n$'}</Latex>}.
         </p>
@@ -861,7 +875,10 @@ export const Counters = (): JSX.Element => {
           />
         </div>
 
-        <p>Cada flip-flop é chamado de estágio (ou stage em inglês).</p>
+        <p>
+          Cada flip-flop é chamado de <span className="bold-text">estágio</span>{' '}
+          (ou <span className="italic-text">stage</span> em inglês).
+        </p>
 
         <div className="site-image">
           <img
@@ -892,13 +909,10 @@ export const Counters = (): JSX.Element => {
         </div>
 
         <p>
-          Note que a cada 2 pulsos do clock temos 1 pulso em Q0, pois ele divide
-          a frequência por 2.
-        </p>
-
-        <p>
-          A cada 4 pulsos do clock temos 1 pulso em Q1, pois ele divide a
-          frequência por 4, e assim por diante.
+          Note que, a cada 2 pulsos do clock, temos 1 pulso em{' '}
+          {<Latex>{'$Q_0$'}</Latex>}, pois ele divide a frequência por 2. A cada
+          4 pulsos do clock temos 1 pulso em {<Latex>{'$Q_1$'}</Latex>}, pois
+          ele divide a frequência por 4, e assim por diante.
         </p>
 
         <div className="site-image">
@@ -923,26 +937,24 @@ export const Counters = (): JSX.Element => {
         </div>
 
         <p>
-          Um contador controlado conta os pulsos do clock apenas quando é
-          comandado. O contador da figura acima é um exemplo de contador
-          controlado por conta da entrada “High”.
+          Um <span className="bold-text">contador controlado</span> conta os
+          pulsos do clock apenas quando é comandado. O contador da figura acima
+          é um exemplo de contador controlado por conta da entrada “High”.
         </p>
 
         <p>
-          O contador da figura acima é chamado de ripple counter, pois o carry
-          se move através dos flip-flops como uma ondulação na água.
+          O contador da figura acima é chamado de{' '}
+          <span className="bold-text">ripple counter</span>, pois o carry se
+          move através dos flip-flops como uma ondulação na água.
         </p>
 
         <p>
-          Quando o carry deve se propagar através de uma cadeia de n flip-flops,
-          o tempo de retardo de propagação no geral é{' '}
-          {<Latex>{'$n \\space . \\space t_p$'}</Latex>}. Por conta disso, o
-          ripple counter é muito lento para algumas aplicações. Para melhorar
-          essa questão, podemos utilizar um contador síncrono.
-        </p>
-
-        <p>
-          A vantagem do contador síncrono é sua velocidade; ele leva apenas um
+          Quando o carry deve se propagar através de uma cadeia de{' '}
+          {<Latex>{'$n$'}</Latex>} flip-flops, o tempo de retardo de propagação
+          no geral é {<Latex>{'$n \\space . \\space t_p$'}</Latex>}. Por conta
+          disso, o ripple counter é muito lento para algumas aplicações. Para
+          melhorar essa questão, podemos utilizar um contador síncrono. A
+          vantagem do contador síncrono é sua velocidade; ele leva apenas um
           tempo de atraso de propagação para a contagem binária correta aparecer
           após a borda do clock ser atingida.
         </p>
