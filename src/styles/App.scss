@@ -497,3 +497,51 @@ table {
 .count-restarts .ant-table-tbody > tr > td.ant-table-cell-row-hover {
   background: unset !important;
 }
+
+.binary-to-decimal-tabble-wrapper {
+  padding: 0.4rem;
+
+  table,
+  th,
+  td {
+    // border: 0.063rem solid black;
+    // border-collapse: collapse;
+    font-family: 'Consolas', monospace;
+    font-size: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: normal;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+th.result {
+  width: 5%;
+}
+
+th.single-bit div {
+  background-color: rgb(56, 56, 56);
+  color: rgb(0, 255, 0);
+  width: 40px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.clear-button {
+  padding: 2rem;
+  text-align: right;
+
+  button {
+    width: 8rem;
+  }
+}
