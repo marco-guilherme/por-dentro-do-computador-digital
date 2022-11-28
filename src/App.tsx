@@ -35,6 +35,7 @@ import { NumeralSystem } from './pages/digital-electronics/numeral-system/Numera
 import { FlipFlopsAndLatches } from './pages/digital-electronics/flip-flops-and-latches/FlipFlopsAndLatches';
 import { AssemblyOrAssembler } from './pages/assembly-language/AssemblyOrAssembler';
 import { Counters } from './pages/digital-electronics/Counters';
+import { BinaryToDecimal } from './pages/digital-electronics/conversion-between-number-systems-and-codes/BinaryToDecimal';
 
 const App = (): JSX.Element => {
   return (
@@ -98,6 +99,16 @@ const App = (): JSX.Element => {
                   <Route
                     path="sistemas-de-numeracao"
                     element={<NumeralSystem />}
+                  />
+                </Route>
+
+                <Route
+                  path="conversao-entre-sistemas-de-numeracao-e-codigos"
+                  element={<Outlet />}
+                >
+                  <Route
+                    path="binario-para-decimal"
+                    element={<BinaryToDecimal />}
                   />
                 </Route>
 
