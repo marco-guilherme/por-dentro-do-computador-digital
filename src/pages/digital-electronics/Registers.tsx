@@ -18,19 +18,21 @@ export const Registers = (): JSX.Element => {
 
       <div className="site-content">
         <p>
-          Um registrador é um grupo de elementos de memória que trabalham juntos
-          como uma unidade. Um registrador simples armazena uma palavra binária,
-          outros modificam a palavra armazenada ao deslocar os bits para a
-          esquerda/direita ou realizando outras operações.
+          Um <span className="bold-text">registrador</span> é um grupo de
+          elementos de memória que trabalham juntos como uma unidade. Um
+          registrador simples armazena uma palavra binária, outros modificam a
+          palavra armazenada ao deslocar os bits para a esquerda/direita ou
+          realizando outras operações.
         </p>
 
         <div className="horizontal-space-2" />
 
-        <h2>Regitrador Buffer</h2>
+        <h2>Registrador Buffer</h2>
 
         <p>
-          Um registrador buffer (ou buffer register em inglês) é um circuito que
-          armazena uma palavra binária.
+          Um <span className="bold-text">registrador buffer</span> (ou{' '}
+          <span className="italic-text">buffer register</span> em inglês) é um
+          circuito que armazena uma palavra binária.
         </p>
 
         <div className="site-image">
@@ -47,6 +49,14 @@ export const Registers = (): JSX.Element => {
           na borda de subida do clock.
         </p>
 
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="buffer-register"
+            src="https://circuitverse.org/simulator/embed/buffer-register-eb3b1f17-8080-420d-9d9c-3448d9a6b3f4"
+            className="circuit-frame"
+          />
+        </div>
+
         <p>Uma variação do circuito acima é:</p>
 
         <div className="site-image">
@@ -61,6 +71,14 @@ export const Registers = (): JSX.Element => {
           A palavra só é armazenada no registrador quando LOAD = 1 e na borda de
           subida do clock.
         </p>
+
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="buffer-register-2"
+            src="https://circuitverse.org/simulator/embed/buffer-register-2"
+            className="circuit-frame"
+          />
+        </div>
 
         <p>
           Ambos os circuitos são muito primitivos para ter alguma utilidade. O
@@ -106,6 +124,14 @@ export const Registers = (): JSX.Element => {
           {<Latex>{'$X_3X_2X_1X_0$'}</Latex>} são armazenados.
         </p>
 
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="controlled-buffer-register"
+            src="https://circuitverse.org/simulator/embed/controlled-buffer-register-97640846-3ec6-4c84-bab8-84ba4a549b0a"
+            className="circuit-frame"
+          />
+        </div>
+
         <p>Registrador buffer de saída de 8 bits:</p>
 
         <div className="site-image">
@@ -116,11 +142,11 @@ export const Registers = (): JSX.Element => {
           />
         </div>
 
-        <p>O 74LS173 é composto por 4 flip-flops do tipo D.</p>
-
         <p>
-          Cada chip armazena 4 bits da palavra de entrada X. C22 armazena o
-          nibble mais significativo e C23 o menos significativo.
+          O <span className="bold-text">74LS173</span> é composto por 4
+          flip-flops do tipo D. Cada chip armazena 4 bits da palavra de entrada
+          X. C22 armazena o nibble mais significativo e C23 o menos
+          significativo.
         </p>
 
         <p>Registrador buffer three-state:</p>
@@ -133,34 +159,44 @@ export const Registers = (): JSX.Element => {
           />
         </div>
 
-        <p>Quando ENABLE = 0, a saída está flutuando.</p>
+        <p>Quando ENABLE = 0, a saída estará flutuando (terceiro estado).</p>
 
         <p>Quando ENABLE = 1, Y = Q.</p>
 
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="three-state-buffer-register"
+            src="https://circuitverse.org/simulator/embed/three-state-buffer-register"
+            className="circuit-frame"
+          />
+        </div>
+
         <div className="horizontal-space-2" />
 
-        <h2>Regitrador de Deslocamento</h2>
+        <h2>Registrador de Deslocamento</h2>
 
         <p>
-          Um registrador de deslocamento (ou shift register em inglês) é um
+          Um <span className="bold-text">registrador de deslocamento</span> (ou{' '}
+          <span className="italic-text">shift register</span> em inglês) é um
           registrador que move os bits armazenados para a esquerda ou direita.
+          Ele utiliza flip-flops em cascata de modo que, a saída de um flip-flop
+          é conectada à entrada do próximo. Eles compartilham um único sinal de
+          clock, o que faz com que os dados armazenados no sistema mudem de um
+          local para o outro.
         </p>
 
         <p>
-          Ele utiliza flip-flops em cascata de tal modo que, a saída de um
-          flip-flop é conectada à entrada do próximo. Eles compartilham um único
-          sinal de clock, o que faz com que os dados armazenados no sistema
-          mudem de um local para o outro.
-        </p>
-
-        <p>
-          Os registradores de deslocamento são úteis para converter uma
-          informação serial em paralela.
+          Os registradores de deslocamento são úteis para{' '}
+          <span className="underline-text">
+            converter uma informação serial em paralela
+          </span>
+          .
         </p>
 
         <p>
           Registrador de deslocamento que desloca os bits para a esquerda
-          (chamado de shift-left register em inglês):
+          (chamado de <span className="italic-text">shift-left register</span>{' '}
+          em inglês):
         </p>
 
         <div className="site-image">
@@ -171,9 +207,18 @@ export const Registers = (): JSX.Element => {
           />
         </div>
 
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="shift-left-register"
+            src="https://circuitverse.org/simulator/embed/shift-left-register-483f7599-5b43-43ab-a7f7-f9e7974f1c4a"
+            className="circuit-frame"
+          />
+        </div>
+
         <p>
           Registrador de deslocamento que desloca os bits para a direita
-          (chamado de shift-right register em inglês):
+          (chamado de <span className="italic-text">shift-right register</span>{' '}
+          em inglês):
         </p>
 
         <div className="site-image">
@@ -189,6 +234,14 @@ export const Registers = (): JSX.Element => {
           flip-flop anterior.
         </p>
 
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="shift-right-register"
+            src="https://circuitverse.org/simulator/embed/shift-right-register-d95acdb2-9e78-41f2-b04c-2823ff9e2434"
+            className="circuit-frame"
+          />
+        </div>
+
         <p>
           Um registrador de deslocamento controlado possui uma entrada de
           controle que determina o que o circuito faz no próximo pulso de clock.
@@ -203,22 +256,34 @@ export const Registers = (): JSX.Element => {
         </div>
 
         <p>
-          SHL (sigla para shift-left) é o sinal de controle. Quando SHL = 0, os
-          bits não são deslocados na borda de subida do clock.
+          SHL (sigla para <span className="italic-text">shift-left</span>) é o
+          sinal de controle. Quando SHL = 0, os bits não são deslocados na borda
+          de subida do clock.
+        </p>
+
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="controlled-shift-register"
+            src="https://circuitverse.org/simulator/embed/controlled-shift-register-437bf81d-5499-4c09-bf2f-40cc7abffddc"
+            className="circuit-frame"
+          />
+        </div>
+
+        <p>
+          Um <span className="bold-text">carregamento serial</span> (ou{' '}
+          <span className="italic-text">serial loading</span> em inglês) é
+          quando uma palavra é armazenada em um registrador de deslocamento de
+          modo que, apenas 1 bit "entre" por pulso de clock. Para armazenar um
+          nibble, por exemplo, são necessários 4 pulsos de clock.
         </p>
 
         <p>
-          Um carregamento serial (ou serial loading em inglês) é quando uma
-          palavra é armazenada em um registrador de deslocamento entrando 1 bit
-          por pulso de clock. Para armazenar um nibble por exemplo, são
-          necessários 4 pulsos de clock.
-        </p>
-
-        <p>
-          Um carregamento paralelo (chamado de parallel ou broadside loading em
-          inglês) é quando todos os bits de uma palavra são armazenados em um
-          registrador de deslocamento. No carregamento paralelo, é necessário
-          apenas 1 pulso de clock para armazenar uma palavra digital.
+          Um <span className="bold-text">carregamento paralelo</span> (chamado
+          de <span className="italic-text">parallel</span> ou{' '}
+          <span className="italic-text">broadside loading</span> em inglês) é
+          quando todos os bits de uma palavra são armazenados em um registrador
+          de deslocamento. No carregamento paralelo, é necessário apenas 1 pulso
+          de clock para armazenar uma palavra digital.
         </p>
 
         <p>
@@ -252,28 +317,51 @@ export const Registers = (): JSX.Element => {
           realizar ambas as operações em uma única borda de clock.
         </p>
 
+        <div className="flex-center-column circuit-frame-wrapper">
+          <iframe
+            title="broadside-loading"
+            src="https://circuitverse.org/simulator/embed/broadside-loading"
+            className="circuit-frame"
+          />
+        </div>
+
         <br />
 
         <p>
-          Os registradores de deslocamento podem ter entradas e saídas paralelas
-          e seriais.
+          Os registradores de deslocamento podem ter{' '}
+          <span className="bold-text">
+            entradas e saídas paralelas e seriais
+          </span>
+          .
         </p>
 
         <div className="flex-center-column">
-          <p>SISO: serial-in serial-out</p>
-          <p>PIPO: parallel-in parallel-out</p>
-          <p>SIPO: serial-in parallel-out</p>
-          <p>SIPO: serial-in parallel-out</p>
+          <p>
+            SISO: <span className="italic-text">serial-in serial-out</span>
+          </p>
+          <p>
+            PIPO: <span className="italic-text">parallel-in parallel-out</span>
+          </p>
+          <p>
+            SIPO: <span className="italic-text">serial-in parallel-out</span>
+          </p>
+          <p>
+            SIPO: <span className="italic-text">serial-in parallel-out</span>
+          </p>
         </div>
 
         <p>
           Existem também tipos que têm entrada serial e paralela e tipos com
           saída serial e paralela. Existem também registradores de deslocamento
-          "bidirecionais" que permitem o deslocamento em ambas as direções: L ⟶
-          R ou R ⟶ L. A entrada serial e a última saída de um registrador de
-          deslocamento também podem ser conectadas para criar um "registrador de
-          deslocamento circular". Um registro PIPO é muito rápido, a saída é
-          dada em um único pulso de clock.
+          "<span className="bold-text">bidirecionais</span>" que permitem o
+          deslocamento em ambas as direções: L ⟶ R ou R ⟶ L. A entrada serial e
+          a última saída de um registrador de deslocamento também podem ser
+          conectadas para criar um "
+          <span className="bold-text">
+            registrador de deslocamento circular
+          </span>
+          ". Um registro PIPO é muito rápido, a saída é dada em um único pulso
+          de clock.
         </p>
 
         <br />
