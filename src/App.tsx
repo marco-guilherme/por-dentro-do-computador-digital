@@ -36,6 +36,7 @@ import { FlipFlopsAndLatches } from './pages/digital-electronics/flip-flops-and-
 import { AssemblyOrAssembler } from './pages/assembly-language/AssemblyOrAssembler';
 import { Counters } from './pages/digital-electronics/Counters';
 import { BinaryToDecimal } from './pages/digital-electronics/conversion-between-number-systems-and-codes/BinaryToDecimal';
+import { Registers } from './pages/digital-electronics/Registers';
 
 const App = (): JSX.Element => {
   return (
@@ -147,6 +148,8 @@ const App = (): JSX.Element => {
                 </Route>
 
                 <Route path="contadores" element={<Counters />} />
+
+                <Route path="registradores" element={<Registers />} />
               </Route>
 
               <Route path="linguagem-assembly" element={<Outlet />}>

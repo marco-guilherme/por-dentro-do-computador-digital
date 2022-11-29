@@ -25,9 +25,10 @@ export const Counters = (): JSX.Element => {
 
       <div className="site-content">
         <p>
-          Um <span className="bold-text">contador</span> é um registrador capaz
-          de contar o número de pulsos de clock que chegam em sua entrada. Os
-          contadores podem ser <span className="bold-text">crescentes</span> ou{' '}
+          Um <span className="bold-text">contador</span> é um tipo especial de
+          registrador, projetado para contar o número de pulsos de clock que
+          chegam em sua entrada. Os contadores podem ser{' '}
+          <span className="bold-text">crescentes</span> ou{' '}
           <span className="bold-text">decrescentes</span>. A contagem é feita em
           binário.
         </p>
@@ -939,7 +940,7 @@ export const Counters = (): JSX.Element => {
         <p>
           Um <span className="bold-text">contador controlado</span> conta os
           pulsos do clock apenas quando é comandado. O contador da figura acima
-          é um exemplo de contador controlado por conta da entrada “High”.
+          é um exemplo de contador controlado por conta da entrada "High".
         </p>
 
         <p>
