@@ -35,6 +35,22 @@ export const About = (): JSX.Element => {
 
   const dataSource: VersionControl[] = [
     {
+      key: 4,
+      releaseDate: <span className="monospaced-snippet">29/11/2022</span>,
+      version: <span className="monospaced-snippet">1.0.3</span>,
+      changes: (
+        <span>
+          Desenvolvimento das últimas páginas antes da apresentação do TCC e
+          adição da página do computador de 8 bits interativo.
+        </span>
+      ),
+      requirements: (
+        <a href={'/'} target="_blank" rel="noreferrer">
+          <img src={pdfIcon} alt="Ícone de PDF" width={'40rem'} />
+        </a>
+      ),
+    },
+    {
       key: 3,
       releaseDate: <span className="monospaced-snippet">26/11/2022</span>,
       version: <span className="monospaced-snippet">1.0.2</span>,
@@ -97,6 +113,28 @@ export const About = (): JSX.Element => {
           <span className="italic-text">campus</span> de Araraquara em
           29/11/2022.
         </p>
+
+        <p>
+          A maior parte do conteúdo deste site surgiu a partir dos seguintes
+          livros:
+        </p>
+
+        <ul>
+          <li>
+            MALVINO, Albert P.; BROWN, Jerald A.{' '}
+            <span className="bold-text">Digital Computer Electronics</span>. 3.
+            ed. [<span className="italic-text">S. l.</span>]: Career Education,
+            1992. 528 p. ISBN 0-02-800594-5;
+          </li>
+          <li>
+            IRVINE, Kip R.{' '}
+            <span className="bold-text">
+              Assembly Language For x86 Processors
+            </span>
+            . 6. ed. [<span className="italic-text">S. l.</span>]: Pearson,
+            2010. 747 p. ISBN 978-0-13-602212-1.
+          </li>
+        </ul>
 
         <p>
           Gostaria de agradecer imensamente ao meu orientador, Prof. Me. Noel
