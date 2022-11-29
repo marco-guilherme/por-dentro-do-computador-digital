@@ -10,8 +10,11 @@ import shiftLeftRegister from '../../images/shift-left-register.png';
 import shiftRightRegister from '../../images/shift-right-register.png';
 import controlledShiftRegister from '../../images/controlled-shift-register.png';
 import shiftRegister from '../../images/shift-register.png';
+import { useThirdPartyCookieCheck } from '../../hooks/useThirdPartyCookieCheck ';
 
 export const Registers = (): JSX.Element => {
+  useThirdPartyCookieCheck();
+
   return (
     <div className="site-content-wrapper">
       <h1>Registradores</h1>

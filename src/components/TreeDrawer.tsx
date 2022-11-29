@@ -522,7 +522,7 @@ export const TreeDrawer = (): JSX.Element => {
         },
         {
           title: 'Memória',
-          key: '/aulas/linguagem-assembly/memória',
+          key: '/aulas/linguagem-assembly/memoria',
           children: [],
         },
         {
@@ -586,6 +586,11 @@ export const TreeDrawer = (): JSX.Element => {
           children: [],
         },
       ],
+    },
+    {
+      title: 'Computador de 8 Bits',
+      key: '/aulas/computador-de-8-bits',
+      children: [],
     },
   ];
 

@@ -37,6 +37,7 @@ import { AssemblyOrAssembler } from './pages/assembly-language/AssemblyOrAssembl
 import { Counters } from './pages/digital-electronics/Counters';
 import { BinaryToDecimal } from './pages/digital-electronics/conversion-between-number-systems-and-codes/BinaryToDecimal';
 import { Registers } from './pages/digital-electronics/Registers';
+import { EightBitComputer } from './pages/EightBitComputer';
 
 const App = (): JSX.Element => {
   return (
@@ -168,6 +169,11 @@ const App = (): JSX.Element => {
                   element={<AssemblyOrAssembler />}
                 />
               </Route>
+
+              <Route
+                path="computador-de-8-bits"
+                element={<EightBitComputer />}
+              />
             </Route>
 
             <Route path="/ascii" element={<ASCIITable />} />
